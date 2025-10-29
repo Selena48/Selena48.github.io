@@ -1,8 +1,8 @@
-<!-- Exemple d'utilisation du système de design Portfolio -->
-<div data-theme="portfolio" class="bg-base-100">
+<!-- Wrapper avec thème dynamique basé sur la route active -->
+<div class="relative">
 
   <!-- Header Example -->
-  <header class="bg-base-100 flex items-center justify-between px-16 py-6 border-b border-base-content/10">
+  <header class="sticky top-0 flex items-center justify-between px-16 py-6 border-b border-base-content/10">
     <p class="logo">NAMEDLY</p>
     <nav class="flex gap-10">
       <a class="nav-link">Works</a>
@@ -12,111 +12,7 @@
   </header>
 
   <!-- Section Example -->
-  <section class="portfolio-container">
-    <div class="portfolio-section">
-
-      <!-- Section Header -->
-      <div class="portfolio-section-header">
-        <h1 class="heading-1">My UX Philosophy</h1>
-        <p class="quote">"Why create something beautiful if users are lost or frustrated?"</p>
-        <p class="body-muted">
-          This question guides everything I do. I believe design must prioritize clarity over trends.
-        </p>
-      </div>
-
-      <!-- Cards Grid Example -->
-      <div class="portfolio-grid-2">
-        <!-- Card 1 -->
-        <div class="portfolio-card">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="text-5xl">🤸‍♀️</span>
-            <h4 class="heading-4">Human-Centered</h4>
-          </div>
-          <p class="body-large">
-            Cognitive science and psychology inform every design decision, ensuring solutions align with how people actually think and behave.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="portfolio-card">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="text-5xl">🔍️</span>
-            <h4 class="heading-4">Research-Driven</h4>
-          </div>
-          <p class="body-large">
-            User research, testing, and data guide iterations. I believe in validating assumptions rather than relying on intuition alone.
-          </p>
-        </div>
-      </div>
-
-      <!-- Accent Cards Example -->
-      <div class="flex flex-col gap-4">
-        <div class="portfolio-card-accent">
-          <div class="flex items-center gap-4 mb-4">
-            <span class="text-5xl">💡</span>
-            <h5 class="heading-5">Behavior design</h5>
-          </div>
-          <p class="body-muted">
-            How small changes in design can shape user habits and decisions
-          </p>
-        </div>
-
-        <div class="portfolio-card-accent-red">
-          <div class="flex items-center gap-4 mb-4">
-            <span class="text-5xl">🎯</span>
-            <h5 class="heading-5">Nudge Theory</h5>
-          </div>
-          <p class="body-muted">
-            Subtle interventions that guide choices without restricting freedom
-          </p>
-        </div>
-      </div>
-
-      <!-- Social Buttons Example -->
-      <div class="flex gap-4">
-        <div class="social-button">
-          <div class="w-10 h-10 bg-primary rounded flex items-center justify-center text-white font-bold">in</div>
-          <span class="link-underlined text-sm">LinkedIn</span>
-        </div>
-        <div class="social-button">
-          <div class="w-10 h-10 bg-primary rounded flex items-center justify-center text-white">@</div>
-          <span class="link-underlined text-sm">selena.boullee&#64;gmail.com</span>
-        </div>
-      </div>
-
-      <!-- Expertise Grid Example -->
-      <div class="bg-primary rounded-3xl p-16">
-        <h3 class="heading-3 text-white mb-12">Expertise I bring</h3>
-        <div class="portfolio-grid-4">
-          <div class="glass-card">
-            <div class="expertise-badge">
-              <div class="icon-wrapper w-16 h-16 bg-white/20 rounded-full"></div>
-              <p class="font-bold text-white text-xl">Personas</p>
-            </div>
-          </div>
-          <div class="glass-card">
-            <div class="expertise-badge">
-              <div class="icon-wrapper w-16 h-16 bg-white/20 rounded-full"></div>
-              <p class="font-bold text-white text-xl">Benchmark</p>
-            </div>
-          </div>
-          <div class="glass-card">
-            <div class="expertise-badge">
-              <div class="icon-wrapper w-16 h-16 bg-white/20 rounded-full"></div>
-              <p class="font-bold text-white text-xl">Flow Diagrams</p>
-            </div>
-          </div>
-          <div class="glass-card">
-            <div class="expertise-badge">
-              <div class="icon-wrapper w-16 h-16 bg-white/20 rounded-full"></div>
-              <p class="font-bold text-white text-xl">Prototypes</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+  <section [attr.data-theme]="themeService.currentTheme()" class="portfolio-container">
+    <router-outlet />
   </section>
 </div>
-
-<router-outlet />
