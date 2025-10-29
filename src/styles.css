@@ -18,7 +18,7 @@
 /* Configuration DaisyUI */
 @plugin "daisyui" {
   /* Thèmes disponibles avec leurs flags */
-  themes: portfolio --default, mytheme, ocean;
+  themes: portfolio --default, project, lightcrowd, mytheme, ocean;
 
   /* Désactiver TOUS les composants DaisyUI */
   /* On garde uniquement le système de thèmes avec les variables CSS */
@@ -34,7 +34,7 @@
 }
 
 /* ========================================
-   Thèmes Custom - Exemples
+   Thèmes Custom
    ======================================== */
 
 /* ========================================
@@ -81,6 +81,55 @@
   --size-selector: 0.25rem;
 
   /* Bordure fine et subtle */
+  --border: 1px;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========================================
+   Thème LightCrowd - Design doux et moderne
+   ======================================== */
+@plugin "daisyui/theme" {
+  name: "lightcrowd";
+  color-scheme: light;
+
+  /* Couleur principale - Rose/Magenta doux du design */
+  --color-primary: #FF6B9D;              /* Rose principal */
+  --color-primary-content: #ffffff;
+
+  /* Couleur secondaire - Violet doux */
+  --color-secondary: #9D4EDD;            /* Violet/Lavande */
+  --color-secondary-content: #ffffff;
+
+  /* Couleur accent - Vert (variable Figma) */
+  --color-accent: #39B39A;               /* Vert turquoise */
+  --color-accent-content: #ffffff;
+
+  /* Couleurs de base - Backgrounds très clairs */
+  --color-base-100: #FDFBFF;             /* Background principal - blanc cassé */
+  --color-base-200: #F8F5FF;             /* Background subtle - teinte lavande très légère */
+  --color-base-300: #F0EBFF;             /* Background plus prononcé - lavande pâle */
+  --color-base-content: #1A1A1A;         /* Texte principal - noir doux */
+
+  /* Couleur neutre - utiliser le violet foncé */
+  --color-neutral: #4A1B6F;              /* Violet foncé */
+  --color-neutral-content: #ffffff;
+
+  /* Couleurs utilitaires - harmonisées avec la palette */
+  --color-info: oklch(70% 0.18 240);     /* Bleu lavande */
+  --color-success: oklch(65% 0.20 150);  /* Vert menthe */
+  --color-warning: oklch(75% 0.20 60);   /* Orange pêche */
+  --color-error: oklch(60% 0.25 10);     /* Rouge rose */
+
+  /* Border radius - arrondi moderne et doux */
+  --radius-box: 1.5rem;                  /* 24px - cards plus arrondies */
+  --radius-field: 0.75rem;               /* 12px - inputs arrondis */
+  --radius-selector: 0.75rem;            /* 12px - checkboxes arrondies */
+
+  /* Tailles de base */
+  --size-field: 0.25rem;
+  --size-selector: 0.25rem;
+
+  /* Bordure subtile */
   --border: 1px;
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }

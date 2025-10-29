@@ -14,25 +14,24 @@ import { Routes } from '@angular/router';
  * }
  */
 export const routes: Routes = [
-  // Exemple de routes avec thèmes différents
-  // {
-  //   path: 'home',
-  //   loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
-  //   data: { theme: 'portfolio' }  // Thème portfolio (par défaut)
-  // },
-  // {
-  //   path: 'works',
-  //   loadComponent: () => import('./pages/works/works.component').then(m => m.WorksComponent),
-  //   data: { theme: 'dark' }  // Thème dark pour la page works
-  // },
-  // {
-  //   path: 'about',
-  //   loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent),
-  //   data: { theme: 'portfolio' }  // Même thème que home
-  // },
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full'
-  // }
+  {
+    path: '',
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
+    data: { theme: 'portfolio' }
+  },
+  {
+    path: 'home',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
+  {
+    path: 'get-to-know-me',
+    loadComponent: () => import('./pages/get-to-know-me/get-to-know-me.component').then(m => m.GetToKnowMeComponent),
+    data: { theme: 'portfolio' }
+  },
+  {
+    path: 'lightcrowd',
+    loadComponent: () => import('./pages/lightcrowd-demo/lightcrowd-demo').then(m => m.LightcrowdDemo),
+    data: { theme: 'lightcrowd' }
+  }
 ];

@@ -1,18 +1,18 @@
 <!-- Wrapper avec thème dynamique basé sur la route active -->
 <div class="relative">
 
-  <!-- Header Example -->
-  <header class="sticky top-0 flex items-center justify-between px-16 py-6 border-b border-base-content/10">
-    <p class="logo">NAMEDLY</p>
-    <nav class="flex gap-10">
-      <a class="nav-link">Works</a>
-      <a class="nav-link">Get to know me</a>
-      <a class="nav-link">my resume</a>
+  <!-- Header -->
+  <header class="sticky top-0 bg-base-100 flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-6 border-b border-base-content/10 z-50 gap-4 sm:gap-0">
+    <a routerLink="/" class="logo text-3xl md:text-4xl lg:text-5xl">NAMEDLY</a>
+    <nav class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 items-center w-full sm:w-auto">
+      <a href="#works" class="nav-link">Works</a>
+      <a routerLink="/get-to-know-me" class="nav-link">Get to know me</a>
+      <a href="/resume.pdf" target="_blank" class="nav-link">my resume</a>
     </nav>
   </header>
 
   <!-- Section Example -->
-  <section [attr.data-theme]="themeService.currentTheme()" class="portfolio-container">
+  <article [attr.data-theme]="themeService.currentTheme()" class="portfolio-container">
     <router-outlet />
-  </section>
+  </article>
 </div>

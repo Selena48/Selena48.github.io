@@ -1,0 +1,126 @@
+<!-- Intro Section with About Me -->
+<section class="portfolio-section bg-gradient-to-b from-transparent to-base-200/50">
+  <div class="flex flex-col lg:flex-row gap-10 items-center justify-center w-full max-w-5xl mx-auto">
+    <div class="relative w-full lg:w-1/2 h-64 lg:h-96">
+      <img src="/about-illustration.svg" alt="About illustration" class="w-full h-full object-contain" />
+    </div>
+
+    <div class="portfolio-section w-full lg:w-1/2">
+      <h2 class="heading-2">About me</h2>
+
+      <p class="body-muted">
+        Designer, researcher, and developer at the intersection of human experience and technology
+      </p>
+
+      <p class="body-muted">
+        Currently pursuing a Master's in Experience Design at UTC Compiègne, following a Bachelor's in Multimedia and Internet Professions. My background in cognitive psychology provides a unique lens for understanding user behavior and mental models.
+      </p>
+
+      <!-- Social Links -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="https://www.linkedin.com/in/selena-boullee"
+          target="_blank"
+          class="social-button group"
+        >
+          <div class="bg-primary rounded-lg size-10 flex items-center justify-center shrink-0">
+            <img src="/linkedin-icon-2.svg" alt="LinkedIn" class="size-5" />
+          </div>
+          <span class="link-underlined text-base-content">LinkedIn</span>
+        </a>
+
+        <a
+          href="mailto:selena.boullee@gmail.com"
+          class="social-button group"
+        >
+          <div class="size-10 flex items-center justify-center shrink-0">
+            <img src="/email-icon-2.svg" alt="Email" class="size-10" />
+          </div>
+          <span class="link-underlined text-base-content break-all sm:break-normal">selena.boullee&#64;gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UX Philosophy Section -->
+<div class="portfolio-section">
+  <h2 class="heading-1">My UX Philosophy</h2>
+
+  <p class="quote">
+    "Why create something beautiful if users are lost or frustrated?"
+  </p>
+
+  <p class="body-muted">
+    This question guides everything I do. I believe design must prioritize clarity over trends, because being useful will always be more impactful than being fashionable. The best experiences are the ones that feel effortless — where users accomplish their goals without noticing the interface.
+  </p>
+</div>
+
+<!-- My Approach Section -->
+<section class="portfolio-section portfolio-section">
+  <div class="portfolio-section-header">
+    <h3 class="heading-1">My Approach</h3>
+  </div>
+
+  <ul class="portfolio-grid-2 gap-6 md:gap-8">
+    @for (approach of approaches; track approach.title) {
+      <li class="portfolio-card flex flex-col gap-6 md:gap-8">
+        <div class="flex gap-4 items-center">
+          <span class="text-4xl md:text-5xl">{{ approach.emoji }}</span>
+          <h5 class="heading-4">
+            {{ approach.title }}
+          </h5>
+        </div>
+
+        <p class="body-large">
+          {{ approach.description }}
+        </p>
+      </li>
+    }
+  </ul>
+</section>
+
+<!-- Current Explorations Section -->
+<section class="portfolio-section flex flex-col lg:flex-row gap-8 lg:gap-12">
+  <div class="lg:w-1/2">
+    <div class="portfolio-section-header">
+      <h3 class="heading-1">Current Explorations</h3>
+    </div>
+    <p class="body-muted">
+      Ideas and frameworks shaping my approach to UX design
+    </p>
+  </div>
+
+  <ul class="lg:w-1/2">
+    @for (exploration of explorations; track exploration.title) {
+      <li class="portfolio-card-accent" [style.background-color]="exploration.bgColor">
+        <div class="flex gap-3 items-center">
+          <h5 class="heading-5">
+            {{ exploration.title }}
+          </h5>
+        </div>
+
+        <p class="body-muted">
+          {{ exploration.description }}
+        </p>
+      </li>
+    }
+  </ul>
+</section>
+
+<!-- Expertise Section -->
+<section class="portfolio-section portfolio-section max-w-6xl mx-auto">
+  <div class="portfolio-section-header">
+    <h3 class="heading-1">Expertise I bring</h3>
+  </div>
+
+  <div class="bg-primary rounded-3xl p-8 md:p-12 lg:p-15 flex items-center justify-center">
+    <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 w-full">
+      @for (skill of expertise; track skill) {
+        <li class="glass-card flex items-center justify-center min-h-[6rem]">
+          <p class="expertise-text text-sm md:text-base lg:text-xl">{{ skill }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
