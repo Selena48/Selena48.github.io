@@ -1,1 +1,301 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+/* Configuration des tailles de texte personnalisées basées sur la maquette Figma */
+@theme {
+  /* Font sizes - Basé sur la maquette Portfolio (base: 16px = 1rem) */
+  --font-size-xs: 0.849375rem;    /* 13.59px - Links, small text */
+  --font-size-sm: 0.875rem;       /* 14px - Caption text */
+  --font-size-base: 1rem;         /* 16px - Body, nav links */
+  --font-size-lg: 1.125rem;       /* 18px - Body large, body muted */
+  --font-size-xl: 1.25rem;        /* 20px - Expertise text */
+  --font-size-2xl: 1.5rem;        /* 24px - H4, H5, Quote */
+  --font-size-3xl: 2.25rem;       /* 36px - H2 */
+  --font-size-4xl: 3rem;          /* 48px - H1, H3 */
+  --font-size-5xl: 3.5rem;        /* 56px - Logo */
+}
+
+/* Configuration DaisyUI */
+@plugin "daisyui" {
+  /* Thèmes disponibles avec leurs flags */
+  themes: portfolio --default, mytheme, ocean;
+
+  /* Désactiver TOUS les composants DaisyUI */
+  /* On garde uniquement le système de thèmes avec les variables CSS */
+  exclude: accordion, alert, artboard, avatar, badge, bottom-navigation, breadcrumbs,
+           button, card, carousel, chat, checkbox, collapse, countdown, diff, divider,
+           drawer, dropdown, file-input, footer, hero, indicator, input, join, kbd,
+           link, loading, mask, menu, modal, navbar, pagination, progress, radial-progress,
+           radio, range, rating, select, skeleton, stack, stat, steps, swap, tab, table,
+           textarea, theme-controller, timeline, toast, toggle, tooltip;
+
+  /* Afficher les logs lors de la compilation */
+  logs: true;
+}
+
+/* ========================================
+   Thèmes Custom - Exemples
+   ======================================== */
+
+/* ========================================
+   Thème Portfolio - Pages Home & Get To Know Me
+   ======================================== */
+@plugin "daisyui/theme" {
+  name: "portfolio";
+  color-scheme: light;
+  default: true;
+
+  /* Couleur principale - Turquoise/Teal du design */
+  --color-primary: #278e90;
+  --color-primary-content: #ffffff;
+
+  /* Couleurs de base - Backgrounds blancs */
+  --color-base-100: #ffffff;           /* Background principal */
+  --color-base-200: #fafbfc;           /* Background subtle */
+  --color-base-300: #f0f0f0;           /* Background plus sombre */
+  --color-base-content: #242424;       /* Texte principal */
+
+  /* Couleurs sémantiques */
+  --color-secondary: #2d8fcc;          /* Bleu accent */
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #a50009;             /* Rouge accent */
+  --color-accent-content: #ffffff;
+
+  --color-neutral: #000000;
+  --color-neutral-content: #ffffff;
+
+  /* Couleurs utilitaires - garder les valeurs par défaut DaisyUI */
+  --color-info: oklch(70% 0.2 220);
+  --color-success: oklch(65% 0.25 140);
+  --color-warning: oklch(80% 0.25 80);
+  --color-error: oklch(65% 0.3 30);
+
+  /* Border radius - arrondi des éléments */
+  --radius-box: 1rem;                   /* 16px pour cards */
+  --radius-field: 0.5rem;               /* 8px pour inputs */
+  --radius-selector: 0.5rem;            /* 8px pour checkboxes */
+
+  /* Tailles de base */
+  --size-field: 0.25rem;
+  --size-selector: 0.25rem;
+
+  /* Bordure fine et subtle */
+  --border: 1px;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Exemple 2 : Nouveau thème 'mytheme' avec quelques variables custom */
+/* Les variables non définies prendront les valeurs par défaut DaisyUI */
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  color-scheme: light;
+
+  /* Définir seulement ce qu'on veut changer */
+  --color-primary: oklch(65% 0.30 30);        /* Rouge orangé */
+  --color-secondary: oklch(60% 0.25 280);     /* Violet */
+  --color-accent: oklch(70% 0.25 140);        /* Vert */
+
+  /* Ajuster les radius si besoin */
+  --radius-box: 1rem;
+  --radius-field: 0.5rem;
+}
+
+/* Exemple 3 : Thème 'ocean' - palette marine */
+@plugin "daisyui/theme" {
+  name: "ocean";
+  color-scheme: light;
+
+  /* Couleurs marines */
+  --color-primary: oklch(50% 0.20 220);       /* Bleu océan */
+  --color-secondary: oklch(65% 0.18 200);     /* Bleu ciel */
+  --color-accent: oklch(70% 0.22 180);        /* Turquoise */
+
+  /* Bases légèrement teintées */
+  --color-base-100: oklch(98% 0.01 220);
+  --color-base-200: oklch(95% 0.02 220);
+  --color-base-300: oklch(92% 0.03 220);
+}
+
+/* ========================================
+   Composants CSS de base - Portfolio
+   Inspiré de la maquette Figma
+   ======================================== */
+
+html{
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ─────────────────────────────────────
+   TYPOGRAPHIE - Header Logo
+   ───────────────────────────────────── */
+
+/* Logo dans le header (ex: "NAMEDLY") */
+.logo {
+  @apply font-black text-5xl leading-[1.1] tracking-[-0.105rem] text-base-content;
+}
+
+/* ─────────────────────────────────────
+   TYPOGRAPHIE - Titres
+   ───────────────────────────────────── */
+
+/* H1 - Titre principal de page (ex: "My UX Philosophy") */
+.heading-1 {
+  @apply font-bold text-4xl leading-[1.2] tracking-[-0.06rem] text-base-content;
+}
+
+/* H2 - Sections principales (ex: "About me") */
+.heading-2 {
+  @apply font-bold text-3xl leading-[1.2] tracking-[-0.045rem] text-base-content;
+}
+
+/* H3 - Sous-sections (ex: "Expertise I bring") */
+.heading-3 {
+  @apply font-bold text-4xl leading-normal tracking-[0] text-base-content;
+}
+
+/* H4 - Titres de cartes */
+.heading-4 {
+  @apply font-semibold text-2xl leading-[1.5] tracking-[-0.0075rem] text-base-content;
+}
+
+/* H5 - Petits titres (ex: "Behavior design") */
+.heading-5 {
+  @apply font-semibold text-2xl leading-none tracking-[-0.0225rem] text-base-content;
+}
+
+/* ─────────────────────────────────────
+   TYPOGRAPHIE - Corps de texte
+   ───────────────────────────────────── */
+
+/* Body Large - Texte principal (18px) */
+.body-large {
+  @apply font-medium text-lg leading-[1.45] tracking-[-0.005625rem] text-base-content;
+}
+
+/* Body - Texte standard (16px) */
+.body {
+  @apply font-medium text-base leading-[1.45] tracking-[-0.005rem] text-base-content;
+}
+
+/* Body Muted - Texte secondaire */
+.body-muted {
+  @apply font-medium text-lg leading-[1.45] tracking-[-0.005625rem] text-base-content/55;
+}
+
+/* Caption - Petits textes */
+.caption {
+  @apply font-medium text-sm leading-[1.5] tracking-[-0.004375rem] text-base-content/55;
+}
+
+/* Quote - Citations (couleur primary) */
+.quote {
+  @apply font-semibold text-2xl leading-[1.45] tracking-[-0.0075rem] text-primary;
+}
+
+/* ─────────────────────────────────────
+   LIENS
+   ───────────────────────────────────── */
+
+/* Lien de navigation - header */
+.nav-link {
+  @apply font-medium text-base leading-[1.45] tracking-[-0.005rem] text-base-content capitalize cursor-pointer;
+  @apply transition-colors hover:text-primary;
+}
+
+/* Lien souligné */
+.link-underlined {
+  @apply font-semibold text-xs leading-[1.5] tracking-[-0.00425rem] underline decoration-solid cursor-pointer;
+  @apply transition-colors hover:text-primary;
+}
+
+/* ─────────────────────────────────────
+   CARTES & CONTAINERS
+   ───────────────────────────────────── */
+
+/* Card - Carte standard avec bordure */
+.portfolio-card {
+  @apply bg-base-100 border border-base-content/10 rounded-2xl p-[2rem];
+  @apply transition-shadow hover:shadow-lg;
+}
+
+/* Card sans bordure - background subtle */
+.portfolio-card-subtle {
+  @apply bg-base-200 rounded-2xl p-[2rem];
+}
+
+/* Card colorée avec background accent */
+.portfolio-card-accent {
+  @apply rounded-2xl p-[1.5rem];
+  @apply bg-secondary/5;
+}
+
+/* Card colorée rouge */
+.portfolio-card-accent-red {
+  @apply rounded-2xl p-[1.5rem];
+  @apply bg-accent/5;
+}
+
+/* Glassmorphism - Pour la section "Expertise" */
+.glass-card {
+  @apply backdrop-blur-[0.31rem] backdrop-filter bg-[rgba(240,226,255,0.05)] border-[0.1128rem] border-[rgba(255,255,255,0.4)] border-solid rounded-[1.4886rem] p-[2.4809rem];
+}
+
+/* ─────────────────────────────────────
+   SECTIONS & LAYOUT
+   ───────────────────────────────────── */
+
+/* Container principal */
+.portfolio-container {
+  @apply px-[7.5rem] py-[3.75rem];
+}
+
+/* Section avec espacement */
+.portfolio-section {
+  @apply w-full flex flex-col gap-[1.5rem];
+}
+
+/* Header de section */
+.portfolio-section-header {
+  @apply w-full flex flex-col gap-[1rem];
+}
+
+/* Grid de cartes - 2 colonnes */
+.portfolio-grid-2 {
+  @apply grid grid-cols-2 gap-[2rem];
+}
+
+/* Grid de cartes - 4 colonnes */
+.portfolio-grid-4 {
+  @apply grid grid-cols-4 gap-[1.1277rem];
+}
+
+/* ─────────────────────────────────────
+   BOUTONS & INTERACTIFS
+   ───────────────────────────────────── */
+
+/* Bouton avec icône sociale */
+.social-button {
+  @apply bg-base-100 flex items-center gap-[14px] px-[14px] py-[7px] rounded-lg;
+  @apply shadow-[0px_1px_3px_0px_rgba(0,0,0,0.25)];
+  @apply transition-transform hover:scale-105;
+}
+
+/* ─────────────────────────────────────
+   UTILITAIRES SPÉCIFIQUES
+   ───────────────────────────────────── */
+
+/* Badge/Tag avec icône */
+.expertise-badge {
+  @apply flex flex-col items-center gap-[1.1277rem] text-center;
+}
+
+/* Texte dans expertise badge */
+.expertise-text {
+  @apply font-bold text-xl leading-normal text-white text-center;
+}
+
+/* Icon container */
+.icon-wrapper {
+  @apply overflow-hidden shrink-0;
+}
