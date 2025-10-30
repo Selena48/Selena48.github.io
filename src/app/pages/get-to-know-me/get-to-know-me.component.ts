@@ -35,24 +35,39 @@ export class GetToKnowMeComponent {
     {
       title: 'Behavior design',
       description: 'How small changes in design can shape user habits and decisions',
-      bgColor: 'rgba(45,143,204,0.05)'
+      bgColor: 'rgba(45,143,204,0.05)',
+      image: '/assets/4.png',
     },
     {
       title: 'Nudge Theory',
       description: 'Subtle interventions that guide choices without restricting freedom',
-      bgColor: 'rgba(165,0,9,0.05)'
+      bgColor: 'rgba(165,0,9,0.05)',
+      image: '/assets/5.png',
     },
     {
       title: 'Enactive design',
       description: 'Designing for embodied cognition and sensorimotor experience',
-      bgColor: 'rgba(45,143,204,0.05)'
+      bgColor: 'rgba(45,143,204,0.05)',
+      image: '/assets/6.png',
     }
   ];
 
   protected readonly expertise = [
-    'Intent Note', 'Benchmark', 'Data collection', 'Personas',
-    'Empathy maps', 'Experience Vision', 'Content Mapping', 'Flow Diagrams',
-    'Composition Sketches', 'Graphic Mockups', 'Low-Fidelity Prototype', 'Five-Second Test Protocol & Report',
-    'High-Fidelity Prototype', 'User Test Protocol & Report', 'Portfolio Page', 'Presentation Video'
+    { name: 'Intent Note', icon: '/icons/intent-note.svg' },
+    { name: 'Benchmark', icon: '/icons/benchmark.svg' },
+    { name: 'Data collection', icon: '/icons/data-collection.svg' },
+    { name: 'Personas', icon: '/icons/personas.svg' },
+    { name: 'Empathy maps', icon: '/icons/empathy-maps.svg' },
+    { name: 'Experience Vision', icon: '/icons/experience-vision.svg' },
+    { name: 'Content Mapping', icon: '/icons/content-mapping.svg' },
+    { name: 'Flow Diagrams', icon: '/icons/flow-diagrams.svg' },
+    { name: 'Composition Sketches', icon: '/icons/composition-sketches.svg' },
+    { name: 'Graphic Mockups', icon: '/icons/graphic-mockups.svg' },
+    { name: 'Low-Fidelity Prototype', icon: '/icons/low-fidelity-prototype.svg' },
+    { name: 'Five-Second Test Protocol & Report', icon: '/icons/five-second-test.svg' },
+    { name: 'High-Fidelity Prototype', icon: '/icons/high-fidelity-prototype.svg' },
+    { name: 'User Test Protocol & Report', icon: '/icons/user-test-protocol.svg' },
+    { name: 'Portfolio Page', icon: '/icons/portfolio-page.svg' },
+    { name: 'Presentation Video', icon: '/icons/presentation-video.svg' }
   ];
 }

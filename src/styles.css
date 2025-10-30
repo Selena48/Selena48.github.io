@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');@import "tailwindcss";
 
 /* Configuration des tailles de texte personnalisées basées sur la maquette Figma */
 @theme {
@@ -10,8 +9,8 @@
   --font-size-lg: 1.125rem;       /* 18px - Body large, body muted */
   --font-size-xl: 1.25rem;        /* 20px - Expertise text */
   --font-size-2xl: 1.5rem;        /* 24px - H4, H5, Quote */
-  --font-size-3xl: 2.25rem;       /* 36px - H2 */
-  --font-size-4xl: 3rem;          /* 48px - H1, H3 */
+  --font-size-3xl: 2rem;       /* 32px - H3 */
+  --font-size-4xl: 2.625rem;          /* 48px - H2 */
   --font-size-5xl: 3.5rem;        /* 56px - Logo */
 }
 
@@ -175,6 +174,13 @@ html{
   font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+.gloria-hallelujah {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* ─────────────────────────────────────
    TYPOGRAPHIE - Header Logo
    ───────────────────────────────────── */
@@ -190,17 +196,17 @@ html{
 
 /* H1 - Titre principal de page (ex: "My UX Philosophy") */
 .heading-1 {
-  @apply font-bold text-4xl leading-[1.2] tracking-[-0.06rem] text-base-content;
+  @apply font-bold text-5xl leading-[1.2] tracking-[-0.06rem] text-base-content;
 }
 
 /* H2 - Sections principales (ex: "About me") */
 .heading-2 {
-  @apply font-bold text-3xl leading-[1.2] tracking-[-0.045rem] text-base-content;
+  @apply font-bold text-4xl leading-[1.2] tracking-[-0.045rem] text-base-content;
 }
 
 /* H3 - Sous-sections (ex: "Expertise I bring") */
 .heading-3 {
-  @apply font-bold text-4xl leading-normal tracking-[0] text-base-content;
+  @apply font-bold text-3xl leading-normal tracking-[0] text-base-content;
 }
 
 /* H4 - Titres de cartes */
@@ -296,12 +302,12 @@ html{
 
 /* Container principal */
 .portfolio-container {
-  @apply px-[7.5rem] py-[3.75rem];
+  @apply px-4 lg:px-[7.5rem] pb-[5rem];
 }
 
 /* Section avec espacement */
 .portfolio-section {
-  @apply w-full flex flex-col gap-[1.5rem];
+  @apply w-full flex flex-col gap-[1.5rem] pt-[3.75rem] md:pb-[5rem];
 }
 
 /* Header de section */
@@ -347,4 +353,9 @@ html{
 /* Icon container */
 .icon-wrapper {
   @apply overflow-hidden shrink-0;
+}
+
+.portfolio-container[data-theme="portfolio"]{
+  background-image: url("/assets/default-bg.png");
+  background-repeat: no-repeat;
 }

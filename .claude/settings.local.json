@@ -23,7 +23,10 @@
       "Bash(netstat:*)",
       "Bash(taskkill:*)",
       "Bash(ng generate:*)",
-      "mcp__figma-desktop__get_variable_defs"
+      "mcp__figma-desktop__get_variable_defs",
+      "Bash(for:*)",
+      "Bash(do mv \"$f\" \"$f%.png.svg\")",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
