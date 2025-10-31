@@ -106,6 +106,9 @@
   --color-info: rgba(168, 85, 247, 0.2);              /* Rose principal */
   --color-info-content: #D8B4FE;
 
+  --color-error: rgba(239, 68, 68, 0.2);
+  --color-error-content: #F87171;
+
   /* Couleurs de base - Backgrounds très clairs */
   --color-base-100: #FDFEFF;             /* Background principal - blanc cassé */
   --color-base-200: #F9F6FF;             /* Background subtle - teinte lavande très légère */
@@ -169,7 +172,7 @@ html{
 
 /* H5 - Petits titres (ex: "Behavior design") */
 .heading-5 {
-  @apply font-semibold text-2xl tracking-[-0.0225rem];
+  @apply font-semibold text-xl tracking-[-0.0225rem];
 }
 
 /* ─────────────────────────────────────
@@ -203,7 +206,10 @@ html{
 }
 
 .muted{
-  @apply opacity-55;
+  @apply text-black/55;
+}
+.hero .muted{
+  @apply text-white/55;
 }
 
 /* ─────────────────────────────────────
@@ -281,7 +287,7 @@ html{
   @apply pb-14 md:px-12;
 }
 
-.hero, .hero .heading-1, .hero .heading-2, .hero .heading-3, .hero .heading-4, .hero .heading-5, .hero .body, .hero .body-large, .hero .body-muted, .hero .caption, .hero .quote {
+.hero, .hero .heading-1, .hero .heading-2, .hero .heading-3, .hero .heading-4, .hero .heading-5, .hero .body, .hero .body-large, .hero .body-muted, .hero .quote {
   @apply text-white
 }
 .hero .p{
@@ -321,17 +327,17 @@ html{
   @apply overflow-hidden shrink-0;
 }
 
-.portfolio-container[data-theme="portfolio"]{
+article[data-theme="portfolio"]{
   background-image: url("/assets/default-bg.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
 .alert{
-  @apply border-2;
+  @apply border-2 rounded-lg;
 }
 .alert-sm{
-  @apply py-0.5 px-2;
+  @apply py-0.5 px-2 rounded-full;
 }
 
 .btn{
@@ -347,4 +353,20 @@ html{
   width: 1rem;
   height: 1rem;
   margin-left: 0.5rem;
+}
+
+.btn.out::after{
+  content: "";
+  background-image: url("/assets/open_in_new.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
+ul{
+  @apply list-disc list-inside;
 }

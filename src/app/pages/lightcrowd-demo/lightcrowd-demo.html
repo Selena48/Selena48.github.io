@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="portefolio-header">
+<section class="portefolio-header pt-5">
   <app-hero-lightcrowd [hostClasses]="'rounded'">
     <div class="flex flex-col items-center text-center gap-6 pt-40 pb-20">
       <!-- Tag overlay -->
@@ -263,7 +263,7 @@
       Following our initial ideation phase, we used our journey maps to create a storyboard depicting the concert experience, now enhanced with our proposed concept. By building on the key opportunities and interactions identified in the user journeys, the storyboard allowed us to visualize how the idea could improve the experience. This scenario featuring our two personas then served as the basis for our 5-second tests, assessing users' understanding, interest, and feedback on the concept.The goal was to explore participants' understanding of the device, its perceived personal and collective value, potential limitations, and possible improvements. Overall, participants grasped the concept and found it reassuring. Some concerns did arise, however: would the light remain visible amid the chaos of a concert? Would others respond to the signal? Could the system be misused?
     </p>
 
-    <img src="/assets/Slide%2016_9%20-%2042%201.png" alt="Storyboard" class="w-full mb-8" />
+    <img src="/assets/Slide 16_9 - 42 1.png" alt="Storyboard" class="w-full mb-8" />
   </section>
 
   <!-- Aesthetic & Accessibility Section -->
@@ -273,28 +273,35 @@
     <div class="mb-16">
       <h3 class="heading-3 mb-8">Aesthetic</h3>
       <p class="muted">
-        The visual identity draws inspiration from pop-rock concert culture, combining deep purples and luminous tones.  Purple — a color of creativity and transition — evokes both artistic energy (from Monet to Hendrix) and calmness, often used in sensory environments to soothe neurodivergent audiences. LightCrowd's small luminous mascots personify this vision: anonymous, soft-edged shapes symbolizing mass collectivity, whose light reflects individual presence within the crowd — an echo of what the bracelet itself achieves.
+        The visual identity draws inspiration from pop-rock concert culture, combining deep purples and luminous tones.<br>
+        Purple — a color of creativity and transition — evokes both artistic energy (from Monet to Hendrix) and calmness, often used in sensory environments to soothe neurodivergent audiences.<br>
+        LightCrowd's small luminous mascots personify this vision: anonymous, soft-edged shapes symbolizing mass collectivity, whose light reflects individual presence within the crowd — an echo of what the bracelet itself achieves.
       </p>
     </div>
 
     <div class="mb-8">
       <h3 class="heading-3 mb-8">Accessibility</h3>
-      <p class="muted">
-        The red signal is reserved exclusively for emergencies to minimize cognitive load. Animated light motion supports color-blind users by reinforcing meaning through movement. Tactile feedback (two distinct vibrations: activation and confirmation) ensures usability under stress or in total darkness. The bracelet design enables operation with one hand, requiring no smartphone during critical moments. For users unable to raise their arms, proximity vibrations strengthen the sense of group connection, acting as a tactile compass paired with app-based geolocation.
-      </p>
+      <ul class="muted">
+        <li>The red signal is reserved exclusively for emergencies to minimize cognitive load.</li>
+        <li>Animated light motion supports color-blind users by reinforcing meaning through movement.</li>
+        <li>Tactile feedback (two distinct vibrations: activation and confirmation) ensures usability under stress or in total darkness.</li>
+        <li>The bracelet design enables operation with one hand, requiring no smartphone during critical moments.</li>
+        <li>For users unable to raise their arms, proximity vibrations strengthen the sense of group connection, acting as a tactile compass paired with app-based geolocation.</li>
+      </ul>
     </div>
 
-    <p class="muted italic">
+    <p class="caption">
       Design is never neutral. Every technical choice carries political and ethical weight. In trying to 'save' people, we risk surveilling, controlling, or creating new forms of exclusion
     </p>
   </section>
-
+</div>
   <!-- The Solution – LightCrowd Section -->
-  <section>
+<app-hero-lightcrowd>
+  <div class="portfolio-container">
     <h2 class="heading-2 mb-16 mt-32">The Solution – LightCrowd</h2>
 
     <div class="mb-12">
-      <h3 class="heading-3 mb-8">Overview</h3>
+      <h3 class="heading-3">Overview</h3>
       <p class="muted">
         LightCrowd is a wearable device—either a bracelet or a badge—connected to a mobile app. It enables instant, non-verbal communication in dense crowds, enhancing safety, coordination, and emotional expression.
       </p>
@@ -304,8 +311,8 @@
       <h3 class="heading-3 mb-8">Key Features</h3>
 
       <!-- Emergency Signal -->
-      <div class="grid grid-cols-2 gap-16 mb-16">
-        <div>
+      <div class="flex gap-16 mb-16">
+        <div class="flex flex-col justify-center w-2/3">
           <div class="flex items-start gap-3 mb-6">
             <span class="text-2xl">🚨</span>
             <h4 class="heading-4">Emergency Signal</h4>
@@ -313,31 +320,34 @@
           <p class="muted mb-6">
             A long press activates a red pulsating light, designed to be visible even in chaotic environments. Nearby users receive subtle vibrations and visual cues, helping them locate and assist the person in need.
           </p>
-          <div class="portfolio-card-subtle inline-block">
-            <p class="text-sm">Strong → 2-sec press</p>
+          <div class="flex">
+            <div class="alert alert-error">
+              <p class="text-sm"><b>2-sec press</b> with feedback → Red light → Collective vibrations</p>
+            </div>
           </div>
+
         </div>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-end items-center">
           <!-- Hand illustration placeholder -->
-          <div class="w-full h-64 bg-base-200 rounded flex items-center justify-center">
-            <span class="text-base-content/50">Hand with bracelet illustration</span>
+          <div class="w-full h-64 rounded flex items-center justify-center">
+            <img src="/assets/Frame 40138.png" alt="Hand illustration" class="w-full h-full object-contain"/>
           </div>
         </div>
       </div>
 
-      <p class="muted italic mb-16">
+      <p class="caption mb-12">
         If we anticipate catachresis, we must also accept its risks: what if the emergency signal becomes a game or spectacle? How can we keep the red light credible without being authoritarian?
       </p>
 
       <!-- Group Reconnection -->
-      <div class="grid grid-cols-2 gap-16 mb-12">
-        <div class="flex justify-center items-center">
+      <div class="flex gap-16 mb-12">
+        <div class="flex justify-start items-center">
           <!-- Group illustration placeholder -->
-          <div class="w-full h-64 bg-base-200 rounded flex items-center justify-center">
-            <span class="text-base-content/50">Group reconnection illustration</span>
+          <div class="h-64 rounded flex items-center justify-start">
+            <img src="/assets/Frame 40138(1).png" alt="Hand illustration" class="h-full object-contain"/>
           </div>
         </div>
-        <div>
+        <div class="w-2/3 flex flex-col justify-center">
           <div class="flex items-start gap-3 mb-6">
             <span class="text-2xl">👥</span>
             <h4 class="heading-4">Group Reconnection</h4>
@@ -345,38 +355,32 @@
           <p class="muted mb-6">
             Groups choose a unique light color. If separated, users can trigger this color to flash on their group members' devices, guiding everyone back together through visual signals and haptic feedback.
           </p>
-          <div class="portfolio-card-subtle inline-block">
-            <p class="text-sm">Strong → Quick tap</p>
+          <div class="flex">
+            <div class="alert alert-info">
+              <p class="text-sm"><b>Quick tap on the app</b> → Group color flash → Visual location</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- How It Works -->
-    <div class="grid grid-cols-2 gap-16">
-      <div>
+    <div class="flex gap-16">
+      <div class="flex flex-col justify-center w-2/3">
         <h3 class="heading-3 mb-8">How It Works</h3>
         <p class="muted mb-8">
           The LightCrowd bracelet is designed for intuitive use under stress. In emergencies, a long press triggers alert mode with a red animated light, signaling urgency and mimicking the crowd parting to clear a path. Before an event, the mobile app allows users to view the venue map, locate exits, and check crowd density, ensuring safe navigation. For post-event or non-urgent situations, the group mode helps users reconnect. Each group selects a unique color during setup. If someone is separated, activating this color flashes the other members' bracelets and provides haptic feedback as a tactile guide, making it easy to reunite with the group.
         </p>
 
         <div class="flex gap-4">
-          <div class="portfolio-card-subtle flex-1">
-            <p class="font-bold mb-2">Case study</p>
-            <a href="#" class="link link-accent flex items-center gap-2">
-              View case study
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-              </svg>
+          <div>
+            <a href="#" class="btn out">
+              Presentation Video
             </a>
           </div>
-          <div class="portfolio-card-subtle flex-1">
-            <p class="font-bold mb-2">Prototype</p>
-            <a href="#" class="link link-accent flex items-center gap-2">
-              Try it
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-              </svg>
+          <div>
+            <a href="#" class="btn out flex items-center gap-2">
+              Demo App
             </a>
           </div>
         </div>
@@ -384,13 +388,16 @@
 
       <div class="flex justify-center items-center">
         <!-- Phone mockup placeholder -->
-        <div class="w-full h-96 bg-base-200 rounded flex items-center justify-center">
-          <span class="text-base-content/50">Phone mockup with hand</span>
+        <div class="w-full h-96 rounded flex items-center justify-center">
+          <img src="/assets/Frame 40191.png" class="object-contain">
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
+  </app-hero-lightcrowd>
+
+<div class="prose portfolio-container">
   <!-- Adoption & Implementation Strategy Section -->
   <section>
     <h2 class="heading-2 mb-12 mt-32">Adoption & Implementation Strategy</h2>
@@ -400,12 +407,14 @@
     </p>
 
     <div class="flex justify-center gap-6">
-      <div class="portfolio-card-subtle flex-1 max-w-xs">
-        <div class="w-20 h-20 rounded-full bg-accent-content/10 flex items-center justify-center mx-auto mb-6">
-          <span class="text-2xl font-bold text-accent-content">01</span>
+      <div class="flex-1 max-w-xs">
+        <div class="w-20 h-20 rounded-full  flex items-center justify-center mx-auto mb-6"
+             style="background: linear-gradient(28deg, var(--color-secondary-content) 32.27%, var(--color-primary-content) 340.79%);"
+        >
+          <span class="text-2xl font-bold text-white">01</span>
         </div>
         <div class="portfolio-card-subtle">
-          <h4 class="heading-5 mb-3">Before the event</h4>
+          <h4 class="heading-5 mb-3 text-center">Before the event</h4>
           <p class="muted text-sm">
             Information via tickets, confirmation emails, and social media
           </p>
@@ -413,17 +422,20 @@
       </div>
 
       <div class="flex items-center">
-        <svg class="w-6 h-6 text-base-content/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19" stroke="#4B3883" stroke-width="2"/>
+          <path d="M12 5L19 12L12 19" stroke="#4B3883" stroke-width="2"/>
         </svg>
       </div>
 
-      <div class="portfolio-card-subtle flex-1 max-w-xs">
-        <div class="w-20 h-20 rounded-full bg-accent-content/10 flex items-center justify-center mx-auto mb-6">
-          <span class="text-2xl font-bold text-accent-content">02</span>
+      <div class="flex-1 max-w-xs">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+             style="background: linear-gradient(104deg, var(--color-secondary-content) 0%, var(--color-primary-content) 100%);"
+        >
+          <span class="text-2xl font-bold text-white">02</span>
         </div>
         <div class="portfolio-card-subtle">
-          <h4 class="heading-5 mb-3">At the venue</h4>
+          <h4 class="heading-5 mb-3 text-center">At the venue</h4>
           <p class="muted text-sm">
             Signage and a staffed rental booth for setup assistance and questions
           </p>
@@ -431,17 +443,20 @@
       </div>
 
       <div class="flex items-center">
-        <svg class="w-6 h-6 text-base-content/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12H19" stroke="#4B3883" stroke-width="2"/>
+          <path d="M12 5L19 12L12 19" stroke="#4B3883" stroke-width="2"/>
         </svg>
       </div>
 
-      <div class="portfolio-card-subtle flex-1 max-w-xs">
-        <div class="w-20 h-20 rounded-full bg-accent-content/10 flex items-center justify-center mx-auto mb-6">
-          <span class="text-2xl font-bold text-accent-content">03</span>
+      <div class="flex-1 max-w-xs">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+             style="background: linear-gradient(28deg, var(--color-secondary-content) -235.56%, var(--color-primary-content) 67.45%);"
+        >
+          <span class="text-2xl font-bold text-white">03</span>
         </div>
         <div class="portfolio-card-subtle">
-          <h4 class="heading-5 mb-3">During the concert</h4>
+          <h4 class="heading-5 mb-3 text-center">During the concert</h4>
           <p class="muted text-sm">
             Pre-show announcements reminding all attendees of the alert signal
           </p>
@@ -452,24 +467,28 @@
 
   <!-- Prototyping & Testing Section -->
   <section>
-    <h2 class="heading-2 mb-12 mt-32">Prototyping & Testing</h2>
+    <h2 class="heading-2 mb-12">Prototyping & Testing</h2>
 
     <p class="muted mb-8">
-      Our testing protocol aimed to evaluate how users could intuitively reconnect with friends in a crowded, noisy context — such as a concert. Rather than measuring success only through performance metrics, we focused on user experience quality and perceived immersion. To capture insights systematically, we used a Rainbow Sheet to document and visualize feedback across participants.
+      Our testing protocol aimed to evaluate how users could intuitively reconnect with friends in a crowded, noisy context — such as a concert. Rather than measuring success only through performance metrics, we focused on user experience quality and perceived immersion.<br>
+      To capture insights systematically, we used a <span style="background: linear-gradient(90deg, rgba(255, 63, 73, 0.80) 33.17%, rgba(251, 107, 46, 0.80) 36.06%, rgba(255, 229, 124, 0.80) 38.94%, rgba(151, 210, 126, 0.80) 41.83%, rgba(62, 191, 206, 0.80) 45.19%, rgba(75, 56, 131, 0.80) 49.04%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent">Rainbow Sheet</span> to document and visualize feedback across participants.
     </p>
 
     <div class="grid grid-cols-2 gap-16 mb-12">
       <div>
-        <p class="muted mb-4">This allowed us to:</p>
-        <ul class="list-disc list-inside muted space-y-2">
+        <p class="text-accent">This allowed us to:</p>
+        <ul class="list-disc list-inside muted">
           <li>Identify recurring usability issues and positive reactions.</li>
           <li>Categorize findings by severity and theme (affordance, clarity, feedback, immersion).</li>
           <li>Track which design hypotheses were confirmed or invalidated.</li>
         </ul>
       </div>
       <div>
-        <p class="muted mb-4">The protocol included:</p>
-        <ul class="list-disc list-inside muted space-y-2">
+        <p class="text-accent">The protocol included:</p>
+        <ul class="list-disc list-inside muted">
           <li>Individual 20-minute sessions.</li>
           <li>Observation of natural behavior during the simulation.</li>
           <li>Post-test semi-structured interviews.</li>
@@ -479,27 +498,30 @@
     </div>
 
     <!-- Test 2 -->
-    <div class="grid grid-cols-2 gap-8 mb-12">
-      <div class="portfolio-card-subtle">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-16 h-16 rounded-full bg-accent-content/10 flex items-center justify-center flex-shrink-0">
-            <span class="text-xl font-bold">2</span>
+    <div class="flex gap-8 mb-12">
+      <div class="portfolio-card-subtle md:w-2/3">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 rounded-full bg-base-300 flex items-center justify-center flex-shrink-0">
+            <span class="text-xl text-white font-bold">2</span>
           </div>
           <div>
-            <p class="text-xs font-bold mb-1">Test 2</p>
+            <p class="text-xs font-bold text-base-300">Test 2</p>
             <p class="heading-5">Concert simulation</p>
           </div>
         </div>
-        <p class="muted mb-6">
+        <p class="mb-6">
           Our first setup was a computer-based simulation: users followed written instructions and interacted with a paper bracelet simulating the device.
         </p>
-        <p class="muted">
-          → Findings: Participants often missed written cues. Switching between screen and real space broke immersion. The experience felt too artificial to gather meaningful feedback.
-        </p>
+        <div class="text-base-300 font-semibold">
+          <p>→ Findings:</p>
+          <ul>
+            <li>Participants often missed written cues.</li>
+            <li>Switching between screen and real space broke immersion.</li>
+            <li>The experience felt too artificial to gather meaningful feedback.</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <img src="/assets/image%2010.png" alt="Test 2 setup" class="w-full h-full object-cover rounded" />
-      </div>
+      <img class="h-full object-contain" src="/assets/image 10.png" alt="Test 2 Illustration"/>
     </div>
 
     <!-- Adjustments -->
@@ -509,33 +531,42 @@
         <p class="muted">
           We found three main biases in the first test: too much reading, an unrealistic environment, and abstract interactions. To correct them, we created a more authentic setup — dim lighting, concert sound and visuals, a mobile-based simulation with oral guidance, and contextual details like fake tickets and a bracelet rental to enhance immersion.
         </p>
-        <p class="muted">
-          → To fix this, we moved to a more realistic setup: Dim lighting, music, and visual ambiance. Simulation on a mobile phone instead of a computer. Oral guidance instead of written text. Fake concert tickets and bracelet rental to create a narrative.
-        </p>
+        <div class="text-base-300">
+          <p class="font-semibold">→ To fix this, we moved to a more realistic setup:</p>
+          <ul>
+            <li>Dim lighting, music, and visual ambiance.</li>
+            <li>Simulation on a mobile phone instead of a computer.</li>
+            <li>Oral guidance instead of written text.</li>
+            <li>Fake concert tickets and bracelet rental to create a narrative.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- Test 3 -->
-    <div class="grid grid-cols-2 gap-8">
-      <div>
-        <img src="/assets/image%2010.png" alt="Test 3 setup" class="w-full h-full object-cover rounded" />
-      </div>
-      <div class="portfolio-card-subtle">
-        <div class="flex items-start gap-4 mb-6">
-          <div class="w-16 h-16 rounded-full bg-accent-content/10 flex items-center justify-center flex-shrink-0">
-            <span class="text-xl font-bold">3</span>
+    <div class="flex justify-end gap-8">
+      <img class="h-full object-contain" src="/assets/image 10(1).png" alt="Test 3 Illustration"/>
+      <div class="portfolio-card-subtle md:w-2/3">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 rounded-full bg-base-300 flex items-center justify-center flex-shrink-0">
+            <span class="text-xl font-bold text-white">3</span>
           </div>
           <div>
-            <p class="text-xs font-bold mb-1">Test 3</p>
+            <p class="text-xs font-bold text-base-300">Test 3</p>
             <p class="heading-5">Concert simulation</p>
           </div>
         </div>
-        <p class="muted mb-6">
+        <p class="mb-6">
           The new setup made the experience far more natural. Participants stayed immersed, reacted intuitively, and provided richer, more emotional feedback. They could imagine using LightCrowd for real.
         </p>
-        <p class="muted">
-          → Findings: Removing sign-up steps improved engagement. The "Join your friends" button lacked affordance — we plan to use more intuitive icons (e.g. raised hand, group). Long-distance feedback needs reinforcement; a directional compass system will be tested next.
-        </p>
+        <div class="text-base-300">
+          <p>→ Findings:</p>
+          <ul>
+            <li>Removing sign-up steps improved engagement.</li>
+            <li>The "Join your friends" button lacked affordance — we plan to use more intuitive icons (e.g. raised hand, group).</li>
+            <li>Long-distance feedback needs reinforcement; a directional compass system will be tested next.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
