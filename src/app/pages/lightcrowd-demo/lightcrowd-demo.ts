@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {HeroComponent} from '../../components/hero/hero.component';
 import {HeroLightcrowdComponent} from '../../components/hero/variants/hero-lightcrowd.component';
+import {ExpertiseService} from '../../services/expertise-service';
+import {ExpertiseCard} from '../../components/expertise-card/expertise-card';
 
 @Component({
   selector: 'app-lightcrowd-demo',
   imports: [
-    HeroLightcrowdComponent
+    HeroLightcrowdComponent,
+    ExpertiseCard
   ],
   templateUrl: './lightcrowd-demo.html',
   styleUrl: './lightcrowd-demo.css',
@@ -14,5 +17,5 @@ import {HeroLightcrowdComponent} from '../../components/hero/variants/hero-light
   }
 })
 export class LightcrowdDemo {
-
+  protected readonly expertise = inject(ExpertiseService);
 }
