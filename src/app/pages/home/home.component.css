@@ -1,1 +1,11 @@
 /* Styles spécifiques pour la page Home si nécessaire */
+.sel img{
+  @apply transition-transform duration-150;
+}
+
+.sel:hover .img1{
+  @apply scale-115;
+}
+.sel:hover .img2{
+  @apply -rotate-30;
+}

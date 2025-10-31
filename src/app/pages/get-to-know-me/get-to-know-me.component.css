@@ -1,1 +1,14 @@
 /* Get To Know Me component styles */
+.sel img{
+  @apply transition-transform duration-150;
+}
+
+.sel:hover .img1{
+  @apply scale-125;
+}
+.sel:hover .img2{
+  @apply -rotate-30;
+}
+.sel:hover .img3{
+  @apply rotate-35;
+}
