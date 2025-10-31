@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {ExpertiseService} from '../../services/expertise-service';
+import {ExpertiseCard} from '../../components/expertise-card/expertise-card';
+import {HeroPortfolioComponent} from '../../components/hero/variants/hero-portfolio.component';
 
 @Component({
   selector: 'app-get-to-know-me',
-  imports: [CommonModule],
+  imports: [CommonModule, ExpertiseCard, HeroPortfolioComponent],
   templateUrl: './get-to-know-me.component.html',
   styleUrl: './get-to-know-me.component.css'
 })
 export class GetToKnowMeComponent {
+
+  constructor(
+    public expertise: ExpertiseService
+  ) {
+  }
+
   protected readonly approaches = [
     {
       emoji: '🤸‍♀️',
@@ -50,24 +59,5 @@ export class GetToKnowMeComponent {
       bgColor: 'rgba(45,143,204,0.05)',
       image: '/assets/6.png',
     }
-  ];
-
-  protected readonly expertise = [
-    { name: 'Intent Note', icon: '/icons/intent-note.svg' },
-    { name: 'Benchmark', icon: '/icons/benchmark.svg' },
-    { name: 'Data collection', icon: '/icons/data-collection.svg' },
-    { name: 'Personas', icon: '/icons/personas.svg' },
-    { name: 'Empathy maps', icon: '/icons/empathy-maps.svg' },
-    { name: 'Experience Vision', icon: '/icons/experience-vision.svg' },
-    { name: 'Content Mapping', icon: '/icons/content-mapping.svg' },
-    { name: 'Flow Diagrams', icon: '/icons/flow-diagrams.svg' },
-    { name: 'Composition Sketches', icon: '/icons/composition-sketches.svg' },
-    { name: 'Graphic Mockups', icon: '/icons/graphic-mockups.svg' },
-    { name: 'Low-Fidelity Prototype', icon: '/icons/low-fidelity-prototype.svg' },
-    { name: 'Five-Second Test Protocol & Report', icon: '/icons/five-second-test.svg' },
-    { name: 'High-Fidelity Prototype', icon: '/icons/high-fidelity-prototype.svg' },
-    { name: 'User Test Protocol & Report', icon: '/icons/user-test-protocol.svg' },
-    { name: 'Portfolio Page', icon: '/icons/portfolio-page.svg' },
-    { name: 'Presentation Video', icon: '/icons/presentation-video.svg' }
   ];
 }

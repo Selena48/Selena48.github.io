@@ -64,6 +64,46 @@
   <!-- Header -->
   <div class="portfolio-section-header">
     <h3 class="heading-1">Selected Works</h3>
+    <div class="flex flex-col gap-8">
+      <div>
+        <app-hero-lightcrowd [hostClasses]="'rounded'">
+          <div class="flex justify-between gap-8">
+            <div class="p flex flex-col gap-10 w-[55%]">
+              <div class="flex">
+                <div role="alert" class="alert alert-info alert-sm">
+                  <span>UX Research • Product Design • IoT</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="heading-3 leading-none mb-2">LightCrowd : When light<br>
+                  becomes <span class="bg-clip-text text-transparent bg-linear-to-r from-secondary-content to-primary-content">language</span></h3>
+                <p class="body-muted leading-[1.25]">A connected bracelet transforming crowds into supportive communities through universal light signals</p>
+              </div>
+              <div class="flex w-full">
+                <div>
+                  <p class="font-bold">The Challenge</p>
+                  <p class="body-muted text-sm">Anxiety and invisibility in dense crowds at concerts</p>
+                </div>
+                <div class="divider divider-horizontal"></div>
+                <div>
+                  <p class="font-bold">The Impact</p>
+                  <p class="body-muted text-sm">Universal signaling system for distress and group reconnection</p>
+                </div>
+              </div>
+              <div class="flex">
+                <a [routerLink]="'/lightcrowd'" class="btn">
+                  Case study
+                </a>
+              </div>
+            </div>
+            <div class="relative w-[45%]">
+              <img src="/assets/Group_23.png" class="absolute origin-bottom-left bottom-0 scale-110">
+              <img src="/assets/Hand.png" class="absolute bottom-0">
+            </div>
+          </div>
+        </app-hero-lightcrowd>
+      </div>
+    </div>
   </div>
 
 </section>

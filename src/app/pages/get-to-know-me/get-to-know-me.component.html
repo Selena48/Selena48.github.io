@@ -122,14 +122,11 @@
     <h2 class="heading-2">Expertise I bring</h2>
   </div>
 
-  <div class="bg-primary rounded-3xl p-8 md:p-12 lg:p-15 flex items-center justify-center">
-    <ul class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 w-full">
-      @for (skill of expertise; track skill.name) {
-        <li class="glass-card flex flex-col items-center justify-center gap-4 min-h-[12rem] p-6">
-          <img [src]="skill.icon" [alt]="skill.name" class="w-16 h-16 object-contain">
-          <p class="expertise-text text-sm md:text-base lg:text-xl text-center">{{ skill.name }}</p>
-        </li>
+  <app-hero-portfolio [hostClasses]="'rounded'">
+    <div class="p grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 w-full">
+      @for (skill of expertise.getAllExpertiseItems(); track skill.name) {
+        <app-expertise-card [expertise]="skill"></app-expertise-card>
       }
-    </ul>
-  </div>
+    </div>
+  </app-hero-portfolio>
 </section>

@@ -2,20 +2,20 @@ import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 /**
- * Hero pour le thème Portfolio
+ * Hero pour le thème Lightcrowd
  *
  * Design basé sur la maquette Figma "Get To Know Me"
  */
 @Component({
-  selector: 'app-hero-portfolio',
+  selector: 'app-hero-lightcrowd',
   standalone: true,
   imports: [NgClass],
   template: `
-    <div class="hero bg-primary" [ngClass]="hostClasses()">
+    <div data-theme="lightcrowd" class="hero bg-gradient-to-r from-[#1D0E41] to-[#070919]" [ngClass]="hostClasses()">
       <ng-content></ng-content>
     </div>
   `
 })
-export class HeroPortfolioComponent {
+export class HeroLightcrowdComponent {
   hostClasses = input<string | null>(null);
 }

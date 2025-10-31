@@ -1,236 +1,260 @@
 <!-- Hero Section -->
-<section class="portfolio-container">
-  <div class="flex flex-col items-center text-center gap-6 py-40">
-    <!-- Tag overlay -->
-    <div class="inline-flex items-center gap-3 px-4 py-1.5 bg-base-300/50 rounded-lg border border-base-content/10">
-      <span class="caption">UX Research • Product Design • IoT</span>
+<section>
+  <app-hero-lightcrowd [hostClasses]="'rounded'">
+    <div class="flex flex-col items-center text-center gap-6 pt-40 pb-20">
+      <!-- Tag overlay -->
+
+      <div class="alert alert-info alert-sm">
+        <span>UX Research • Product Design • IoT</span>
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="heading-1 leading-[1.1] max-w-4xl">
+        LightCrowd : When light<br> becomes <span class="bg-clip-text text-transparent bg-linear-to-r from-secondary-content to-primary-content">language</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="body-muted">
+        A connected bracelet transforming crowds into supportive communities through<br> universal light signals
+      </p>
+
+      <!-- Scroll indicator (SVG arrow down) -->
+      <div>
+        <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.47314 1.47314L13.9731 13.9731L26.4731 1.47314" class="stroke-base-200" stroke-width="4.16667"/>
+        </svg>
+      </div>
     </div>
-
-    <!-- Main heading -->
-    <h1 class="heading-1 max-w-4xl">
-      LightCrowd : When light becomes language
-    </h1>
-
-    <!-- Subtitle -->
-    <p class="body-large max-w-3xl text-base-content/70">
-      A connected bracelet transforming crowds into supportive communities through universal light signals
-    </p>
-
-    <!-- Scroll indicator (SVG arrow down) -->
-    <div class="mt-6">
-      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M25 35 L25 15 M25 35 L18 28 M25 35 L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-  </div>
+  </app-hero-lightcrowd>
 </section>
 
 <!-- Project Info Row -->
-<section class="w-full bg-base-200 py-15">
-  <div class="portfolio-container">
-    <div class="grid grid-cols-4 gap-8">
-      <div>
-        <h3 class="heading-5 mb-2">ROLE</h3>
-        <p class="body text-base-content/70">UX Designer, Researcher, Prototyper</p>
+<div class="prose">
+  <section>
+      <div class="grid grid-cols-4 gap-8 py-14">
+        <div>
+          <h3 class="heading-5 mb-2">ROLE</h3>
+          <p class="body text-base-content/70">UX Designer, Researcher, Prototyper</p>
+        </div>
+        <div>
+          <h3 class="heading-5 mb-2">TIMELINE</h3>
+          <p class="body text-base-content/70">5 months (Academic Project)<br>Started in february 2025</p>
+        </div>
+        <div>
+          <h3 class="heading-5 mb-2">TEAM</h3>
+          <p class="body text-base-content/70">Group project : Sélèna Boullée, Mia Pellegrini, Lucas Hureaux</p>
+        </div>
+        <div>
+          <h3 class="heading-5 mb-2">TOOLS USED</h3>
+          <p class="body text-base-content/70">FigJam, Notion, Google Sheets, Google Form, Figma</p>
+        </div>
       </div>
+  </section>
+
+  <!-- Understanding the Problem Section -->
+  <section>
+    <div class="grid grid-cols-2 gap-16">
+      <!-- Left column -->
       <div>
-        <h3 class="heading-5 mb-2">TIMELINE</h3>
-        <p class="body text-base-content/70">5 months (Academic Project)<br>Started in february 2025</p>
+        <h2 class="heading-2 mb-4">Understanding the Problem</h2>
+        <p class="muted text-xl mb-6">The crowd paradox : the more we gather, the more alone we feel</p>
+        <p class="caption text-lg">
+          This project was born from a striking personal observation: facing mediatized tragedies (like in Seoul or Houston) and daily concert incidents, it became evident that it was impossible to effectively signal distress."
+        </p>
       </div>
-      <div>
-        <h3 class="heading-5 mb-2">TEAM</h3>
-        <p class="body text-base-content/70">Group project : Sélèna Boullée, Mia Pellegrini, Lucas Hureaux</p>
-      </div>
-      <div>
-        <h3 class="heading-5 mb-2">TOOLS USED</h3>
-        <p class="body text-base-content/70">FigJam, Notion, Google Sheets, Google Form, Figma</p>
+
+      <!-- Right column - Problem cards -->
+      <div class="flex flex-col gap-6">
+        <div class="portfolio-card-subtle">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="text-2xl">⛔</span>
+            <h3 class="heading-5">Can't Extract</h3>
+          </div>
+          <p class="muted">
+            Many don't dare ask for help to exit, fearing being ignored, judged, or physically blocked
+          </p>
+        </div>
+
+        <div class="portfolio-card-subtle">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="text-2xl">📱</span>
+            <h3 class="heading-5">Can't Call</h3>
+          </div>
+          <p class="muted">
+            In a compact crowd, it's often physically impossible to take out a phone to call for help
+          </p>
+        </div>
+
+        <div class="portfolio-card-subtle">
+          <div class="flex items-start gap-3 mb-3">
+            <span class="text-2xl">👥</span>
+            <h3 class="heading-5">Can't Reunite</h3>
+          </div>
+          <p class="muted">
+            After extraction, the fear of never finding friends persists. Raising arms is ineffective for shorter people
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Understanding the Problem Section -->
-<section class="portfolio-container py-20">
-  <div class="grid grid-cols-2 gap-16">
-    <!-- Left column -->
+  <!-- Context Section -->
+  <section>
     <div>
-      <h2 class="heading-2 mb-4">Understanding the Problem</h2>
-      <p class="quote mb-6">The crowd paradox : the more we gather, the more alone we feel</p>
-      <p class="body text-base-content/70">
-        This project was born from a striking personal observation: facing mediatized tragedies (like in Seoul or Houston) and daily concert incidents, it became evident that it was impossible to effectively signal distress."
-      </p>
-    </div>
+      <h2 class="heading-2 mb-12">Context</h2>
 
-    <!-- Right column - Problem cards -->
-    <div class="flex flex-col gap-6">
-      <div class="portfolio-card">
-        <div class="flex items-start gap-3 mb-3">
-          <span class="text-2xl">⛔</span>
-          <h3 class="heading-5">Can't Extract</h3>
-        </div>
-        <p class="body text-base-content/70">
-          Many don't dare ask for help to exit, fearing being ignored, judged, or physically blocked
+      <div class="space-y-6 mb-8">
+        <p class="muted">
+          While exploring this concept, several limitations emerged. The term agoraphobia proved too specific, implying clinical expertise beyond our scope and narrowing our target audience. Many people experience crowd-related anxiety without a formal diagnosis. We therefore refocused on the broader experience of anxiety in crowds. Music events — particularly concert pits — became our natural context: powerful collective spaces that many know firsthand, yet can quickly turn from excitement to discomfort or distress.
+        </p>
+
+        <p class="muted">
+          Concert experiences are often perceived as moments of euphoria and sharing. However, for some, they synonymous with anxiety. At the heart of this human sea, calls for help can be swallowed by chaos, leaving individuals with a feeling of isolation and invisibility.
         </p>
       </div>
 
-      <div class="portfolio-card">
-        <div class="flex items-start gap-3 mb-3">
-          <span class="text-2xl">📱</span>
-          <h3 class="heading-5">Can't Call</h3>
+      <!-- Stats -->
+      <div class="flex justify-center gap-16 my-12">
+        <div class="text-center">
+          <p class="heading-1 text-accent-content">145M</p>
+          <p class="text-sm   ">tickets sold worldwide</p>
         </div>
-        <p class="body text-base-content/70">
-          In a compact crowd, it's often physically impossible to take out a phone to call for help
-        </p>
+        <div class="text-center">
+          <p class="heading-1 text-accent-content">8.5%</p>
+          <p class="text-sm">social anxiety</p>
+        </div>
+        <div class="text-center">
+          <p class="heading-1 text-accent-content">80%</p>
+          <p class="text-sm">fear-driven media</p>
+        </div>
       </div>
 
-      <div class="portfolio-card">
-        <div class="flex items-start gap-3 mb-3">
-          <span class="text-2xl">👥</span>
-          <h3 class="heading-5">Can't Reunite</h3>
-        </div>
-        <p class="body text-base-content/70">
-          After extraction, the fear of never finding friends persists. Raising arms is ineffective for shorter people
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Context Section -->
-<section class="w-full bg-base-200 py-20">
-  <div class="portfolio-container">
-    <h2 class="heading-2 mb-12">Context</h2>
-
-    <div class="space-y-6 mb-8">
-      <p class="body text-base-content/70">
-        While exploring this concept, several limitations emerged. The term agoraphobia proved too specific, implying clinical expertise beyond our scope and narrowing our target audience. Many people experience crowd-related anxiety without a formal diagnosis. We therefore refocused on the broader experience of anxiety in crowds. Music events — particularly concert pits — became our natural context: powerful collective spaces that many know firsthand, yet can quickly turn from excitement to discomfort or distress.
-      </p>
-
-      <p class="body text-base-content/70">
-        Concert experiences are often perceived as moments of euphoria and sharing. However, for some, they synonymous with anxiety. At the heart of this human sea, calls for help can be swallowed by chaos, leaving individuals with a feeling of isolation and invisibility.
+      <p class="muted">
+        These trends reveal a growing paradox: our collective experiences are expanding, but our sense of togetherness is shrinking.
       </p>
     </div>
+  </section>
 
-    <!-- Stats -->
-    <div class="flex justify-center gap-16 my-12">
-      <div class="text-center">
-        <p class="heading-1 text-primary">145M</p>
-        <p class="caption">tickets sold worldwide</p>
-      </div>
-      <div class="text-center">
-        <p class="heading-1 text-secondary">8.5%</p>
-        <p class="caption">social anxiety</p>
-      </div>
-      <div class="text-center">
-        <p class="heading-1 text-accent">80%</p>
-        <p class="caption">fear-driven media</p>
-      </div>
-    </div>
-
-    <p class="body text-base-content/70">
-      These trends reveal a growing paradox: our collective experiences are expanding, but our sense of togetherness is shrinking.
-    </p>
-  </div>
-</section>
-
-<!-- Research Phase Section -->
-<section class="portfolio-container py-20">
-  <h2 class="heading-2 mb-12">Research Phase</h2>
-
-  <div class="grid grid-cols-2 gap-16">
-    <!-- Left column - Research methods text -->
-    <div class="space-y-6 body text-base-content/70">
-      <p><strong>Online survey</strong><br>Distributed to 42 respondents to capture challenges experienced in dense crowds, including attitudes, behaviors, and coping mechanisms in concert pits.</p>
-
-      <p><strong>Field research</strong><br>Conducted on-site observations and in-person interviews with concert-goers at Bercy Arena to gather real-world insights into user experiences and pain points.</p>
-
-      <p><strong>Data synthesis</strong><br>Analyzed qualitative and quantitative findings to identify patterns and create data-driven personas representing key user segments.</p>
-
-      <p><strong>Experience mapping & Personas</strong><br>Mapped the end-to-end concert journey to identify emotional highs, lows, and critical friction points throughout the experience. Consult the documents</p>
-    </div>
-
-    <!-- Right column - Image + quote -->
-    <div>
-      <!-- Placeholder for research image -->
-      <div class="bg-base-300 rounded-2xl h-96 mb-4"></div>
-      <p class="body-muted italic">
-        "Overcoming my shyness and engaging with people was a real challenge, especially while gathering information without disturbing them."
-      </p>
-    </div>
-  </div>
-
-  <!-- Key Findings -->
-  <div class="mt-20">
-    <h3 class="heading-3 mb-8">Key Findings</h3>
-
-    <div class="grid grid-cols-4 gap-6">
-      <div class="portfolio-card-subtle">
-        <h4 class="heading-5 mb-3">Anxiety & Control</h4>
-        <p class="caption mb-4">Loss of control is a primary trigger of panic.</p>
-        <div class="flex items-start gap-2">
-          <span class="text-accent text-xl">✓</span>
-          <p class="caption">Design for reassurance and rapid signaling.</p>
-        </div>
-      </div>
-
-      <div class="portfolio-card-subtle">
-        <h4 class="heading-5 mb-3">Visibility</h4>
-        <p class="caption mb-4">Shorter users or those with mobility limitations feel invisible</p>
-        <div class="flex items-start gap-2">
-          <span class="text-accent text-xl">✓</span>
-          <p class="caption">The signal must remain visible regardless of height or position</p>
-        </div>
-      </div>
-
-      <div class="portfolio-card-subtle">
-        <h4 class="heading-5 mb-3">Communication</h4>
-        <p class="caption mb-4">People rely heavily on non-verbal cues (eye contact, gestures, light).</p>
-        <div class="flex items-start gap-2">
-          <span class="text-accent text-xl">✓</span>
-          <p class="caption">Light can serve as a universal language</p>
-        </div>
-      </div>
-
-      <div class="portfolio-card-subtle">
-        <h4 class="heading-5 mb-3">Willingness to Help</h4>
-        <p class="caption mb-4">Strong readiness to help, but no visible or shared signal to recognize distress</p>
-        <div class="flex items-start gap-2">
-          <span class="text-accent text-xl">✓</span>
-          <p class="caption">Create a shared, collective code of empathy</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Key Question -->
-  <div class="mt-16 portfolio-card-accent text-center py-12">
-    <p class="caption mb-4">Key Question</p>
-    <p class="heading-2">"How do we transform a crowd into an attentive community?"</p>
-  </div>
-</section>
-
-<!-- Ideation Section -->
-<section class="w-full bg-base-200 py-20">
-  <div class="portfolio-container">
-    <h2 class="heading-2 mb-12">Ideation & Concept Development</h2>
-
-    <h3 class="heading-3 mb-8">Design Principles</h3>
+  <!-- Research Phase Section -->
+  <section>
+    <h2 class="heading-2 mb-12">Research Phase</h2>
 
     <div class="grid grid-cols-2 gap-16">
-      <div class="body text-base-content/70">
-        To structure our design approach, we modeled the experience around six interconnected dimensions. The material and interactive dimensions form the technical core, combining a durable, light-based bracelet with an intuitive mobile interface for quick, stress-free use. The informative and declarative dimensions define how users receive and share information, creating a simple visual language that connects individuals through light signals. Finally, the social and psychological dimensions emerge as outcomes — fostering empathy, reassurance, and a lasting sense of safety within the crowd.
+      <!-- Left column - Research methods text -->
+      <div class="space-y-6 body text-base-content/70">
+        <p>
+          <strong class="text-accent">Online survey</strong><br>
+          <span class="muted">Distributed to 42 respondents to capture challenges experienced in dense crowds, including attitudes, behaviors, and coping mechanisms in concert pits.</span>
+        </p>
+
+        <p><strong class="text-accent">Field research</strong><br>
+          <span class="muted">Conducted on-site observations and in-person interviews with concert-goers at Bercy Arena to gather real-world insights into user experiences and pain points.</span>
+        </p>
+
+        <p><strong class="text-accent">Data synthesis</strong><br>
+          <span class="muted">Analyzed qualitative and quantitative findings to identify patterns and create data-driven personas representing key user segments.</span>
+        </p>
+
+        <p><strong class="text-accent">Experience mapping & Personas</strong><br>
+          <span class="muted">Mapped the end-to-end concert journey to identify emotional highs, lows, and critical friction points throughout the experience.</span><br>
+          <a class="link link-accent">Consult the documents</a>
+        </p>
       </div>
-      <div class="body text-base-content/70">
-        <strong>Accessibility:</strong> usable regardless of height, mobility, or language.<br>
-        <strong>Simplicity:</strong> one gesture, one meaning.<br>
-        <strong>Universality:</strong> instantly understandable in any context.
+
+      <!-- Right column - Image + quote -->
+      <div>
+        <!-- Placeholder for research image -->
+        <img src="/assets/Group%2040117.png" alt="Research Image" class="mb-5" />
+        <p class="caption text-lg">
+          "Overcoming my shyness and engaging with people was a real challenge, especially while gathering information without disturbing them."
+        </p>
       </div>
     </div>
 
-    <!-- Placeholder for design diagram -->
-    <div class="bg-base-100 rounded-2xl h-[600px] mt-12"></div>
-  </div>
-</section>
+    <!-- Key Findings -->
+    <div class="mt-20">
+      <h3 class="heading-3 mb-8">Key Findings</h3>
 
-<!-- More sections would continue here following the same pattern... -->
-<!-- I'm stopping here since the content is very long, but the pattern is established -->
+      <div class="grid grid-cols-4 gap-6">
+        <div class="portfolio-card-subtle">
+          <p class="text-xs font-bold mb-3">Anxiety & Control</p>
+          <p class="text-xxs mb-4">Loss of control is a primary trigger of panic.</p>
+          <div class="flex items-start gap-2">
+            <img src="/assets/Group%201.png">
+            <p class="caption text-xs">Design for reassurance and rapid signaling.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card-subtle">
+          <p class="text-xs font-bold mb-3">Visibility</p>
+          <p class="text-xxs mb-4">Shorter users or those with mobility limitations feel invisible</p>
+          <div class="flex items-start gap-2">
+            <img src="/assets/Group%201.png">
+            <p class="caption text-xs">The signal must remain visible regardless of height or position</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card-subtle">
+          <p class="text-xs font-bold mb-3">Communication</p>
+          <p class="text-xxs mb-4">People rely heavily on non-verbal cues (eye contact, gestures, light).</p>
+          <div class="flex items-start gap-2">
+            <img src="/assets/Group%201.png">
+            <p class="caption text-xs">Light can serve as a universal language</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card-subtle">
+          <p class="text-xs font-bold mb-3">Willingness to Help</p>
+          <p class="text-xxs mb-4">Strong readiness to help, but no visible or shared signal to recognize distress</p>
+          <div class="flex items-start gap-2">
+            <img src="/assets/Group%201.png">
+            <p class="caption text-xs">Create a shared, collective code of empathy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Question -->
+    <app-hero-lightcrowd hostClasses="rounded">
+      <div class="p flex flex-col items-center text-center gap-6 py-20">
+        <p class="muted text-2xl mb-4">Key Question</p>
+        <p class="text-[2.5rem]/[1.2] font-medium italic">"How do we transform a crowd into an attentive community?"</p>
+      </div>
+    </app-hero-lightcrowd>
+
+  </section>
+
+  <!-- Ideation Section -->
+  <section>
+    <div>
+      <h2 class="heading-2 mb-12">Ideation & Concept Development</h2>
+
+      <h3 class="heading-3 mb-8">Design Principles</h3>
+
+      <div class="flex gap-4 mb-12">
+        <div class="muted text-lg font-medium w-3/4">
+          To structure our design approach, we modeled the experience around six interconnected dimensions. The material and interactive dimensions form the technical core, combining a durable, light-based bracelet with an intuitive mobile interface for quick, stress-free use. The informative and declarative dimensions define how users receive and share information, creating a simple visual language that connects individuals through light signals. Finally, the social and psychological dimensions emerge as outcomes — fostering empathy, reassurance, and a lasting sense of safety within the crowd.
+        </div>
+        <div class="divider divider-horizontal"></div>
+        <div>
+          <p class="mb-4 text-lg">
+            <strong class="text-accent uppercase">Accessibility:</strong><span class="muted"> usable regardless of height, mobility, or language.</span>
+          </p>
+          <p class="mb-4 text-lg">
+            <strong class="text-accent uppercase">Simplicity:</strong><span class="muted"> one gesture, one meaning.</span>
+          </p>
+          <p class="mb-4 text-lg">
+            <strong class="text-accent uppercase">Universality:</strong><span class="muted"> instantly understandable in any context.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Placeholder for design diagram -->
+      <img src="/assets/image 12.png" alt="Design Principles Diagram" class="w-full" />
+    </div>
+  </section>
+
+  <!-- More sections would continue here following the same pattern... -->
+  <!-- I'm stopping here since the content is very long, but the pattern is established -->
+</div>
+
