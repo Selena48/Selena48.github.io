@@ -26,7 +26,16 @@
       "mcp__figma-desktop__get_variable_defs",
       "Bash(for:*)",
       "Bash(do mv \"$f\" \"$f%.png.svg\")",
-      "Bash(done)"
+      "Bash(done)",
+      "WebSearch",
+      "WebFetch(domain:angular.dev)",
+      "Bash(pnpm build:*)",
+      "Bash(ng add:*)",
+      "Bash(pnpm list:*)",
+      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:github.com)",
+      "mcp__angular-cli__search_documentation",
+      "mcp__angular-cli__get_best_practices"
     ],
     "deny": [],
     "ask": []

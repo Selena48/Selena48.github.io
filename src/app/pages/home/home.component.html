@@ -1,109 +1,112 @@
-<!-- Hero Section -->
-<section id="my-resume" class="portfolio-section bg-gradient-to-b from-transparent to-base-200/50 rounded-[1.75rem]">
-  <div class="flex flex-col gap-8 items-start w-full">
-    <!-- Title and Illustration -->
-    <div class="flex flex-col gap-6 w-full">
-      <div class="flex flex-row gap-6 items-end justify-between w-full">
-        <h1 class="text-[4rem] leading-[1] font-bold flex-1">
-          Sélèna Boullée
-        </h1>
-        <img
-          src="/assets/logo-illustration.svg"
-          alt="Logo illustration"
-          class="w-32 md:w-48 lg:w-56 aspect-40/36"
-        />
+<div class="portfolio-container">
+  <!-- Hero Section -->
+  <section id="my-resume" class="portfolio-section bg-gradient-to-b from-transparent to-base-200/50 rounded-[1.75rem]">
+    <div class="flex flex-col gap-8 items-start w-full">
+      <!-- Title and Illustration -->
+      <div class="flex flex-col gap-6 w-full">
+        <div class="flex flex-row gap-6 items-end justify-between w-full">
+          <h1 class="text-[4rem] leading-[1] font-bold flex-1">
+            Sélèna Boullée
+          </h1>
+          <img
+            src="/assets/logo-illustration.svg"
+            alt="Logo illustration"
+            class="w-32 md:w-48 lg:w-56 aspect-40/36"
+          />
+        </div>
+
+        <h2 class="heading-2 text-2xl md:text-3xl lg:text-4xl">
+          Why create something beautiful if users are lost or frustrated?
+        </h2>
+
+        <!-- Social Links -->
+        <div class="flex flex-col sm:flex-row gap-4 w-full">
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/selena-boullee"
+            target="_blank"
+            class="social-button group"
+          >
+            <div class="bg-primary rounded-lg size-12 flex items-center justify-center shrink-0">
+              <img src="/assets/linkedin-icon.svg" alt="LinkedIn" class="size-6" />
+            </div>
+            <span class="link-underlined text-base-content">LinkedIn</span>
+          </a>
+
+          <!-- Email -->
+          <a
+            href="mailto:selena.boullee@gmail.com"
+            class="social-button group"
+          >
+            <div class="size-12 flex items-center justify-center shrink-0">
+              <img src="/assets/email-icon.svg" alt="Email" class="size-12" />
+            </div>
+            <span class="link-underlined text-base-content break-all sm:break-normal">selena.boullee&#64;gmail.com</span>
+          </a>
+        </div>
       </div>
 
-      <h2 class="heading-2 text-2xl md:text-3xl lg:text-4xl">
-        Why create something beautiful if users are lost or frustrated?
-      </h2>
-
-      <!-- Social Links -->
-      <div class="flex flex-col sm:flex-row gap-4 w-full">
-        <!-- LinkedIn -->
-        <a
-          href="https://www.linkedin.com/in/selena-boullee"
-          target="_blank"
-          class="social-button group"
-        >
-          <div class="bg-primary rounded-lg size-12 flex items-center justify-center shrink-0">
-            <img src="/assets/linkedin-icon.svg" alt="LinkedIn" class="size-6" />
-          </div>
-          <span class="link-underlined text-base-content">LinkedIn</span>
-        </a>
-
-        <!-- Email -->
-        <a
-          href="mailto:selena.boullee@gmail.com"
-          class="social-button group"
-        >
-          <div class="size-12 flex items-center justify-center shrink-0">
-            <img src="/assets/email-icon.svg" alt="Email" class="size-12" />
-          </div>
-          <span class="link-underlined text-base-content break-all sm:break-normal">selena.boullee&#64;gmail.com</span>
-        </a>
+      <!-- Description -->
+      <div class="w-full">
+        <ul class="body space-y-2">
+          <li class="list-disc ml-6">
+            Currently pursuing a <span class="font-bold">Master's in Experience Design at UTC Compiègne</span>, I combine UX/UI design, cognitive science and Computer science to create precise, creative, and human-centered digital experiences.
+          </li>
+          <li class="list-disc ml-6">
+            Curious and persistent, I believe the best experiences are the ones that feel effortless. I choose clarity over trends, because being useful will always be more impactful than being fashionable
+          </li>
+        </ul>
       </div>
     </div>
+  </section>
 
-    <!-- Description -->
-    <div class="w-full">
-      <ul class="body space-y-2">
-        <li class="list-disc ml-6">
-          Currently pursuing a <span class="font-bold">Master's in Experience Design at UTC Compiègne</span>, I combine UX/UI design, cognitive science and Computer science to create precise, creative, and human-centered digital experiences.
-        </li>
-        <li class="list-disc ml-6">
-          Curious and persistent, I believe the best experiences are the ones that feel effortless. I choose clarity over trends, because being useful will always be more impactful than being fashionable
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Selected Works Section -->
-<section id="works" class="portfolio-section portfolio-section">
-  <!-- Header -->
-  <div class="portfolio-section-header">
-    <h3 class="heading-1">Selected Works</h3>
-    <div class="flex flex-col gap-8">
-      <div>
-        <app-hero-lightcrowd [hostClasses]="'rounded'">
-          <div class="flex justify-between gap-8">
-            <div class="p flex flex-col gap-10 w-[55%]">
-              <div class="flex">
-                <div role="alert" class="alert alert-info alert-sm">
-                  <span>UX Research • Product Design • IoT</span>
+  <!-- Selected Works Section -->
+  <section id="works" class="portfolio-section portfolio-section">
+    <!-- Header -->
+    <div class="portfolio-section-header">
+      <h3 class="heading-1">Selected Works</h3>
+      <div class="flex flex-col gap-8">
+        <div>
+          <app-hero-lightcrowd [hostClasses]="'rounded'">
+            <div class="flex justify-between gap-8">
+              <div class="p flex flex-col gap-10 w-[55%]">
+                <div class="flex">
+                  <div role="alert" class="alert alert-info alert-sm">
+                    <span>UX Research • Product Design • IoT</span>
+                  </div>
                 </div>
-              </div>
-              <div>
-                <h3 class="heading-3 leading-none mb-2">LightCrowd : When light<br>
-                  becomes <span class="bg-clip-text text-transparent bg-linear-to-r from-secondary-content to-primary-content">language</span></h3>
-                <p class="body-muted leading-[1.25]">A connected bracelet transforming crowds into supportive communities through universal light signals</p>
-              </div>
-              <div class="flex w-full">
                 <div>
-                  <p class="font-bold">The Challenge</p>
-                  <p class="body-muted text-sm">Anxiety and invisibility in dense crowds at concerts</p>
+                  <h3 class="heading-3 leading-none mb-2">LightCrowd : When light<br>
+                    becomes <span class="bg-clip-text text-transparent bg-linear-to-r from-secondary-content to-primary-content">language</span></h3>
+                  <p class="body-muted leading-[1.25]">A connected bracelet transforming crowds into supportive communities through universal light signals</p>
                 </div>
-                <div class="divider divider-horizontal"></div>
-                <div>
-                  <p class="font-bold">The Impact</p>
-                  <p class="body-muted text-sm">Universal signaling system for distress and group reconnection</p>
+                <div class="flex w-full">
+                  <div>
+                    <p class="font-bold">The Challenge</p>
+                    <p class="body-muted text-sm">Anxiety and invisibility in dense crowds at concerts</p>
+                  </div>
+                  <div class="divider divider-horizontal"></div>
+                  <div>
+                    <p class="font-bold">The Impact</p>
+                    <p class="body-muted text-sm">Universal signaling system for distress and group reconnection</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <a [routerLink]="'/lightcrowd'" class="btn">
+                    Case study
+                  </a>
                 </div>
               </div>
-              <div class="flex">
-                <a [routerLink]="'/lightcrowd'" class="btn">
-                  Case study
-                </a>
+              <div class="relative w-[45%]">
+                <img src="/assets/Group_23.png" class="absolute origin-bottom-left bottom-0 scale-110">
+                <img src="/assets/Hand.png" class="absolute bottom-0">
               </div>
             </div>
-            <div class="relative w-[45%]">
-              <img src="/assets/Group_23.png" class="absolute origin-bottom-left bottom-0 scale-110">
-              <img src="/assets/Hand.png" class="absolute bottom-0">
-            </div>
-          </div>
-        </app-hero-lightcrowd>
+          </app-hero-lightcrowd>
+        </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
+</div>
+

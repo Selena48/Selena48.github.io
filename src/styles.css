@@ -263,6 +263,10 @@ html{
   @apply px-4 lg:px-[7.5rem] pb-[5rem];
 }
 
+.portefolio-header {
+  @apply px-4 sm:px-8 md:px-12 lg:px-16;
+}
+
 /* Section avec espacement */
 .portfolio-section {
   @apply w-full flex flex-col gap-[1.5rem] pt-[3.75rem] md:pb-[5rem];
@@ -270,7 +274,7 @@ html{
 
 /* Header de section */
 .portfolio-section-header {
-  @apply w-full flex flex-col gap-[1rem];
+  @apply w-full flex flex-col gap-[1rem] ;
 }
 
 .prose section{
