@@ -38,5 +38,10 @@ export const routes: Routes = [
     path: 'pluka',
     loadComponent: () => import('./pages/pluka-demo/pluka-demo').then(m => m.PlukaDemo),
     data: { theme: 'pluka' }
+  },
+  {
+    path: 'anthropophonie',
+    loadComponent: () => import('./pages/anthropophonie-demo/anthropophonie-demo').then(m => m.AnthrophonieDemo),
+    data: { theme: 'anthropophonie' }
   }
 ];

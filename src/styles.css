@@ -18,7 +18,7 @@
 /* Configuration DaisyUI */
 @plugin "daisyui" {
   /* Thèmes disponibles avec leurs flags */
-  themes: portfolio --default, lightcrowd, pluka;
+  themes: portfolio --default, lightcrowd, pluka, anthropophonie;
 
   /* Désactiver TOUS les composants DaisyUI */
   /* On garde uniquement le système de thèmes avec les variables CSS */
@@ -148,6 +148,42 @@
   --color-info-content: #79c9bc;
 
   --color-neutral: #1a353f;
+  --color-neutral-content: #ffffff;
+
+  /* Border radius */
+  --radius-box: 1.527rem;                /* 24.456px comme dans le design */
+  --radius-field: 0.5rem;
+  --radius-selector: 0.5rem;
+}
+
+/* ========================================
+   Thème Anthropophonie - Sensory Design
+   ======================================== */
+@plugin "daisyui/theme" {
+  name: "anthropophonie";
+  color-scheme: light;
+
+  /* Couleur principale - Bleu aquatique du dégradé */
+  --color-primary: #5e8b99;
+  --color-primary-content: #ffffff;
+
+  /* Couleurs de base - Background avec dégradé aquatique */
+  --color-base-100: #5e8b99;             /* Background principal - bleu aquatique */
+  --color-base-200: #7ba88f;             /* Background vert aquatique */
+  --color-base-300: #4a7584;             /* Background plus foncé */
+  --color-base-content: #ffffff;         /* Texte principal - blanc */
+
+  /* Couleurs sémantiques */
+  --color-secondary: #7ba88f;            /* Vert aquatique */
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #7ba88f;               /* Vert accent */
+  --color-accent-content: #ffffff;
+
+  --color-info: rgba(94, 139, 153, 0.2);
+  --color-info-content: #ffffff;
+
+  --color-neutral: #4a7584;
   --color-neutral-content: #ffffff;
 
   /* Border radius */

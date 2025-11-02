@@ -21,4 +21,8 @@ export const serverRoutes: ServerRoute[] = [
     path: 'pluka',
     renderMode: RenderMode.Prerender,
   },
+  {
+    path: 'anthropophonie',
+    renderMode: RenderMode.Prerender,
+  },
 ];
