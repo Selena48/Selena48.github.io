@@ -72,19 +72,19 @@
     <!-- Header -->
     <div class="portfolio-section-header">
       <h3 class="heading-1">Selected Works</h3>
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- LightCrowd Project -->
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <app-hero-lightcrowd [hostClasses]="'rounded'">
-            <div class="flex justify-between gap-8">
-              <div class="p flex flex-col gap-10 w-[55%]">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+              <div class="p flex flex-col gap-10 md:w-[55%]">
                 <div class="flex">
                   <div role="alert" class="alert alert-info alert-sm">
                     <span>UX Research • Product Design • IoT</span>
                   </div>
                 </div>
                 <div>
-                  <h3 class="heading-3 leading-none mb-2">LightCrowd : When light<br>
+                  <h3 class="heading-3 leading-none mb-2">LightCrowd : When light<span class="hidden md:inline"><br></span>
                     becomes <span class="bg-clip-text text-transparent bg-linear-to-r from-secondary-content to-primary-content">language</span></h3>
                   <p class="body-muted leading-[1.25]">A connected bracelet transforming crowds into supportive communities through universal light signals</p>
                 </div>
@@ -105,7 +105,7 @@
                   </a>
                 </div>
               </div>
-              <div class="relative w-[45%]">
+              <div class="relative h-70 md:h-auto md:w-[45%]">
                 <img src="/assets/Group_23.png" class="absolute origin-bottom-left bottom-0 scale-110">
                 <img src="/assets/Hand.png" class="absolute bottom-0">
               </div>
@@ -114,18 +114,18 @@
         </div>
 
         <!-- Pluka Project -->
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <app-hero-pluka [hostClasses]="'rounded'">
-            <div class="flex justify-between gap-8">
-              <div class="p flex flex-col gap-10 w-[55%]">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+              <div class="p flex flex-col gap-10 md:w-[55%]">
                 <div class="flex">
                   <div role="alert" class="alert alert-info alert-sm">
                     <span>UX Research • UI Design • Health Tech • Web App</span>
                   </div>
                 </div>
                 <div>
-                  <h3 class="heading-3 leading-none mb-2">Pluka – Bringing Science-<br>
-                    Based Wellness to the <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Public</span></h3>
+                  <h3 class="heading-3 leading-none mb-2">Pluka – Bringing Science-<span class="hidden md:inline"><br></span>
+                    Based Wellness to the Public</h3>
                   <p class="body-muted leading-[1.25]">Transforming a professional health app into an accessible lifestyle experience (2024–2025)</p>
                 </div>
                 <div class="flex w-full">
@@ -160,23 +160,25 @@
 
         <div>
           <app-hero-anthropophonie [hostClasses]="'rounded'">
-            <div class="flex flex-col md:flex-row gap-8 items-start justify-between p-8 md:p-12 lg:p-16">
-              <!-- Left side: Content -->
-              <div class="flex flex-col gap-5 w-full md:w-[55%]">
+            <div class="flex flex-col md:flex-row gap-8 items-start justify-between p-8 md:p-12 lg:p-16 relative z-1">
+              <div class="flex flex-col gap-8">
                 <!-- Tag overlay -->
                 <div class="alert alert-info alert-sm w-fit">
                   <span>UX Research • Product Design • Sensory Design</span>
                 </div>
 
-                <!-- Main heading -->
-                <h1 class="heading-1 leading-[1.1]">
-                  Anthropophonie : When silence becomes listening
-                </h1>
+                <div>
+                  <!-- Main heading -->
+                  <h3 class="heading-3 leading-[1.1]">
+                    Anthropophonie : When silence becomes listening
+                  </h3>
 
-                <!-- Subtitle -->
-                <p class="body-muted">
-                  Reconnecting Humans and Nature Through Sound : Rethinking the relationship between students, noise, and attention on the UTC campus (2030)
-                </p>
+                  <!-- Subtitle -->
+                  <p class="body-muted">
+                    Reconnecting Humans and Nature Through Sound : Rethinking the relationship between students, noise, and attention on the UTC campus (2030)
+                  </p>
+                </div>
+
 
                 <!-- Challenge & Impact section -->
                 <div class="flex gap-4 w-full">
@@ -192,21 +194,17 @@
                 </div>
 
                 <!-- CTA Button -->
-                <div class="flex">
+                <div class="flex items-start">
                   <a href="#" class="btn">
                     Case study
                   </a>
                 </div>
               </div>
+            </div>
 
-              <!-- Right side: Image placeholder -->
-              <div class="relative w-full md:w-[45%] h-64 md:h-auto flex items-end justify-center">
-                <!-- Image de la fleur violette avec les feuilles vertes -->
-                <div class="text-white/30 text-center">
-                  <p class="text-sm">Image à venir</p>
-                  <p class="text-xs">(fleur violette + feuilles)</p>
-                </div>
-              </div>
+            <!-- Right side: Image placeholder -->
+            <div class="relative z-0 h-30 w-full flex items-end justify-end">
+              <img src="/assets/IMG_7610-removebg-preview%201.png" alt="Anthropophonie project preview" class="md:w-2/3">
             </div>
           </app-hero-anthropophonie>
         </div>

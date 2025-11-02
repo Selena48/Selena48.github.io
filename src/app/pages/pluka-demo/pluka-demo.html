@@ -1,7 +1,13 @@
 <!-- Hero Section -->
 <section class="portefolio-header pt-5">
   <app-hero-pluka [hostClasses]="'rounded'">
-    <div class="flex flex-col items-center text-center gap-6 pt-40 pb-20">
+    <img src="assets/Group 261.png" class="hidden md:block absolute z-0 top-5 right-48"/>
+    <img src="assets/Group.png" class="hidden md:block absolute z-0 top-36 right-15"/>
+    <img src="assets/Group 264.png" class="hidden md:block absolute z-0 bottom-10 right-10"/>
+    <img src="assets/Group 262.png" class="hidden md:block absolute z-0 bottom-20 left-0"/>
+    <img src="assets/Group 263.png" class="hidden md:block absolute z-0 bottom-5 left-30"/>
+
+    <div class="relative z-1 flex flex-col items-center text-center gap-6 pt-40 pb-20">
       <!-- Tag overlay -->
       <div class="alert alert-info alert-sm">
         <span>UX Research • UI Design • Health Tech • Web App</span>
@@ -9,12 +15,12 @@
 
       <!-- Main heading -->
       <h1 class="heading-1 leading-[1.1] max-w-4xl">
-        Pluka – Bringing Science-Based<br> Wellness to the <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Public</span>
+        Pluka – Bringing Science-<br>Based Wellness to the Public
       </h1>
 
       <!-- Subtitle -->
       <p class="body-muted">
-        Transforming a professional health app into an accessible lifestyle<br> experience (2024–2025)
+        Transforming a professional health app into an accessible lifestyle experience<br> (2024–2025)
       </p>
 
       <!-- Scroll indicator (SVG arrow down) -->
@@ -125,8 +131,8 @@
         </div>
         <div>
           <!-- Placeholder pour image de recherche -->
-          <div class="bg-base-200 rounded-lg h-64 flex items-center justify-center">
-            <p class="text-base-content/30">Research image</p>
+          <div class="rounded-lg flex justify-end">
+            <img src="/assets/image 10(2).png" alt="Research image">
           </div>
         </div>
       </div>
@@ -141,7 +147,7 @@
           <p class="text-xs font-bold mb-3">Quality of Life as the Main Driver</p>
           <p class="text-sm mb-4 muted">Users primarily seek to improve their quality of life (78%) and prefer Google, their personal network, and social media for information.</p>
           <div class="flex items-start gap-2">
-            <img src="/assets/Group%201.png" alt="">
+            <img src="/assets/Group 2.png" alt="">
             <p class="caption text-xs">Design a guided experience that helps users identify suitable natural solutions aligned with their lifestyle goals.</p>
           </div>
         </div>
@@ -150,7 +156,7 @@
           <p class="text-xs font-bold mb-3">Trust Built on Evidence and Experience</p>
           <p class="text-sm mb-4 muted">Trust is conditional on scientific evidence (74.8%) and personal experience (62.9%).</p>
           <div class="flex items-start gap-2">
-            <img src="/assets/Group%201.png" alt="">
+            <img src="/assets/Group 2.png" alt="">
             <p class="caption text-xs">Include verified expert content and community feedback to strengthen credibility.</p>
           </div>
         </div>
@@ -159,7 +165,7 @@
           <p class="text-xs font-bold mb-3">Overwhelmed and Underserved</p>
           <p class="text-sm mb-4 muted">Main pain points include information overload with contradictory sources, lack of personalization, and difficulty evaluating the real effectiveness of proposed solutions.</p>
           <div class="flex items-start gap-2">
-            <img src="/assets/Group%201.png" alt="">
+            <img src="/assets/Group 2.png" alt="">
             <p class="caption text-xs">Build a personalized recommendation system or filtering tool to simplify decision-making.</p>
           </div>
         </div>
@@ -167,8 +173,8 @@
     </div>
 
     <!-- Personas and Journey -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-      <div>
+    <div class="flex flex-col md:flex-row gap-8 mb-10">
+      <div class="md:w-1/3">
         <p class="muted">
           Based on these findings, I created 3 personas representing target profiles (preventive user, user with chronic needs, parent), mapped user journeys to identify friction points, and prioritized user stories to guide feature development.
         </p>
@@ -176,11 +182,8 @@
           This research validated user needs and oriented design decisions toward evidence-based content, simplified navigation, and increased personalization.
         </p>
       </div>
-      <div>
-        <!-- Placeholder pour personas -->
-        <div class="bg-base-200 rounded-lg h-96 flex items-center justify-center">
-          <p class="text-base-content/30">Personas & journey map</p>
-        </div>
+      <div class="md:w-2/3">
+        <img src="/assets/image 10(3).png" alt="Personas and journey map">
       </div>
     </div>
 
@@ -199,10 +202,7 @@
         </p>
       </div>
       <div>
-        <!-- Placeholder pour branding -->
-        <div class="bg-base-200 rounded-lg h-[490px] flex items-center justify-center">
-          <p class="text-base-content/30">Branding image</p>
-        </div>
+        <img src="/assets/image 10(4).png" alt="Branding and mascot design">
       </div>
     </div>
 
@@ -219,9 +219,7 @@
 
       <div class="w-full">
         <!-- Placeholder pour wireframes -->
-        <div class="bg-base-200 rounded-lg h-[400px] flex items-center justify-center">
-          <p class="text-base-content/30">Wireframes & prototypes</p>
-        </div>
+        <img src="/assets/image 14.png" alt="Wireframes and prototype">
       </div>
     </div>
 
@@ -238,9 +236,7 @@
 
       <div class="w-full">
         <!-- Placeholder pour testing -->
-        <div class="bg-base-200 rounded-lg h-[400px] flex items-center justify-center">
-          <p class="text-base-content/30">Testing & iterations</p>
-        </div>
+        <img src="/assets/image 15.png" alt="Testing and improvements">
       </div>
     </div>
   </section>
@@ -251,9 +247,7 @@
 
     <p class="muted mb-4">
       The Pluka project represents the most significant initiative I led at Kalya Santé, aiming to translate a professional medical tool into a public-facing lifestyle app, combine rigorous science with accessible, engaging content, and build a credible visual identity to support investor fundraising.
-    </p>
-    <p class="muted mb-4">
-      The next phase involves launching a web application without mandatory accounts, optimizing for search engine visibility, and continuing iterative testing and design refinements.
+      <br/>The next phase involves launching a web application without mandatory accounts, optimizing for search engine visibility, and continuing iterative testing and design refinements.
     </p>
     <p class="muted">
       Pluka is positioned to bridge the gap between scientific knowledge and everyday wellness, offering users a credible, enjoyable, and practical way to improve their health.
@@ -267,8 +261,12 @@
     <app-hero-pluka hostClasses="rounded">
       <div class="p-16">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          @for (deliverable of plukaDeliverables; track deliverable.name) {
-            <app-expertise-card [expertise]="deliverable"></app-expertise-card>
+          @for (deliverable of plukaDeliverables; track deliverable.id) {
+            <app-expertise-card
+              [expertise]="expertise.getExpertiseItem(deliverable.id)"
+              [gradientStart]="deliverable.colorStart"
+              [gradientEnd]="deliverable.colorEnd"
+            ></app-expertise-card>
           }
         </div>
       </div>

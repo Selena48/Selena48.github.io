@@ -132,19 +132,19 @@
   --color-primary-content: #ffffff;
 
   /* Couleurs de base - Background sombre teal */
-  --color-base-100: #224452;             /* Background principal - teal foncé */
-  --color-base-200: #1a353f;             /* Background plus foncé */
+  --color-base-100: #fdfeff;             /* Background principal - teal foncé */
+  --color-base-200: rgb(242, 250, 249);             /* Background plus foncé */
   --color-base-300: #2d5562;             /* Background plus clair */
-  --color-base-content: #ffffff;         /* Texte principal - blanc */
+  --color-base-content: rgb(36, 36, 36);         /* Texte principal - blanc */
 
   /* Couleurs sémantiques */
   --color-secondary: #79c9bc;            /* Teal clair */
   --color-secondary-content: #ffffff;
 
-  --color-accent: #79c9bc;               /* Teal accent */
+  --color-accent: rgba(39, 116, 111, 1);               /* Teal accent */
   --color-accent-content: #ffffff;
 
-  --color-info: rgba(121, 201, 188, 0.23);
+  --color-info: rgba(94, 139, 153, 0.2);
   --color-info-content: #79c9bc;
 
   --color-neutral: #1a353f;
@@ -169,9 +169,9 @@
 
   /* Couleurs de base - Background avec dégradé aquatique */
   --color-base-100: #5e8b99;             /* Background principal - bleu aquatique */
-  --color-base-200: #7ba88f;             /* Background vert aquatique */
+  --color-base-200: rgb(242, 250, 249);             /* Background vert aquatique */
   --color-base-300: #4a7584;             /* Background plus foncé */
-  --color-base-content: #ffffff;         /* Texte principal - blanc */
+  --color-base-content: rgb(36, 36, 36);         /* Texte principal - blanc */
 
   /* Couleurs sémantiques */
   --color-secondary: #7ba88f;            /* Vert aquatique */
