@@ -35,7 +35,11 @@
       "WebFetch(domain:stackoverflow.com)",
       "WebFetch(domain:github.com)",
       "mcp__angular-cli__search_documentation",
-      "mcp__angular-cli__get_best_practices"
+      "mcp__angular-cli__get_best_practices",
+      "Bash(timeout 5 pnpm start:*)",
+      "Bash(exit 0)",
+      "mcp__serena__read_file",
+      "Bash(do echo \"=== $f ===\")"
     ],
     "deny": [],
     "ask": []

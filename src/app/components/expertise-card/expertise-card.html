@@ -1,4 +1,4 @@
-<div class="glass-card flex flex-col items-center justify-center gap-4 p-6 h-full">
-  <img [src]="expertise.icon" [alt]="expertise.name" class="w-16 h-16 object-contain">
+<div class="glass-card flex flex-col items-center justify-center gap-4 p-6 h-full" [ngStyle]="cssVariables()">
+  <div class="w-16 h-16" [innerHTML]="svgHtml()"></div>
   <p class="expertise-text text-sm md:text-base lg:text-xl text-center">{{ expertise.name }}</p>
 </div>
