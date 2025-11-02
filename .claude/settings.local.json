@@ -39,7 +39,9 @@
       "Bash(timeout 5 pnpm start:*)",
       "Bash(exit 0)",
       "mcp__serena__read_file",
-      "Bash(do echo \"=== $f ===\")"
+      "Bash(do echo \"=== $f ===\")",
+      "Bash(pnpm run build)",
+      "Bash(timeout 10 pnpm start:*)"
     ],
     "deny": [],
     "ask": []

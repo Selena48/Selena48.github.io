@@ -18,7 +18,7 @@
 /* Configuration DaisyUI */
 @plugin "daisyui" {
   /* Thèmes disponibles avec leurs flags */
-  themes: portfolio --default, lightcrowd;
+  themes: portfolio --default, lightcrowd, pluka;
 
   /* Désactiver TOUS les composants DaisyUI */
   /* On garde uniquement le système de thèmes avec les variables CSS */
@@ -118,6 +118,42 @@
   /* Couleur neutre - utiliser le violet foncé */
   --color-neutral: #4A1B6F;              /* Violet foncé */
   --color-neutral-content: #7E6ABA;
+}
+
+/* ========================================
+   Thème Pluka - Health Tech & Wellness
+   ======================================== */
+@plugin "daisyui/theme" {
+  name: "pluka";
+  color-scheme: dark;
+
+  /* Couleur principale - Turquoise/Teal du design Pluka */
+  --color-primary: #79c9bc;
+  --color-primary-content: #ffffff;
+
+  /* Couleurs de base - Background sombre teal */
+  --color-base-100: #224452;             /* Background principal - teal foncé */
+  --color-base-200: #1a353f;             /* Background plus foncé */
+  --color-base-300: #2d5562;             /* Background plus clair */
+  --color-base-content: #ffffff;         /* Texte principal - blanc */
+
+  /* Couleurs sémantiques */
+  --color-secondary: #79c9bc;            /* Teal clair */
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #79c9bc;               /* Teal accent */
+  --color-accent-content: #ffffff;
+
+  --color-info: rgba(121, 201, 188, 0.23);
+  --color-info-content: #79c9bc;
+
+  --color-neutral: #1a353f;
+  --color-neutral-content: #ffffff;
+
+  /* Border radius */
+  --radius-box: 1.527rem;                /* 24.456px comme dans le design */
+  --radius-field: 0.5rem;
+  --radius-selector: 0.5rem;
 }
 
 /* ========================================

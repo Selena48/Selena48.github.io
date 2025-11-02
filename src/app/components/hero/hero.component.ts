@@ -3,6 +3,7 @@ import { NgTemplateOutlet } from '@angular/common';
 import { ThemeAwareDirective } from '../../directives/theme-aware.directive';
 import { HeroPortfolioComponent } from './variants/hero-portfolio.component';
 import { HeroLightcrowdComponent } from './variants/hero-lightcrowd.component';
+import { HeroPlukaComponent } from './variants/hero-pluka.component';
 
 /**
  * Composant Hero intelligent qui s'adapte automatiquement au thème parent
@@ -36,6 +37,7 @@ import { HeroLightcrowdComponent } from './variants/hero-lightcrowd.component';
   imports: [
     HeroLightcrowdComponent,
     HeroPortfolioComponent,
+    HeroPlukaComponent,
   ],
   hostDirectives: [ThemeAwareDirective],
   styles: [`
@@ -49,6 +51,11 @@ import { HeroLightcrowdComponent } from './variants/hero-lightcrowd.component';
         <app-hero-lightcrowd [hostClasses]="hostClasses()">
           <ng-content />
         </app-hero-lightcrowd>
+      }
+      @case ('pluka') {
+        <app-hero-pluka [hostClasses]="hostClasses()">
+          <ng-content />
+        </app-hero-pluka>
       }
       @case ('portfolio') {
         <app-hero-portfolio [hostClasses]="hostClasses()">
