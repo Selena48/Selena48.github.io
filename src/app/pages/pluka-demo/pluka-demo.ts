@@ -49,7 +49,7 @@ export class PlukaDemo {
     { id: 'content-mapping', colorStart: 'rgba(136, 164, 67, 1)', colorEnd: 'rgba(201, 208, 127, 1)'},
     { id: 'user-flows', colorStart: 'rgba(183, 193, 84, 1)', colorEnd: 'rgba(55, 188, 166, 1)'},
     { id: 'composition-sketches', colorStart: 'rgba(211, 229, 255, 1)', colorEnd: 'rgba(103, 146, 209, 1)'},
-    { id: 'graphic-mockups', colorStart: 'rgba(255, 80, 92, 1)', colorEnd: 'rgba(225, 187, 10, 1)'},
-    { id: 'high-fidelity-prototype', colorStart: 'rgba(255, 80, 92, 1)', colorEnd: 'rgba(236, 31, 68, 1)'}
+    { id: 'high-fidelity-prototype', colorStart: 'rgba(255, 80, 92, 1)', colorEnd: 'rgba(225, 187, 10, 1)'},
+    { id: 'graphic-mockups', colorStart: 'rgba(255, 80, 92, 1)', colorEnd: 'rgba(236, 31, 68, 1)'}
   ];
 }
