@@ -33,5 +33,15 @@ export const routes: Routes = [
     path: 'lightcrowd',
     loadComponent: () => import('./pages/lightcrowd-demo/lightcrowd-demo').then(m => m.LightcrowdDemo),
     data: { theme: 'lightcrowd' }
+  },
+  {
+    path: 'pluka',
+    loadComponent: () => import('./pages/pluka-demo/pluka-demo').then(m => m.PlukaDemo),
+    data: { theme: 'pluka' }
+  },
+  {
+    path: 'anthropophonie',
+    loadComponent: () => import('./pages/anthropophonie-demo/anthropophonie-demo').then(m => m.AnthrophonieDemo),
+    data: { theme: 'anthropophonie' }
   }
 ];

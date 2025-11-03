@@ -126,9 +126,16 @@
     </div>
 
     <app-hero-portfolio [hostClasses]="'rounded'">
-      <div class="p grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 w-full">
-        @for (skill of expertise.getAllExpertiseItems(); track skill.name) {
-          <app-expertise-card [expertise]="skill"></app-expertise-card>
+      <div class="p md:gap-5 w-full">
+        @for (section of expertises; track section.section){
+          <div class="pb-5">
+            <h3 class="heading-3 pb-5">{{section.section}}</h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+              @for (skill of expertise.getExpertiseCollection(section.expertises); track skill.name) {
+                <app-expertise-card [expertise]="skill" gradientStart="white" gradientEnd="white"></app-expertise-card>
+              }
+            </div>
+          </div>
         }
       </div>
     </app-hero-portfolio>

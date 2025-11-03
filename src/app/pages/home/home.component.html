@@ -6,7 +6,7 @@
       <div class="flex flex-col gap-6 w-full pt-10">
         <div class="sel flex flex-row gap-6 items-end justify-between w-full">
           <h1 class="text-[4rem] leading-[1] font-bold flex-1">
-            Sélèna Boullée
+            <img src="/assets/logo.png" alt="Sélèna">
           </h1>
           <div class="relative">
             <img src="/assets/4.svg"
@@ -72,18 +72,19 @@
     <!-- Header -->
     <div class="portfolio-section-header">
       <h3 class="heading-1">Selected Works</h3>
-      <div class="flex flex-col gap-8">
-        <div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- LightCrowd Project -->
+        <div class="md:col-span-2">
           <app-hero-lightcrowd [hostClasses]="'rounded'">
-            <div class="flex justify-between gap-8">
-              <div class="p flex flex-col gap-10 w-[55%]">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+              <div class="p flex flex-col gap-10 md:w-[55%]">
                 <div class="flex">
                   <div role="alert" class="alert alert-info alert-sm">
                     <span>UX Research • Product Design • IoT</span>
                   </div>
                 </div>
                 <div>
-                  <h3 class="heading-3 leading-none mb-2">LightCrowd : When light<br>
+                  <h3 class="heading-3 leading-none mb-2">LightCrowd : When light<span class="hidden md:inline"><br></span>
                     becomes <span class="bg-clip-text text-transparent bg-linear-to-r from-secondary-content to-primary-content">language</span></h3>
                   <p class="body-muted leading-[1.25]">A connected bracelet transforming crowds into supportive communities through universal light signals</p>
                 </div>
@@ -104,12 +105,105 @@
                   </a>
                 </div>
               </div>
-              <div class="relative w-[45%]">
+              <div class="relative h-70 md:h-auto md:w-[45%]">
                 <img src="/assets/Group_23.png" class="absolute origin-bottom-left bottom-0 scale-110">
                 <img src="/assets/Hand.png" class="absolute bottom-0">
               </div>
             </div>
           </app-hero-lightcrowd>
+        </div>
+
+        <!-- Pluka Project -->
+        <div class="md:col-span-2">
+          <app-hero-pluka [hostClasses]="'rounded'">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+              <div class="p flex flex-col gap-10 md:w-[55%]">
+                <div class="flex">
+                  <div role="alert" class="alert alert-info alert-sm">
+                    <span>UX Research • UI Design • Health Tech • Web App</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="heading-3 leading-none mb-2">Pluka – Bringing Science-<span class="hidden md:inline"><br></span>
+                    Based Wellness to the Public</h3>
+                  <p class="body-muted leading-[1.25]">Transforming a professional health app into an accessible lifestyle experience (2024–2025)</p>
+                </div>
+                <div class="flex w-full">
+                  <div>
+                    <p class="font-bold">The Challenge</p>
+                    <p class="body-muted text-sm">Translating clinical rigor into human-centered experience</p>
+                  </div>
+                  <div class="divider divider-horizontal"></div>
+                  <div>
+                    <p class="font-bold">The Impact</p>
+                    <p class="body-muted text-sm">From B2B expert tool to consumer-friendly health companion</p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <a [routerLink]="'/pluka'" class="btn">
+                    Case study
+                  </a>
+                </div>
+              </div>
+              <div class="relative h-100% w-[50%]">
+                <!-- Placeholder pour les images des téléphones et la main -->
+                <div class="absolute bottom-0 left-0 right-0 flex items-end justify-center gap-4 opacity-80">
+                  <img src="/assets/Frame%2040189.png"/>
+                </div>
+              </div>
+            </div>
+          </app-hero-pluka>
+        </div>
+
+        <div class="hidden">
+          <app-hero-anthropophonie [hostClasses]="'rounded'">
+            <div class="flex flex-col md:flex-row gap-8 items-start justify-between p-8 md:p-12 lg:p-16 relative z-1">
+              <div class="flex flex-col gap-8">
+                <!-- Tag overlay -->
+                <div class="alert alert-info alert-sm w-fit">
+                  <span>UX Research • Product Design • Sensory Design</span>
+                </div>
+
+                <div>
+                  <!-- Main heading -->
+                  <h3 class="heading-3 leading-[1.1]">
+                    Anthropophonie : When silence becomes listening
+                  </h3>
+
+                  <!-- Subtitle -->
+                  <p class="body-muted">
+                    Reconnecting Humans and Nature Through Sound : Rethinking the relationship between students, noise, and attention on the UTC campus (2030)
+                  </p>
+                </div>
+
+
+                <!-- Challenge & Impact section -->
+                <div class="flex gap-4 w-full">
+                  <div class="flex flex-col gap-1 flex-1">
+                    <p class="font-bold">The Challenge</p>
+                    <p class="body-muted text-sm">90dB noise pollution creating stress and acoustic exhaustion</p>
+                  </div>
+                  <div class="divider divider-horizontal"></div>
+                  <div class="flex flex-col gap-1 flex-1">
+                    <p class="font-bold">The Impact</p>
+                    <p class="body-muted text-sm">Collective awareness through sensory design without blame</p>
+                  </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex items-start">
+                  <a [routerLink]="'/anthropophonie'" class="btn">
+                    Case study
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right side: Image placeholder -->
+            <div class="relative z-0 h-18 w-full flex items-end justify-end">
+              <img src="/assets/IMG_7610-removebg-preview%201.png" alt="Anthropophonie project preview" class="md:w-2/3">
+            </div>
+          </app-hero-anthropophonie>
         </div>
       </div>
     </div>

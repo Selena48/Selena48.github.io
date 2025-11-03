@@ -17,4 +17,12 @@ export const serverRoutes: ServerRoute[] = [
     path: 'lightcrowd',
     renderMode: RenderMode.Prerender,
   },
+  {
+    path: 'pluka',
+    renderMode: RenderMode.Prerender,
+  },
+  {
+    path: 'anthropophonie',
+    renderMode: RenderMode.Prerender,
+  },
 ];
