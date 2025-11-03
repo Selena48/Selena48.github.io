@@ -21,7 +21,6 @@ export class AnthrophonieDemo {
   // Collection des deliverables pour Anthropophonie dans l'ordre exact de la maquette
   protected readonly anthropophonieDeliverables = this.expertise.getExpertiseCollection([
     'background-research',
-    'shadowing',
     'benchmark',
     'personas',
     'user-case',
