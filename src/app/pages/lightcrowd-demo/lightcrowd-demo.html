@@ -578,8 +578,8 @@ background-clip: text;
     <app-hero-lightcrowd hostClasses="rounded">
       <div class="p-16">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          @for (skill of expertise.getAllExpertiseItems(); track skill.name) {
-            <app-expertise-card [expertise]="skill"></app-expertise-card>
+          @for (skill of selectedExpertise; track skill.id) {
+            <app-expertise-card [expertise]="expertise.getExpertiseItem(skill.id)" [gradientStart]="skill.colorStart" [gradientEnd]="skill.colorEnd"></app-expertise-card>
           }
         </div>
       </div>

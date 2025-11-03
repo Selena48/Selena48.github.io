@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ExpertiseService} from '../../services/expertise-service';
+import {ExpertiseKey, ExpertiseService} from '../../services/expertise-service';
 import {ExpertiseCard} from '../../components/expertise-card/expertise-card';
 import {HeroPortfolioComponent} from '../../components/hero/variants/hero-portfolio.component';
 
@@ -60,4 +60,26 @@ export class GetToKnowMeComponent {
       image: '/assets/6.png',
     }
   ];
+
+  protected readonly expertises: {
+    section: string;
+    expertises: ExpertiseKey[];
+  }[] = [
+    {
+      section: "Research & Analysis",
+      expertises: ['background-research', 'hypothesis-formulation', "benchmark", "ux-audit", "user-case", "data-collection", "personas", "empathy-maps", "2x2-matrix", "welchs-t-test", "modeling-design-tensions"]
+    },
+    {
+      section: "Design & Ideation",
+      expertises: ['facilitate-ideation-workshops', "experience-vision", "content-mapping", "user-flows", "composition-sketches"],
+    },
+    {
+      section: "Prototyping & Testing",
+      expertises: ['low-fidelity-prototype', 'high-fidelity-prototype', "user-test-protocol", "five-second-test"]
+    },
+    {
+      section: "Deliverables",
+      expertises: ['intent-note', "design-system", "staleholder-presentations", "presentation-video"]
+    }
+  ]
 }

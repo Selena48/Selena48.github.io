@@ -141,8 +141,8 @@ export class ExpertiseService {
   <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5042 0H0V46.0372C0 54.5123 6.87053 61.3829 15.3457 61.3829H28.85V15.3457C28.85 6.87053 21.9794 0 13.5042 0ZM47.8787 0C39.4035 0 32.5329 6.87053 32.5329 15.3457V61.3829H46.0372C54.5123 61.3829 61.3829 54.5123 61.3829 46.0372V0H47.8787Z" fill="url('#gradient-ux-audit')"/>
   <defs>
     <linearGradient id="gradient-ux-audit" x1="30.6915" y1="0" x2="30.6915" y2="61.3829" gradientUnits="userSpaceOnUse">
-      <stop stop-color="var(--gradient-start-ux-audit, #88A443)"/>
-      <stop offset="1" stop-color="var(--gradient-end-ux-audit, #E1BB0A)"/>
+      <stop stop-color="var(--gradient-start, #ffffff)"/>
+      <stop offset="1" stop-color="var(--gradient-end, #ffffff)"/>
     </linearGradient>
   </defs>
 </svg>`
