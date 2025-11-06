@@ -1,1 +1,4 @@
 /* Styles spécifiques pour la page Anthropophonie */
+.portfolio-card-subtle{
+  background-color: color-mix(in oklab, var(--color-base-200) 20%, transparent);
+}
