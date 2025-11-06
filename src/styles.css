@@ -164,12 +164,12 @@
   color-scheme: light;
 
   /* Couleur principale - Bleu aquatique du dégradé */
-  --color-primary: #5e8b99;
-  --color-primary-content: #ffffff;
+  --color-primary: #fff;
+  --color-primary-content: rgba(183, 193, 84, 1);
 
   /* Couleurs de base - Background avec dégradé aquatique */
-  --color-base-100: #5e8b99;             /* Background principal - bleu aquatique */
-  --color-base-200: rgb(242, 250, 249);             /* Background vert aquatique */
+  --color-base-100: rgb(253, 254, 255);             /* Background principal - bleu aquatique */
+  --color-base-200: rgb(178, 194, 96);             /* Background vert aquatique */
   --color-base-300: #4a7584;             /* Background plus foncé */
   --color-base-content: rgb(36, 36, 36);         /* Texte principal - blanc */
 
@@ -177,10 +177,10 @@
   --color-secondary: #7ba88f;            /* Vert aquatique */
   --color-secondary-content: #ffffff;
 
-  --color-accent: #7ba88f;               /* Vert accent */
+  --color-accent: #054166;               /* Vert accent */
   --color-accent-content: #ffffff;
 
-  --color-info: rgba(94, 139, 153, 0.2);
+  --color-info: rgba(255, 255, 255, 0.13);
   --color-info-content: #ffffff;
 
   --color-neutral: #4a7584;

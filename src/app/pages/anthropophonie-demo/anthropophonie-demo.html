@@ -1,5 +1,31 @@
 <!-- Project Info Row -->
-<div class="prose portfolio-container">
+<div class="prose portfolio-container pt-5">
+  <app-hero-anthropophonie [hostClasses]="'rounded'">
+    <div class="flex flex-col items-center text-center gap-6 pt-40 pb-20">
+      <!-- Tag overlay -->
+
+      <div class="alert alert-info alert-sm">
+        <span>UX Research • UI Design • Health Tech • Web App</span>
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="heading-1 leading-[1.1] max-w-4xl">
+        Anthropophonie : When silence becomes listening
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="body-muted">
+        Transforming a professional health app into an accessible lifestyle experience (2024–2025)
+      </p>
+
+      <!-- Scroll indicator (SVG arrow down) -->
+      <div>
+        <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.47314 1.47314L13.9731 13.9731L26.4731 1.47314" class="stroke-primary" stroke-width="4.16667"/>
+        </svg>
+      </div>
+    </div>
+  </app-hero-anthropophonie>
   <section>
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 py-14">
       <div>
@@ -31,7 +57,7 @@
           On the UTC campus, human sounds such as conversations, footsteps, chairs scraping and doors slamming form a constant acoustic backdrop. At the university restaurant, noise levels often exceed 90 decibels, creating a stressful and exhausting atmosphere.
         </p>
         <p class="caption">
-          What if noise was not just a nuisance, but a symptom of a deeper disconnection  from both nature and others? The problem was no longer the absence of natural sounds, but the impossibility of listening.
+          What if noise was not just a nuisance, but a symptom of a deeper disconnection — from both nature and others? The problem was no longer the absence of natural sounds, but the impossibility of listening.
         </p>
       </div>
 
@@ -81,7 +107,7 @@
 
   <!-- Methodology Section -->
   <section>
-    <h2 class="heading-2 mb-12">Methodology  An Iterative Approach of Listening, Critique, and Design</h2>
+    <h2 class="heading-2 mb-12">Methodology – An Iterative Approach of Listening, Critique, and Design</h2>
 
     <!-- Sensory Exploration -->
     <div class="flex flex-col gap-5 mb-10">
@@ -98,9 +124,7 @@
 
     <!-- Image placeholder -->
     <div class="w-full mb-10">
-      <div class="bg-base-200 rounded-lg aspect-[3170/1380] flex items-center justify-center">
-        <p class="text-base-content/30">Research images</p>
-      </div>
+      <img src="/assets/image 16.png" alt="">
     </div>
 
     <!-- Key Findings -->
@@ -125,7 +149,7 @@
       </div>
 
       <p class="caption mb-6">
-        Our hypothesis was wrong  the issue wasn't bringing nature back, but restoring acoustic comfort and attention to the immediate environment. This marked a key learning: knowing when to let go of an appealing idea to stay aligned with user reality.
+        Our hypothesis was wrong — the issue wasn't bringing nature back, but restoring acoustic comfort and attention to the immediate environment. This marked a key learning: knowing when to let go of an appealing idea to stay aligned with user reality.
       </p>
 
       <!-- Personas section -->
@@ -140,15 +164,13 @@
 
         <!-- Image placeholder for personas -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-base-200 rounded-lg h-64 flex items-center justify-center">
-            <p class="text-base-content/30">Personas image</p>
-          </div>
+          <img src="/assets/image%2018.png" alt=""/>
           <div class="flex flex-col justify-center">
             <p class="muted">
               Scenarios built around these personas illustrated how the same soundscapes are experienced very differently, highlighting the need for adaptable and inclusive solutions.
             </p>
             <p class="muted mt-4">
-              To complement this qualitative insight, we conducted on-site observations and mapped the campus' soundscape, recording audio in various locations. The canteen consistently registered as the loudest area, with peaks exceeding 90 dBroughly equivalent to heavy urban trafficwhich aligned with students' experiences of noise-related discomfort.
+              To complement this qualitative insight, we conducted on-site observations and mapped the campus' soundscape, recording audio in various locations. The canteen consistently registered as the loudest area, with peaks exceeding 90 dB—roughly equivalent to heavy urban traffic—which aligned with students' experiences of noise-related discomfort.
             </p>
           </div>
         </div>
@@ -190,24 +212,22 @@
 
       <!-- Workshop image placeholder -->
       <div class="w-full">
-        <div class="bg-base-200 rounded-lg aspect-[1040/399] flex items-center justify-center">
-          <p class="text-base-content/30">Workshop images</p>
-        </div>
+        <img src="/assets/image%2019.png" alt="" class="w-full">
       </div>
     </div>
 
     <!-- Reframing Section -->
     <app-hero-anthropophonie [hostClasses]="'rounded mb-10'">
       <div class="p-10 flex flex-col gap-6 items-center">
-        <p class="body-muted text-center">Reframing: Clarifying the Core Challenge</p>
+        <p class="body-muted text-center uppercase text-xl">Reframing: Clarifying the Core Challenge</p>
         <p class="body text-center">
           The workshop prompted a critical reassessment of our question. Students rejected artificial nature sounds as inauthentic. We reframed the challenge to focus on user needs.
         </p>
 
         <!-- Evolution cards -->
-        <div class="flex gap-6 items-center w-full justify-center">
-          <div class="flex gap-3 items-center">
-            <div class="bg-white rounded-full size-20 flex items-center justify-center text-accent font-bold text-2xl">
+        <div class="flex flex-col md:flex-row gap-6 items-center w-full justify-center">
+          <div class="flex flex-col md:flex-row gap-3 items-center">
+            <div class="bg-primary rounded-full size-20 flex items-center justify-center text-primary-content font-bold text-2xl">
               01
             </div>
             <div class="bg-white/30 backdrop-blur-sm rounded-lg p-6 max-w-xs">
@@ -216,11 +236,11 @@
               </p>
             </div>
           </div>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-white shrink-0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="hidden md:block text-white shrink-0">
             <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <div class="flex gap-3 items-center">
-            <div class="bg-white rounded-full size-20 flex items-center justify-center text-accent font-bold text-2xl">
+          <div class="flex flex-col md:flex-row gap-3 items-center">
+            <div class="bg-primary rounded-full size-20 flex items-center justify-center text-primary-content font-bold text-2xl">
               02
             </div>
             <div class="bg-white/30 backdrop-blur-sm rounded-lg p-6 max-w-md">
@@ -234,35 +254,34 @@
     </app-hero-anthropophonie>
 
     <!-- Our Solution -->
-    <div class="flex flex-col gap-5 mb-10">
+    <div class="flex flex-col mb-10">
       <h3 class="heading-3">Our solution</h3>
       <p class="muted">
-        Students highlighted that limited space makes zone separation difficult. The sound meter could induce guiltnot our goal. We want noise reduction to create calm, not stress. Following our research, we developed a two-zone solution for the university restaurant
+        Students highlighted that limited space makes zone separation difficult. The sound meter could induce guilt—not our goal. We want noise reduction to create calm, not stress. Following our research, we developed a two-zone solution for the university restaurant
       </p>
 
       <!-- Ground floor image placeholder -->
       <div class="w-full">
-        <div class="bg-base-200 rounded-lg aspect-[1045/268] flex items-center justify-center mb-6">
-          <p class="text-base-content/30">Ground floor design</p>
-        </div>
+        <img src="/assets/image%2020.png" alt="" class="w-full">
       </div>
 
-      <p class="muted mb-6">
-        <span class="font-bold text-accent uppercase">Ground Floor</span>: The ground floor features a living green wall composed of natural sound-absorbing plants. Integrated within this vegetation are mechanical flowers that react to sound levels:
-      </p>
-      <ul class="muted list-disc ml-6 space-y-2 mb-6">
-        <li>When noise remains at acceptable levels, the flowers stay fully bloomed and open</li>
-        <li>When sound exceeds the established threshold, the flowers close, returning to bud form</li>
-      </ul>
-      <p class="muted mb-6">
-        This creates a collective, non-intrusive feedback system that affects the entire space rather than singling out individuals.
-      </p>
+      <div class="my-5">
+        <p class="muted">
+          <span class="font-bold text-accent uppercase">Ground Floor</span>: The ground floor features a living green wall composed of natural sound-absorbing plants. Integrated within this vegetation are mechanical flowers that react to sound levels:
+        </p>
+        <ul class="muted list-disc ml-4">
+          <li>When noise remains at acceptable levels, the flowers stay fully bloomed and open</li>
+          <li>When sound exceeds the established threshold, the flowers close, returning to bud form</li>
+        </ul>
+        <p class="muted">
+          This creates a collective, non-intrusive feedback system that affects the entire space rather than singling out individuals.
+        </p>
+      </div>
+
 
       <!-- Upper floor image placeholder -->
       <div class="w-full">
-        <div class="bg-base-200 rounded-lg aspect-[1045/271] flex items-center justify-center mb-6">
-          <p class="text-base-content/30">Upper floor design</p>
-        </div>
+        <img src="/assets/image%2021.png" class="w-full"/>
       </div>
 
       <p class="muted mb-6">
@@ -284,12 +303,8 @@
 
       <!-- Prototype images -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-base-200 rounded-lg aspect-[494/356] flex items-center justify-center">
-          <p class="text-base-content/30">Prototype image 1</p>
-        </div>
-        <div class="bg-base-200 rounded-lg aspect-[494/356] flex items-center justify-center">
-          <p class="text-base-content/30">Prototype image 2</p>
-        </div>
+        <img src="/assets/Rectangle 177.png" class="w-full">
+        <img src="/assets/Rectangle 178.png" class="w-full">
       </div>
 
       <h3 class="heading-3 mb-6">Critical insights and iterations</h3>
@@ -299,7 +314,7 @@
           <p class="text-xs font-bold mb-3">Culpability effect</p>
           <p class="text-sm mb-4 muted">Central placement created a sense of surveillance</p>
           <div class="flex gap-2 items-start">
-            <img src="/assets/Group 1.png" alt="" class="w-6">
+            <img src="/assets/Group 2.png" alt="" class="w-6">
             <p class="caption text-xs">Reposition flowers on walls or overhead to diffuse attention</p>
           </div>
         </div>
@@ -308,7 +323,7 @@
           <p class="text-xs font-bold mb-3">Engagement decay</p>
           <p class="text-sm mb-4 muted">Interest diminished after initial novelty</p>
           <div class="flex gap-2 items-start">
-            <img src="/assets/Group 1.png" alt="" class="w-6">
+            <img src="/assets/Group 2.png" alt="" class="w-6">
             <p class="caption text-xs">Introduce multiple flower types with varied reactions (e.g., by frequency range, intensity, duration)</p>
           </div>
         </div>
@@ -332,8 +347,8 @@
     <app-hero-anthropophonie hostClasses="rounded">
       <div class="p-16">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          @for (deliverable of anthropophonieDeliverables; track deliverable.name) {
-            <app-expertise-card [expertise]="deliverable"></app-expertise-card>
+          @for (deliverable of anthropophonieDeliverables; track deliverable.id) {
+            <app-expertise-card [expertise]="expertise.getExpertiseItem(deliverable.id)" [gradientStart]="deliverable.color" [gradientEnd]="deliverable.color"></app-expertise-card>
           }
         </div>
       </div>
