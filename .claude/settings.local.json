@@ -42,7 +42,10 @@
       "Bash(do echo \"=== $f ===\")",
       "Bash(pnpm run build)",
       "Bash(timeout 10 pnpm start:*)",
-      "mcp__serena__activate_project"
+      "mcp__serena__activate_project",
+      "mcp__serena__find_symbol",
+      "mcp__serena__find_file",
+      "mcp__serena__replace_symbol_body"
     ],
     "deny": [],
     "ask": []
