@@ -48,7 +48,8 @@
       "mcp__serena__replace_symbol_body",
       "mcp__serena__replace_regex",
       "mcp__serena__create_text_file",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(node scripts/image-to-favicon.js:*)"
     ],
     "deny": [],
     "ask": []

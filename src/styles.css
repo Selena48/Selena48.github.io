@@ -56,11 +56,11 @@
   --color-base-content: #242424;       /* Texte principal */
 
   /* Couleurs sémantiques */
-  --color-secondary: #2d8fcc;          /* Bleu accent */
+  --color-secondary: rgba(182, 191, 74, 1);          /* Bleu accent */
   --color-secondary-content: #ffffff;
 
-  --color-accent: #a50009;             /* Rouge accent */
-  --color-accent-content: #ffffff;
+  --color-accent: rgba(255, 67, 21, 1);             /* Rouge accent */
+  --color-accent-content: rgb(226, 186, 221);
 
   --color-neutral: #000000;
   --color-neutral-content: #ffffff;
@@ -340,6 +340,10 @@ html{
 /* ─────────────────────────────────────
    CARTES & CONTAINERS
    ───────────────────────────────────── */
+
+.portfolio-card-base{
+  @apply rounded-2xl p-[1.5rem];
+}
 
 /* Card - Carte standard avec bordure */
 .portfolio-card {

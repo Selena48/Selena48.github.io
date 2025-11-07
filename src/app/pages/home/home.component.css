@@ -11,6 +11,9 @@
 .sel:hover .img2{
   @apply -rotate-30;
 }
+.sel:hover .img3{
+  @apply rotate-45;
+}
 
 
 /* HERO'S ANIMATIONS */
