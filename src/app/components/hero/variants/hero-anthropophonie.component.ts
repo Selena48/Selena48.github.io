@@ -37,14 +37,13 @@ import { NgClass } from '@angular/common';
       </div>
 
       <!-- Contenu -->
-      <div class="content relative z-10">
+      <div class="h-full relative z-10">
         <ng-content></ng-content>
       </div>
     </div>
   `,
   styles: [`
     .hero-anthropophonie {
-      min-height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -155,12 +154,6 @@ import { NgClass } from '@angular/common';
         rgba(75, 155, 155, 0.2) 50%,
         rgba(30, 77, 107, 0.1) 100%
       );
-    }
-
-    /* Contenu */
-    .content {
-      text-align: center;
-      color: white;
     }
 
     .content :deep(h1) {
