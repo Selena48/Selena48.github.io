@@ -4,6 +4,7 @@ import { ThemeAwareDirective } from '../../directives/theme-aware.directive';
 import { HeroPortfolioComponent } from './variants/hero-portfolio.component';
 import { HeroLightcrowdComponent } from './variants/hero-lightcrowd.component';
 import { HeroPlukaComponent } from './variants/hero-pluka.component';
+import { HeroCohabitationComponent } from './variants/hero-cohabitation.component';
 
 /**
  * Composant Hero intelligent qui s'adapte automatiquement au thème parent
@@ -38,6 +39,7 @@ import { HeroPlukaComponent } from './variants/hero-pluka.component';
     HeroLightcrowdComponent,
     HeroPortfolioComponent,
     HeroPlukaComponent,
+    HeroCohabitationComponent,
   ],
   hostDirectives: [ThemeAwareDirective],
   styles: [`
@@ -61,6 +63,11 @@ import { HeroPlukaComponent } from './variants/hero-pluka.component';
         <app-hero-portfolio [hostClasses]="hostClasses()">
           <ng-content />
         </app-hero-portfolio>
+      }
+      @case ('cohabitation') {
+        <app-hero-cohabitation [hostClasses]="hostClasses()">
+          <ng-content />
+        </app-hero-cohabitation>
       }
     }
   `

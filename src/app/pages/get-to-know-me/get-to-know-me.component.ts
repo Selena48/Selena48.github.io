@@ -44,20 +44,20 @@ export class GetToKnowMeComponent {
     {
       title: 'Behavior design',
       description: 'How small changes in design can shape user habits and decisions',
-      bgColor: 'rgba(45,143,204,0.05)',
-      image: '/assets/4.png',
+      bgColor: 'bg-primary/5',
+      image: '/assets/Shapes(1).png',
     },
     {
       title: 'Nudge Theory',
       description: 'Subtle interventions that guide choices without restricting freedom',
-      bgColor: 'rgba(165,0,9,0.05)',
-      image: '/assets/5.png',
+      bgColor: 'bg-secondary/5',
+      image: '/assets/Shapes(2).png',
     },
     {
       title: 'Enactive design',
       description: 'Designing for embodied cognition and sensorimotor experience',
-      bgColor: 'rgba(45,143,204,0.05)',
-      image: '/assets/6.png',
+      bgColor: 'bg-accent-content/5',
+      image: '/assets/Shapes(3).png',
     }
   ];
 

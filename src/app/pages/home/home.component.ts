@@ -5,10 +5,11 @@ import {HeroLightcrowdComponent} from '../../components/hero/variants/hero-light
 import {HeroPlukaComponent} from '../../components/hero/variants/hero-pluka.component';
 import {RouterLink} from '@angular/router';
 import {HeroAnthropophonie} from '../../components/hero/variants/hero-anthropophonie.component';
+import {HeroCohabitationComponent} from '../../components/hero/variants/hero-cohabitation.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, HeroLightcrowdComponent, HeroPlukaComponent, RouterLink, HeroAnthropophonie],
+  imports: [CommonModule, HeroLightcrowdComponent, HeroPlukaComponent, RouterLink, HeroAnthropophonie, HeroCohabitationComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
