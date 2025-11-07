@@ -1,4 +1,6 @@
 /* Styles spécifiques pour la page Home si nécessaire */
+@import "tailwindcss";
+
 .sel img{
   @apply transition-transform duration-150;
 }
@@ -8,4 +10,64 @@
 }
 .sel:hover .img2{
   @apply -rotate-30;
+}
+
+
+/* HERO'S ANIMATIONS */
+
+.lightcrowd img, .pluka img{
+  @apply transition-all duration-500;
+}
+
+.lightcrowd .logo{
+  @apply opacity-0;
+}
+.lightcrowd .phone1{
+  @apply origin-bottom-right rotate-9 translate-y-18 translate-x-40;
+}
+.lightcrowd .phone2{
+  @apply origin-bottom-left scale-100 -rotate-5 translate-y-0 translate-x-10;
+}
+.lightcrowd .bracelet{
+  @apply origin-bottom scale-100;
+}
+
+.lightcrowd:hover .logo{
+  @apply opacity-100;
+}
+.lightcrowd:hover .phone1{
+  @apply rotate-19 translate-y-18 translate-x-50;
+}
+.lightcrowd:hover .phone2{
+  @apply origin-bottom-left scale-115 -rotate-7 -translate-y-10 translate-x-12;
+}
+.lightcrowd:hover .bracelet{
+  @apply origin-bottom scale-105;
+}
+
+
+.pluka .phone3{
+  @apply origin-bottom scale-100 translate-y-36 -translate-x-8;
+}
+.pluka .phone4{
+  @apply origin-bottom scale-100 translate-y-15 -translate-x-55;
+}
+.pluka .logo{
+  @apply origin-bottom scale-100 -rotate-6;
+}
+.pluka .icons{
+  @apply opacity-0;
+}
+
+.pluka:hover .phone3{
+  @apply origin-bottom translate-y-36 -translate-x-8 rotate-7;
+}
+.pluka:hover .phone4{
+  @apply origin-bottom scale-123 translate-y-30 -translate-x-55 -rotate-3;
+}
+.pluka:hover .logo{
+  @apply origin-bottom scale-105 -rotate-6 -translate-y-15;
+}
+.pluka:hover .icons{
+  @apply opacity-100;
 }

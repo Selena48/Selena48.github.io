@@ -74,9 +74,9 @@
       <h3 class="heading-1">Selected Works</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- LightCrowd Project -->
-        <div class="md:col-span-2">
+        <div class="md:col-span-2 relative overflow-visible lightcrowd">
           <app-hero-lightcrowd [hostClasses]="'rounded'">
-            <div class="flex flex-col md:flex-row justify-between gap-8 overflow-visible">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
               <div class="p flex flex-col gap-10 md:w-[55%]">
                 <div class="flex">
                   <div role="alert" class="alert alert-info alert-sm">
@@ -105,16 +105,29 @@
                   </a>
                 </div>
               </div>
-              <div class="relative h-70 md:h-auto md:w-[45%] overflow-visible">
-                <img src="/assets/Group_23.png" class="absolute origin-bottom-left bottom-0 scale-110">
-                <img src="/assets/Hand.png" class="absolute bottom-0">
+              <div class="relative h-70 md:h-auto md:w-[45%]">
+                <!-- Placeholder pour maintenir l'espace -->
               </div>
             </div>
           </app-hero-lightcrowd>
+
+          <!-- Image positionnée absolument par-dessus le hero avec clip-path pour masquer le débordement en bas -->
+          <div class="animbox absolute bottom-0 right-0 md:w-[30rem] h-70 md:h-full pointer-events-none">
+            <img src="/assets/source_6fdaba732982b6253714e242777ba384c26182a2.png"
+                 class="absolute origin-bottom-left bottom-0 w-50 scale-100 phone1">
+            <img src="/assets/source_bd4b0003ac964da325277cea5a5b0ca8396b6c7d.png"
+                  class="absolute origin-bottom-left bottom-0 w-50 scale-100 phone2">
+
+            <img src="/assets/Group%2022.png" alt="Crowd at concert"
+                 class="absolute top-10 right-7 pointer-events-none logo">
+
+            <img src="/assets/Hand.png" alt="Hand holding bracelet"
+                 class="absolute bottom-0 z-10 pointer-events-auto bracelet">
+          </div>
         </div>
 
         <!-- Pluka Project -->
-        <div class="md:col-span-2">
+        <div class="md:col-span-2 relative overflow-visible pluka">
           <app-hero-pluka [hostClasses]="'rounded'">
             <div class="flex flex-col md:flex-row justify-between gap-8">
               <div class="p flex flex-col gap-10 md:w-[55%]">
@@ -145,14 +158,27 @@
                   </a>
                 </div>
               </div>
-              <div class="relative h-100% w-[50%]">
-                <!-- Placeholder pour les images des téléphones et la main -->
-                <div class="absolute bottom-0 left-0 right-0 flex items-end justify-center gap-4">
-                  <img src="/assets/Frame%2040189.png"/>
-                </div>
+              <div class="relative h-100% w-[45%]">
+
               </div>
             </div>
           </app-hero-pluka>
+          <div class="animbox absolute bottom-0 right-0 md:w-[30rem] h-70 md:h-full pointer-events-none">
+            <!-- Placeholder pour maintenir l'espace -->
+            <img src="/assets/c4927ddc21b8feeac2564763a0c5feed0dba176a.png"
+                 class="absolute bottom-0 right-0 w-56 phone3">
+            <img src="/assets/dc10355bc75ea2d5f68b81db7719dd95e2945237.png"
+                 class="absolute bottom-0 right-0 w-56 phone4">
+
+            <img src="/assets/pluka-illustration.png"
+                 class="absolute top-26 right-6 w-27 logo">
+
+            <img src="/assets/Group.png"
+                 class="absolute bottom-5 -right-15 z-10 pointer-events-auto icons">
+            <img src="/assets/Group 262.png"
+                 class="absolute -bottom-8 right-92 -rotate-45 z-10 pointer-events-auto icons">
+
+          </div>
         </div>
 
         <div>
