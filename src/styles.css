@@ -18,7 +18,7 @@
 /* Configuration DaisyUI */
 @plugin "daisyui" {
   /* Thèmes disponibles avec leurs flags */
-  themes: portfolio --default, lightcrowd, pluka, anthropophonie;
+  themes: portfolio --default, lightcrowd, pluka, anthropophonie, cohabitation;
 
   /* Désactiver TOUS les composants DaisyUI */
   /* On garde uniquement le système de thèmes avec les variables CSS */
@@ -184,6 +184,42 @@
   --color-info-content: #ffffff;
 
   --color-neutral: #4a7584;
+  --color-neutral-content: #ffffff;
+
+  /* Border radius */
+  --radius-box: 1.527rem;                /* 24.456px comme dans le design */
+  --radius-field: 0.5rem;
+  --radius-selector: 0.5rem;
+}
+
+/* ========================================
+   Thème Cohabitation - Collective Well-being
+   ======================================== */
+@plugin "daisyui/theme" {
+  name: "cohabitation";
+  color-scheme: dark;
+
+  /* Couleur principale - Corail/Rose du design */
+  --color-primary: #ff3f49;
+  --color-primary-content: #ffffff;
+
+  /* Couleurs de base - Background sombre avec pattern */
+  --color-base-100: #1a1a1a;             /* Background principal - noir profond */
+  --color-base-200: #242424;             /* Background subtle */
+  --color-base-300: #2d2d2d;             /* Background plus clair */
+  --color-base-content: #ffffff;         /* Texte principal - blanc */
+
+  /* Couleurs sémantiques */
+  --color-secondary: #ff6b7a;            /* Rose/corail clair */
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #ff8f97;               /* Rose accent plus doux */
+  --color-accent-content: #ffffff;
+
+  --color-info: rgba(255, 63, 73, 0.23);
+  --color-info-content: #ff3f49;
+
+  --color-neutral: #151515;
   --color-neutral-content: #ffffff;
 
   /* Border radius */
