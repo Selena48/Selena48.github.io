@@ -1,5 +1,7 @@
 /* Styles spécifiques pour la page Home si nécessaire */
-@import "tailwindcss";
+
+/* Référence au fichier global Tailwind pour accéder aux utilities */
+@reference "../../../styles.css";
 
 .sel img{
   @apply transition-transform duration-150;
