@@ -76,7 +76,7 @@
         <!-- LightCrowd Project -->
         <div class="md:col-span-2">
           <app-hero-lightcrowd [hostClasses]="'rounded'">
-            <div class="flex flex-col md:flex-row justify-between gap-8">
+            <div class="flex flex-col md:flex-row justify-between gap-8 overflow-visible">
               <div class="p flex flex-col gap-10 md:w-[55%]">
                 <div class="flex">
                   <div role="alert" class="alert alert-info alert-sm">
@@ -105,7 +105,7 @@
                   </a>
                 </div>
               </div>
-              <div class="relative h-70 md:h-auto md:w-[45%]">
+              <div class="relative h-70 md:h-auto md:w-[45%] overflow-visible">
                 <img src="/assets/Group_23.png" class="absolute origin-bottom-left bottom-0 scale-110">
                 <img src="/assets/Hand.png" class="absolute bottom-0">
               </div>
@@ -166,7 +166,7 @@
 
                 <div>
                   <!-- Main heading -->
-                  <h3 class="heading-3 leading-[1.1]">
+                  <h3 class="heading-3 leading-[1.1] mb-2.5">
                     Anthropophonie : When silence becomes listening
                   </h3>
 
@@ -178,15 +178,15 @@
 
 
                 <!-- Challenge & Impact section -->
-                <div class="flex gap-4 w-full">
+                <div class="flex w-full">
                   <div class="flex flex-col gap-1 flex-1">
-                    <p class="font-bold">The Challenge</p>
-                    <p class="body-muted text-sm">90dB noise pollution creating stress and acoustic exhaustion</p>
+                    <p class="font-bold text-sm">The Challenge</p>
+                    <p class="body-muted text-xs">90dB noise pollution creating stress and acoustic exhaustion</p>
                   </div>
                   <div class="divider divider-horizontal"></div>
                   <div class="flex flex-col gap-1 flex-1">
-                    <p class="font-bold">The Impact</p>
-                    <p class="body-muted text-sm">Collective awareness through sensory design without blame</p>
+                    <p class="font-bold text-sm">The Impact</p>
+                    <p class="body-muted text-xs">Collective awareness through sensory design without blame</p>
                   </div>
                 </div>
 
@@ -200,7 +200,7 @@
             </div>
 
             <!-- Right side: Image placeholder -->
-            <div class="relative -bottom-1.5 z-0 h-18 w-full flex items-end justify-end">
+            <div class="relative -bottom-1.5 z-0 h-11 w-full flex items-end justify-end">
               <img src="/assets/IMG_7610-removebg-preview%201.png" alt="Anthropophonie project preview" class="md:w-2/3">
             </div>
           </app-hero-anthropophonie>
@@ -209,33 +209,43 @@
         <!-- Cohabitation Project -->
         <div>
           <app-hero-cohabitation [hostClasses]="'rounded'">
-            <div class="flex flex-col gap-8 items-start justify-between p-8 md:p-12 lg:p-16 relative z-10">
-              <div class="flex flex-col gap-8 max-w-[500px]">
-                <!-- Tag overlay -->
-                <div class="subtitle">
-                  UX Research
-                </div>
+            <div class="relative">
+              <div class="flex flex-col md:flex-row gap-8 items-start justify-between p-8 md:p-12 lg:p-16 relative z-1">
+                <div class="flex flex-col gap-8">
+                  <!-- Tag overlay -->
+                  <div class="alert alert-sm alert-info w-fit">
+                    <span>UX Research</span>
+                  </div>
 
-                <div>
-                  <!-- Main heading -->
-                  <h1 class="mb-4">
-                    Designing Cohabitation: A Study on <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#ff3f49] to-[#ff8f97]">Collective Well-being</span>
-                  </h1>
+                  <div>
+                    <!-- Main heading -->
+                    <h3 class="heading-3 leading-[1.1] mb-2.5 bg-clip-text bg-gradient-to-r from-[#E67BBD] via-[#FE5652] to-[#F9AE45]">
+                      Designing Cohabitation: A Study on <span class="text-transparent">Collective Well-being</span>
+                    </h3>
 
-                  <!-- Subtitle -->
-                  <p class="description">
-                    Understanding how to overcome value and behavior differences to create inclusive and supportive shared spaces
-                  </p>
-                </div>
+                    <!-- Subtitle -->
+                    <p class="opacity-70">
+                      Understanding how to overcome value and behavior differences to create inclusive and supportive shared spaces
+                    </p>
+                  </div>
 
-                <!-- CTA Button -->
-                <div class="flex items-start">
-                  <button class="btn">
-                    Coming soon ...
-                  </button>
+                  <!-- CTA Button -->
+                  <div class="flex items-start">
+                    <button class="btn none">
+                      Coming soon ...
+                    </button>
+                  </div>
                 </div>
               </div>
+
+              <div class="relative -bottom-1.5 z-0 h-25 w-full flex items-end justify-end ">
+                <img src="/assets/Group%2040128.png" alt="" class="md:w-2/3">
+              </div>
+              <div class="w-full h-[40%] absolute bottom-0 left-0 bg-gradient-to-t from-[#202020] to-transparent">
+
+              </div>
             </div>
+
           </app-hero-cohabitation>
         </div>
       </div>

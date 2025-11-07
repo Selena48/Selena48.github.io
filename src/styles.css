@@ -204,9 +204,9 @@
   --color-primary-content: #ffffff;
 
   /* Couleurs de base - Background sombre avec pattern */
-  --color-base-100: #1a1a1a;             /* Background principal - noir profond */
-  --color-base-200: #242424;             /* Background subtle */
-  --color-base-300: #2d2d2d;             /* Background plus clair */
+  --color-base-100: #ffffff;             /* Background principal - noir profond */
+  --color-base-200: #ffffff;             /* Background subtle */
+  --color-base-300: #1a1a1a;             /* Background plus clair */
   --color-base-content: #ffffff;         /* Texte principal - blanc */
 
   /* Couleurs sémantiques */
@@ -299,7 +299,7 @@ html{
 
 /* Body Muted - Texte secondaire */
 .body-muted {
-  @apply font-medium text-base tracking-[-0.005625rem] opacity-55;
+  @apply font-medium tracking-[-0.005625rem] opacity-55;
 }
 
 /* Caption - Petits textes */
@@ -451,7 +451,7 @@ article[data-theme="portfolio"]{
 .btn{
   @apply bg-base-200/20 flex items-center text-white px-6 py-3 font-medium rounded-full;
 }
-.btn::after{
+a.btn::after{
   content: "";
   background-image: url("/assets/arrow_forward_ios.png");
   background-size: contain;
@@ -463,7 +463,7 @@ article[data-theme="portfolio"]{
   margin-left: 0.5rem;
 }
 
-.btn.out::after{
+a.btn.out::after{
   content: "";
   background-image: url("/assets/open_in_new.png");
   background-size: contain;
