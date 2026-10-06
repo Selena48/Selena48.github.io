@@ -12,7 +12,7 @@ import { NgClass } from '@angular/common';
   imports: [NgClass],
   template: `
     <div data-theme="pluka" class="hero hero-pluka bg-[#224452] relative overflow-hidden" [ngClass]="hostClasses()">
-      <div class="relative z-10">
+      <div class="relative z-10 h-full w-full">
         <ng-content></ng-content>
       </div>
     </div>

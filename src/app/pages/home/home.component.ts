@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HeroComponent} from '../../components/hero/hero.component';
-import {HeroLightcrowdComponent} from '../../components/hero/variants/hero-lightcrowd.component';
-import {HeroPlukaComponent} from '../../components/hero/variants/hero-pluka.component';
-import {RouterLink} from '@angular/router';
-import {HeroAnthropophonie} from '../../components/hero/variants/hero-anthropophonie.component';
-import {HeroCohabitationComponent} from '../../components/hero/variants/hero-cohabitation.component';
+import { HeroComponent } from '../../components/hero/hero.component';
+import { HeroLightcrowdComponent } from '../../components/hero/variants/hero-lightcrowd.component';
+import { HeroPlukaComponent } from '../../components/hero/variants/hero-pluka.component';
+import { RouterLink } from '@angular/router';
+import { HeroAnthropophonie } from '../../components/hero/variants/hero-anthropophonie.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, HeroLightcrowdComponent, HeroPlukaComponent, RouterLink, HeroAnthropophonie, HeroCohabitationComponent],
+  imports: [CommonModule, HeroLightcrowdComponent, HeroPlukaComponent, RouterLink, HeroAnthropophonie],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

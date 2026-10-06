@@ -37,7 +37,7 @@ import { NgClass } from '@angular/common';
       </div>
 
       <!-- Contenu -->
-      <div class="h-full relative z-10">
+      <div class="h-full w-full relative z-10">
         <ng-content></ng-content>
       </div>
     </div>

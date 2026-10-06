@@ -7,7 +7,8 @@
 
         <!-- artefacts -->
         <img src="/assets/Vector(3).png" class="img1 absolute w-28 md:w-32 -bottom-4 md:bottom-0 -right-4 md:right-0" />
-        <img src="/assets/2.svg" class="img2 absolute w-36 md:w-40 right-6 md:right-15 bottom-8 md:bottom-12 rotate-5" />
+        <img src="/assets/2.svg"
+          class="img2 absolute w-36 md:w-40 right-6 md:right-15 bottom-8 md:bottom-12 rotate-5" />
         <img src="/assets/Vector(2).png" class="img3 absolute w-20 md:w-24 top-5 -left-5 md:left-0 " />
       </div>
 
@@ -19,30 +20,27 @@
         </p>
 
         <p class="body-muted">
-          Currently pursuing a Master's in Experience Design at UTC Compiègne, following a Bachelor's in Multimedia and Internet Professions. My background in cognitive psychology provides a unique lens for understanding user behavior and mental models.
+          Currently pursuing a Master's in Experience Design at UTC Compiègne, following a Bachelor's in Multimedia and
+          Internet Professions. My background in cognitive psychology provides a unique lens for understanding user
+          behavior and mental models.
         </p>
 
         <!-- Social Links -->
         <div class="flex flex-row flex-wrap gap-4">
-          <a
-            href="https://www.linkedin.com/in/s%C3%A9l%C3%A8na-boull%C3%A9e-8437bb237/"
-            target="_blank"
-            class="social-button group"
-          >
+          <a href="https://www.linkedin.com/in/s%C3%A9l%C3%A8na-boull%C3%A9e-8437bb237/" target="_blank"
+            class="social-button group">
             <div class="bg-accent rounded-lg size-10 flex items-center justify-center shrink-0">
               <img src="/assets/linkedin-icon-2.svg" alt="LinkedIn" class="size-5" />
             </div>
             <span class="link-underlined text-base-content">LinkedIn</span>
           </a>
 
-          <a
-            href="mailto:selena.boullee@gmail.com"
-            class="social-button group"
-          >
+          <a href="mailto:selena.boullee@gmail.com" class="social-button group">
             <div class="bg-secondary rounded-lg size-10 flex items-center justify-center shrink-0">
               <img src="/assets/@.png" alt="Email" class="size-5" />
             </div>
-            <span class="link-underlined text-base-content break-all sm:break-normal">selena.boullee&#64;gmail.com</span>
+            <span
+              class="link-underlined text-base-content break-all sm:break-normal">selena.boullee&#64;gmail.com</span>
           </a>
         </div>
       </div>
@@ -60,7 +58,9 @@
     </p>
 
     <p class="body-muted">
-      This question guides everything I do. I believe design must prioritize clarity over trends, because being useful will always be more impactful than being fashionable. The best experiences are the ones that feel effortless — where users accomplish their goals without noticing the interface.
+      This question guides everything I do. I believe design must prioritize clarity over trends, because being useful
+      will always be more impactful than being fashionable. The best experiences are the ones that feel effortless —
+      where users accomplish their goals without noticing the interface.
     </p>
   </div>
 
@@ -72,18 +72,18 @@
 
     <ul class="grid md:grid-cols-2 gap-6 md:gap-8">
       @for (approach of approaches; track approach.title) {
-        <li class="portfolio-card flex flex-col gap-6 md:gap-8">
-          <div class="flex gap-4 items-center">
-            <span class="text-4xl md:text-5xl">{{ approach.emoji }}</span>
-            <h5 class="heading-4">
-              {{ approach.title }}
-            </h5>
-          </div>
+      <li class="portfolio-card flex flex-col gap-6 md:gap-8">
+        <div class="flex gap-4 items-center">
+          <span class="text-4xl md:text-5xl">{{ approach.emoji }}</span>
+          <h5 class="heading-4">
+            {{ approach.title }}
+          </h5>
+        </div>
 
-          <p class="body-large">
-            {{ approach.description }}
-          </p>
-        </li>
+        <p class="body">
+          {{ approach.description }}
+        </p>
+      </li>
       }
     </ul>
   </section>
@@ -102,18 +102,18 @@
 
       <div class="flex flex-col gap-4">
         @for (exploration of explorations; track exploration.title) {
-          <div class="portfolio-card-base" [ngClass]="exploration.bgColor">
-            <div class="flex gap-3 items-center mb-4">
-              <img [src]="exploration.image">
-              <h5 class="heading-5">
-                {{ exploration.title }}
-              </h5>
-            </div>
-
-            <p class="body-muted">
-              {{ exploration.description }}
-            </p>
+        <div class="portfolio-card-base" [ngClass]="exploration.bgColor">
+          <div class="flex gap-3 items-center mb-4">
+            <img [src]="exploration.image">
+            <h5 class="heading-5">
+              {{ exploration.title }}
+            </h5>
           </div>
+
+          <p class="body-muted">
+            {{ exploration.description }}
+          </p>
+        </div>
         }
       </div>
     </div>
@@ -128,18 +128,16 @@
     <app-hero-portfolio [hostClasses]="'rounded'">
       <div class="p md:gap-5 w-full">
         @for (section of expertises; track section.section){
-          <div class="pb-5">
-            <h3 class="heading-3 pb-5">{{section.section}}</h3>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-              @for (skill of expertise.getExpertiseCollection(section.expertises); track skill.name) {
-                <app-expertise-card [expertise]="skill" gradientStart="white" gradientEnd="white"></app-expertise-card>
-              }
-            </div>
+        <div class="pb-5">
+          <h3 class="heading-3 pb-5">{{section.section}}</h3>
+          <div class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 ">
+            @for (skill of expertise.getExpertiseCollection(section.expertises); track skill.name) {
+            <app-expertise-card [expertise]="skill" gradientStart="white" gradientEnd="white"></app-expertise-card>
+            }
           </div>
+        </div>
         }
       </div>
     </app-hero-portfolio>
   </section>
 </div>
-
-

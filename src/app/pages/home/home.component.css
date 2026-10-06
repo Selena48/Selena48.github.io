@@ -1,78 +1,405 @@
-/* Styles spécifiques pour la page Home si nécessaire */
-
-/* Référence au fichier global Tailwind pour accéder aux utilities */
+/* Styles spécifiques pour la page Home */
 @reference "../../../styles.css";
 
-.sel img{
-  @apply transition-transform duration-150;
+/* ─── HERO SECTION ─── */
+.hero-section {
+  @apply w-full rounded-[1.75rem] overflow-hidden;
+  background: #f0f2f8;
+  padding: 3.5rem 3rem 0;
 }
 
-.sel:hover .img1{
-  @apply scale-115;
+.hero-inner {
+  @apply flex flex-col md:flex-row gap-8 items-center w-full;
+  min-height: 420px;
 }
-.sel:hover .img2{
-  @apply -rotate-30;
+
+/* LEFT COLUMN */
+.hero-left {
+  @apply flex flex-col gap-6 flex-1 pb-10;
 }
-.sel:hover .img3{
-  @apply rotate-45;
+
+.hero-title {
+  font-family: "DM Sans", "Inter", sans-serif;
+  font-weight: 700;
+  @apply leading-[1.1];
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: #1a1a1a;
+}
+
+.hero-desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  @apply flex flex-col gap-3 leading-[1.6];
+  font-size: 1rem;
+  color: #444;
+  max-width: 40ch;
+}
+
+.hero-links {
+  @apply flex flex-row flex-wrap gap-3;
 }
 
 
-/* HERO'S ANIMATIONS */
+/* RIGHT COLUMN */
+.hero-right {
+  @apply relative flex-shrink-0;
+  width: min(480px, 52%);
+  height: 440px;
+}
 
-.lightcrowd img, .pluka img{
+/* ─── FRAMES SCENE ─── */
+.frames-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+/* Common base for all hero SVGs */
+.hero-svg {
+  position: absolute;
+  display: block;
+  user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.35s ease;
+  will-change: transform;
+}
+
+/* ─── FRAMES ─── */
+
+/* Right vertical frame (frame-3-right.svg: 331x516) */
+.hero-frame-right {
+  width: 215px;
+  top: 30px;
+  right: 12px;
+  z-index: 2;
+  transform: rotate(4.5deg);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+}
+
+.frames-scene:hover .hero-frame-right {
+  transform: rotate(8.5deg) translateY(-8px) scale(1.02);
+}
+
+.hero-frame-right:hover {
+  transform: rotate(11deg) translateY(-14px) scale(1.05) !important;
+  z-index: 10;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.16));
+}
+
+/* Top center photo frame (frame-2-top.svg: 249x253) */
+.hero-frame-top {
+  width: 180px;
+  top: 10px;
+  left: 15%;
+  z-index: 3;
+  transform: rotate(-2.5deg);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.1));
+}
+
+.frames-scene:hover .hero-frame-top {
+  transform: rotate(-7deg) translateY(-10px) scale(1.04);
+}
+
+.hero-frame-top:hover {
+  transform: rotate(-11deg) translateY(-18px) scale(1.08) !important;
+  z-index: 10;
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.2));
+}
+
+/* Left landscape frame (frame-1-left.svg: 366x316) */
+.hero-frame-left {
+  width: 230px;
+  bottom: 35px;
+  left: 0%;
+  z-index: 4;
+  transform: rotate(-5.5deg);
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.1));
+}
+
+.frames-scene:hover .hero-frame-left {
+  transform: rotate(-10deg) translateY(6px) scale(1.03);
+}
+
+.hero-frame-left:hover {
+  transform: rotate(-14deg) translateY(10px) scale(1.07) !important;
+  z-index: 10;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.18));
+}
+
+/* ─── STICKERS ─── */
+
+/* Cat sticker (cat-sticker.svg: 210x187) */
+.hero-cat {
+  width: 115px;
+  bottom: 28px;
+  left: 36%;
+  z-index: 6;
+  transform: rotate(5deg);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+}
+
+.frames-scene:hover .hero-cat {
+  transform: rotate(-6deg) translateY(-10px) scale(1.1);
+}
+
+.hero-cat:hover {
+  transform: rotate(-12deg) translateY(-16px) scale(1.2) !important;
+  z-index: 12;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.22));
+}
+
+/* Sun gradient starburst (sun-gradient.svg: 199x199) */
+.hero-sun {
+  width: 105px;
+  top: 0;
+  left: 2%;
+  z-index: 1;
+  transform: rotate(0deg);
+  filter: drop-shadow(0 2px 8px rgba(63, 188, 161, 0.2));
+}
+
+.frames-scene:hover .hero-sun {
+  transform: rotate(30deg) scale(1.08);
+}
+
+.hero-sun:hover {
+  transform: rotate(55deg) scale(1.18) !important;
+}
+
+/* Flower gradient windmill (flower-gradient.svg: 146x146) */
+.hero-flower {
+  width: 76px;
+  top: 0px;
+  right: 18%;
+  z-index: 1;
+  transform: rotate(12deg);
+  filter: drop-shadow(0 2px 8px rgba(63, 188, 161, 0.25));
+}
+
+.frames-scene:hover .hero-flower {
+  transform: rotate(-22deg) scale(1.12);
+}
+
+.hero-flower:hover {
+  transform: rotate(-45deg) scale(1.22) !important;
+}
+
+/* Sparkle gradient 4-star (sparkle-gradient.svg: 131x131) */
+.hero-sparkle {
+  width: 58px;
+  bottom: 22%;
+  right: 0;
+  z-index: 5;
+  transform: rotate(-8deg);
+  filter: drop-shadow(0 2px 8px rgba(255, 67, 21, 0.25));
+}
+
+.frames-scene:hover .hero-sparkle {
+  transform: rotate(25deg) scale(1.15) translateY(-5px);
+}
+
+.hero-sparkle:hover {
+  transform: rotate(45deg) scale(1.28) translateY(-8px) !important;
+}
+
+/* Responsive Tablet & Mobile */
+@media (max-width: 1024px) {
+  .hero-right {
+    width: min(440px, 48%);
+    height: 390px;
+  }
+
+  .hero-frame-right {
+    width: 185px;
+  }
+
+  .hero-frame-top {
+    width: 155px;
+  }
+
+  .hero-frame-left {
+    width: 200px;
+  }
+
+  .hero-cat {
+    width: 100px;
+  }
+
+  .hero-sun {
+    width: 90px;
+  }
+
+  .hero-flower {
+    width: 65px;
+  }
+
+  .hero-sparkle {
+    width: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+
+  .hero-desc {
+    font-size: 0.875rem;
+  }
+
+  .hero-right {
+    width: 100%;
+    max-width: 350px;
+    height: 310px;
+    margin: 0 auto;
+  }
+
+  .frames-scene {
+    min-height: 290px;
+  }
+
+  .hero-frame-right {
+    width: 155px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .hero-frame-top {
+    width: 130px;
+    top: 15px;
+    left: 18%;
+  }
+
+  .hero-frame-left {
+    width: 165px;
+    bottom: 10px;
+    left: 2%;
+  }
+
+  .hero-cat {
+    width: 82px;
+    bottom: 18px;
+    left: 35%;
+  }
+
+  .hero-sun {
+    width: 72px;
+  }
+
+  .hero-flower {
+    width: 52px;
+  }
+
+  .hero-sparkle {
+    width: 40px;
+  }
+}
+
+/* ─── HERO'S CARD ANIMATIONS (lightcrowd / pluka) ─── */
+.lightcrowd img,
+.pluka img {
   @apply transition-all duration-500;
 }
 
-.lightcrowd .logo{
+.lightcrowd .logo {
   @apply opacity-0;
 }
-.lightcrowd .phone1{
+
+.lightcrowd .phone1 {
   @apply origin-bottom-right rotate-9 translate-y-18 translate-x-40;
 }
-.lightcrowd .phone2{
+
+.lightcrowd .phone2 {
   @apply origin-bottom-left scale-100 -rotate-5 translate-y-0 translate-x-10;
 }
-.lightcrowd .bracelet{
+
+.lightcrowd .bracelet {
   @apply origin-bottom scale-100;
 }
 
-.lightcrowd:hover .logo{
+.lightcrowd:hover .logo {
   @apply opacity-100;
 }
-.lightcrowd:hover .phone1{
+
+.lightcrowd:hover .phone1 {
   @apply rotate-19 translate-y-18 translate-x-50;
 }
-.lightcrowd:hover .phone2{
+
+.lightcrowd:hover .phone2 {
   @apply origin-bottom-left scale-115 -rotate-7 -translate-y-10 translate-x-12;
 }
-.lightcrowd:hover .bracelet{
+
+.lightcrowd:hover .bracelet {
   @apply origin-bottom scale-105;
 }
 
-
-.pluka .phone3{
+.pluka .phone3 {
   @apply origin-bottom scale-100 translate-y-36 -translate-x-8;
 }
-.pluka .phone4{
+
+.pluka .phone4 {
   @apply origin-bottom scale-100 translate-y-15 -translate-x-55;
 }
-.pluka .logo{
+
+.pluka .logo {
   @apply origin-bottom scale-100 -rotate-6;
 }
-.pluka .icons{
+
+.pluka .icons {
   @apply opacity-0;
 }
 
-.pluka:hover .phone3{
+.pluka:hover .phone3 {
   @apply origin-bottom translate-y-36 -translate-x-8 rotate-7;
 }
-.pluka:hover .phone4{
+
+.pluka:hover .phone4 {
   @apply origin-bottom scale-123 translate-y-30 -translate-x-55 -rotate-3;
 }
-.pluka:hover .logo{
+
+.pluka:hover .logo {
   @apply origin-bottom scale-105 -rotate-6 -translate-y-15;
 }
-.pluka:hover .icons{
+
+.pluka:hover .icons {
   @apply opacity-100;
+}
+
+/* ─── PROJECT CARD MOSAIC (FIGMA 2x2) ─── */
+.project-card {
+  @apply flex flex-col justify-between transition-all duration-300;
+}
+
+.project-card .hero {
+  min-height: 340px !important;
+  height: 340px;
+  width: 100%;
+  border-radius: 1.5rem !important;
+}
+
+.btn-case-study {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background-color: #18181b;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-case-study:hover {
+  background-color: #000000;
+  gap: 0.75rem;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

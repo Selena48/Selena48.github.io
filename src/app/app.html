@@ -1,20 +1,106 @@
 <!-- Wrapper avec thème dynamique basé sur la route active -->
-<div class="relative">
+<div class="relative min-h-screen flex flex-col justify-between">
 
-  <!-- Header -->
-  <header class="sm:sticky top-0 bg-base-100 flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 py-4 md:py-6 border-b border-base-content/10 z-50 gap-4 sm:gap-0">
-    <a routerLink="/" class="logo">
-      <img src="/assets/logo.png" alt="Sélèna" class="h-12">
-    </a>
-    <nav class="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-10 items-center w-full sm:w-auto">
-      <a routerLink="/" class="nav-link">Works</a>
-      <a routerLink="/get-to-know-me" class="nav-link">Get to know me</a>
-      <a href="/CV-Selena-Boullee-2025.pdf" target="_blank" class="nav-link">my resume</a>
-    </nav>
-  </header>
+  <div class="grow">
+    <!-- Header desktop (sm+) -->
+    <header
+      class="hidden sm:flex sticky top-0 bg-base-100 flex-row items-center justify-between px-8 md:px-12 lg:px-16 py-4 md:py-6 z-50"
+      [class.scrolled]="scrolled">
+      <a routerLink="/" class="logo">
+        <img src="/assets/logo.png" alt="Sélèna" class="h-12">
+      </a>
+      <nav class="flex flex-row gap-6 md:gap-10 items-center">
+        <a routerLink="/" class="nav-link">Works</a>
+        <a routerLink="/get-to-know-me" class="nav-link">Get to know me</a>
+        <a href="/CV_Selena-2026.pdf" target="_blank" class="nav-link">my resume</a>
+      </nav>
+    </header>
 
-  <!-- Section Example -->
-  <article [attr.data-theme]="themeService.currentTheme()">
-    <router-outlet />
-  </article>
+    <!-- Mobile top bar (fixed) -->
+    <div class="mobile-topbar sm:hidden">
+      <a routerLink="/" class="mobile-logo">
+        <img src="/assets/logo.png" alt="Sélèna" class="h-10">
+      </a>
+      <button class="mobile-burger" [class.open]="menuOpen" (click)="menuOpen = !menuOpen" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer overlay -->
+    <div class="mobile-drawer sm:hidden" [class.active]="menuOpen" (click)="menuOpen = false">
+      <nav class="mobile-drawer-nav" (click)="$event.stopPropagation()">
+        <a routerLink="/" class="nav-link" (click)="menuOpen = false">Works</a>
+        <a routerLink="/get-to-know-me" class="nav-link" (click)="menuOpen = false">Get to know me</a>
+        <a href="/CV_Selena-2026.pdf" target="_blank" class="nav-link" (click)="menuOpen = false">my resume</a>
+      </nav>
+    </div>
+
+    <!-- Section Example -->
+    <article [attr.data-theme]="themeService.currentTheme()">
+      <router-outlet />
+    </article>
+  </div>
+
+  <!-- Footer classique et propre -->
+  <footer class="border-t border-base-300 bg-base-100 mt-20">
+    <div class="px-6 sm:px-10 md:px-16 lg:px-24 py-12 md:py-16 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+
+        <!-- Left: Branding & Role -->
+        <div class="md:col-span-6 flex flex-col gap-4">
+          <a routerLink="/" class="inline-block">
+            <img src="/assets/logo.png" alt="Sélèna" class="h-10">
+          </a>
+          <p class="key-data max-w-sm">
+            Designer, researcher & developer at the intersection of human experience and technology.
+          </p>
+        </div>
+
+        <!-- Middle: Navigation -->
+        <div class="md:col-span-3 flex flex-col gap-3">
+          <p class="font-bold text-xs uppercase tracking-wider text-base-content/50">Navigation</p>
+          <div class="flex flex-col gap-2">
+            <a routerLink="/" class="text-sm text-base-content/70 hover:text-primary transition-colors">Works</a>
+            <a routerLink="/get-to-know-me"
+              class="text-sm text-base-content/70 hover:text-primary transition-colors">Get to know me</a>
+            <a href="/CV_Selena-2026.pdf" target="_blank"
+              class="text-sm text-base-content/70 hover:text-primary transition-colors">My resume (PDF)</a>
+          </div>
+        </div>
+
+        <!-- Right: Contact & Socials -->
+        <div class="md:col-span-3 flex flex-col gap-3">
+          <p class="font-bold text-xs uppercase tracking-wider text-base-content/50">Connect</p>
+          <div class="flex flex-col gap-2">
+            <a href="mailto:selena.boullee@gmail.com"
+              class="text-sm text-base-content/70 hover:text-primary transition-colors break-all">
+              selena.boullee&#64;gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/s%C3%A9l%C3%A8na-boull%C3%A9e-8437bb237/" target="_blank"
+              rel="noopener noreferrer" class="text-sm text-base-content/70 hover:text-primary transition-colors">
+              LinkedIn ↗
+            </a>
+            <a href="https://github.com/Selena48" target="_blank" rel="noopener noreferrer"
+              class="text-sm text-base-content/70 hover:text-primary transition-colors">
+              GitHub ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div
+        class="mt-12 pt-6 border-t border-base-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-base-content/50">
+        <p>© {{ currentYear }} Sélèna Boullée. All rights reserved.</p>
+        <button (click)="scrollToTop()"
+          class="hover:text-base-content transition-colors cursor-pointer flex items-center gap-1">
+          Back to top ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
 </div>

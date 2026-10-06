@@ -34,7 +34,7 @@ interface Star {
       }
 
       <!-- Contenu -->
-      <div class="relative z-10">
+      <div class="relative z-10 h-full w-full">
         <ng-content></ng-content>
       </div>
     </div>

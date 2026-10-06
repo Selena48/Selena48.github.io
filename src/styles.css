@@ -1,19 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Gloria+Hallelujah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
-/* Configuration des tailles de texte personnalisées basées sur la maquette Figma */
+/* Échelle typographique — ratio 1.25x (Major Third)
+   Base: 16px
+   12 → 14 → 16 → 18 → 20 → 24 → 28 → 36 → 48 → 60 */
 @theme {
-  /* Font sizes - Basé sur la maquette Portfolio (base: 16px = 1rem) */
-  --text-xxs: 0.8125rem;     /* 13px - Très petit texte */
-  --text-xs: 0.849375rem;    /* 13.59px - Links, small text */
-  --text-sm: 0.875rem;       /* 14px - Caption text */
-  --text-base: 1rem;         /* 16px - Body, nav links */
-  --text-lg: 1.125rem;       /* 18px - Body large, body muted */
-  --text-xl: 1.25rem;        /* 20px - Expertise text */
-  --text-2xl: 1.5rem;        /* 24px - H4, H5, Quote */
-  --text-3xl: 2rem;       /* 32px - H3 */
-  --text-4xl: 3rem;          /* 48px - H2 */
-  --text-5xl: 3.5rem;        /* 56px - Logo */
+  --text-2xs: 0.625rem;
+  /* 10px - Micro badges */
+  --text-xs: 0.75rem;
+  /* 12px - Labels, annotations mobile */
+  --text-sm: 0.875rem;
+  /* 14px - Annotations desktop, body mobile */
+  --text-base: 1rem;
+  /* 16px - Body desktop */
+  --text-lg: 1.125rem;
+  /* 18px */
+  --text-xl: 1.25rem;
+  /* 20px - H5 */
+  --text-2xl: 1.5rem;
+  /* 24px - H4 */
+  --text-3xl: 1.75rem;
+  /* 28px - H3 */
+  --text-4xl: 2.25rem;
+  /* 36px - H2 */
+  --text-5xl: 3rem;
+  /* 48px - H1 */
+  --text-6xl: 3.75rem;
+  /* 60px - Display */
 }
 
 /* Configuration DaisyUI */
@@ -24,10 +37,10 @@
   /* Désactiver TOUS les composants DaisyUI */
   /* On garde uniquement le système de thèmes avec les variables CSS */
   exclude: accordion, artboard, avatar, badge, bottom-navigation, breadcrumbs,
-           button, card, carousel, chat, checkbox, collapse, countdown, diff,
-           drawer, dropdown, file-input, footer, hero, indicator, input, join, kbd, loading, mask, menu, modal, navbar, pagination, progress, radial-progress,
-           radio, range, rating, select, skeleton, stack, stat, steps, swap, tab, table,
-           textarea, theme-controller, timeline, toast, toggle, tooltip;
+    button, card, carousel, chat, checkbox, collapse, countdown, diff,
+    drawer, dropdown, file-input, footer, hero, indicator, input, join, kbd, loading, mask, menu, modal, navbar, pagination, progress, radial-progress,
+    radio, range, rating, select, skeleton, stack, stat, steps, swap, tab, table,
+    textarea, theme-controller, timeline, toast, toggle, tooltip;
 
   /* Afficher les logs lors de la compilation */
   logs: true;
@@ -46,20 +59,26 @@
   default: true;
 
   /* Couleur principale - Turquoise/Teal du design */
-  --color-primary: #278e90;
+  --color-primary: #3FBCA1;
   --color-primary-content: #ffffff;
 
   /* Couleurs de base - Backgrounds blancs */
-  --color-base-100: #ffffff;           /* Background principal */
-  --color-base-200: #fafbfc;           /* Background subtle */
-  --color-base-300: #f0f0f0;           /* Background plus sombre */
-  --color-base-content: #242424;       /* Texte principal */
+  --color-base-100: #ffffff;
+  /* Background principal */
+  --color-base-200: #fafbfc;
+  /* Background subtle */
+  --color-base-300: #f0f0f0;
+  /* Background plus sombre */
+  --color-base-content: #242424;
+  /* Texte principal */
 
   /* Couleurs sémantiques */
-  --color-secondary: rgba(182, 191, 74, 1);          /* Bleu accent */
+  --color-secondary: rgba(182, 191, 74, 1);
+  /* Bleu accent */
   --color-secondary-content: #ffffff;
 
-  --color-accent: rgba(255, 67, 21, 1);             /* Rouge accent */
+  --color-accent: rgba(255, 67, 21, 1);
+  /* Rouge accent */
   --color-accent-content: rgb(226, 186, 221);
 
   --color-neutral: #000000;
@@ -72,9 +91,12 @@
   --color-error: oklch(65% 0.3 30);
 
   /* Border radius - arrondi des éléments */
-  --radius-box: 1rem;                   /* 16px pour cards */
-  --radius-field: 0.5rem;               /* 8px pour inputs */
-  --radius-selector: 0.5rem;            /* 8px pour checkboxes */
+  --radius-box: 1rem;
+  /* 16px pour cards */
+  --radius-field: 0.5rem;
+  /* 8px pour inputs */
+  --radius-selector: 0.5rem;
+  /* 8px pour checkboxes */
 
   /* Tailles de base */
   --size-field: 0.25rem;
@@ -93,31 +115,40 @@
   color-scheme: light;
 
   /* Couleur principale - Rose/Magenta doux du design */
-  --color-primary: #A855F7;              /* Rose principal */
+  --color-primary: #A855F7;
+  /* Rose principal */
   --color-primary-content: #D8B4FE;
 
   /* Couleur secondaire - Violet doux */
-  --color-secondary: #FF6B9D;            /* Violet/Lavande */
+  --color-secondary: #FF6B9D;
+  /* Violet/Lavande */
   --color-secondary-content: #F87171;
 
   /* Couleur accent - Vert (variable Figma) */
-  --color-accent: #7E6ABA;               /* Vert turquoise */
+  --color-accent: #7E6ABA;
+  /* Vert turquoise */
   --color-accent-content: #7E6ABA;
 
-  --color-info: rgba(168, 85, 247, 0.2);              /* Rose principal */
+  --color-info: rgba(168, 85, 247, 0.2);
+  /* Rose principal */
   --color-info-content: #D8B4FE;
 
   --color-error: rgba(239, 68, 68, 0.2);
   --color-error-content: #F87171;
 
   /* Couleurs de base - Backgrounds très clairs */
-  --color-base-100: #FDFEFF;             /* Background principal - blanc cassé */
-  --color-base-200: #F9F6FF;             /* Background subtle - teinte lavande très légère */
-  --color-base-300: #4B3883;             /* Background plus prononcé - lavande pâle */
-  --color-base-content: #000000;         /* Texte principal - noir doux */
+  --color-base-100: #FDFEFF;
+  /* Background principal - blanc cassé */
+  --color-base-200: #F9F6FF;
+  /* Background subtle - teinte lavande très légère */
+  --color-base-300: #4B3883;
+  /* Background plus prononcé - lavande pâle */
+  --color-base-content: #000000;
+  /* Texte principal - noir doux */
 
   /* Couleur neutre - utiliser le violet foncé */
-  --color-neutral: #4A1B6F;              /* Violet foncé */
+  --color-neutral: #4A1B6F;
+  /* Violet foncé */
   --color-neutral-content: #7E6ABA;
 }
 
@@ -133,16 +164,22 @@
   --color-primary-content: #ffffff;
 
   /* Couleurs de base - Background sombre teal */
-  --color-base-100: #fdfeff;             /* Background principal - teal foncé */
-  --color-base-200: rgb(242, 250, 249);             /* Background plus foncé */
-  --color-base-300: #2d5562;             /* Background plus clair */
-  --color-base-content: rgb(36, 36, 36);         /* Texte principal - blanc */
+  --color-base-100: #fdfeff;
+  /* Background principal - teal foncé */
+  --color-base-200: rgb(242, 250, 249);
+  /* Background plus foncé */
+  --color-base-300: #2d5562;
+  /* Background plus clair */
+  --color-base-content: rgb(36, 36, 36);
+  /* Texte principal - blanc */
 
   /* Couleurs sémantiques */
-  --color-secondary: #79c9bc;            /* Teal clair */
+  --color-secondary: #79c9bc;
+  /* Teal clair */
   --color-secondary-content: #ffffff;
 
-  --color-accent: rgba(39, 116, 111, 1);               /* Teal accent */
+  --color-accent: rgba(39, 116, 111, 1);
+  /* Teal accent */
   --color-accent-content: #ffffff;
 
   --color-info: rgba(94, 139, 153, 0.2);
@@ -152,7 +189,8 @@
   --color-neutral-content: #ffffff;
 
   /* Border radius */
-  --radius-box: 1.527rem;                /* 24.456px comme dans le design */
+  --radius-box: 1.527rem;
+  /* 24.456px comme dans le design */
   --radius-field: 0.5rem;
   --radius-selector: 0.5rem;
 }
@@ -169,16 +207,22 @@
   --color-primary-content: rgba(183, 193, 84, 1);
 
   /* Couleurs de base - Background avec dégradé aquatique */
-  --color-base-100: rgb(253, 254, 255);             /* Background principal - bleu aquatique */
-  --color-base-200: rgb(178, 194, 96);             /* Background vert aquatique */
-  --color-base-300: #4a7584;             /* Background plus foncé */
-  --color-base-content: rgb(36, 36, 36);         /* Texte principal - blanc */
+  --color-base-100: rgb(253, 254, 255);
+  /* Background principal - bleu aquatique */
+  --color-base-200: rgb(178, 194, 96);
+  /* Background vert aquatique */
+  --color-base-300: #4a7584;
+  /* Background plus foncé */
+  --color-base-content: rgb(36, 36, 36);
+  /* Texte principal - blanc */
 
   /* Couleurs sémantiques */
-  --color-secondary: #7ba88f;            /* Vert aquatique */
+  --color-secondary: #7ba88f;
+  /* Vert aquatique */
   --color-secondary-content: #ffffff;
 
-  --color-accent: #054166;               /* Vert accent */
+  --color-accent: #054166;
+  /* Vert accent */
   --color-accent-content: #ffffff;
 
   --color-info: rgba(255, 255, 255, 0.13);
@@ -188,7 +232,8 @@
   --color-neutral-content: #ffffff;
 
   /* Border radius */
-  --radius-box: 1.527rem;                /* 24.456px comme dans le design */
+  --radius-box: 1.527rem;
+  /* 24.456px comme dans le design */
   --radius-field: 0.5rem;
   --radius-selector: 0.5rem;
 }
@@ -205,16 +250,22 @@
   --color-primary-content: #ffffff;
 
   /* Couleurs de base - Background sombre avec pattern */
-  --color-base-100: #ffffff;             /* Background principal - noir profond */
-  --color-base-200: #ffffff;             /* Background subtle */
-  --color-base-300: #1a1a1a;             /* Background plus clair */
-  --color-base-content: #ffffff;         /* Texte principal - blanc */
+  --color-base-100: #ffffff;
+  /* Background principal - noir profond */
+  --color-base-200: #ffffff;
+  /* Background subtle */
+  --color-base-300: #1a1a1a;
+  /* Background plus clair */
+  --color-base-content: #ffffff;
+  /* Texte principal - blanc */
 
   /* Couleurs sémantiques */
-  --color-secondary: #ff6b7a;            /* Rose/corail clair */
+  --color-secondary: #ff6b7a;
+  /* Rose/corail clair */
   --color-secondary-content: #ffffff;
 
-  --color-accent: #ff8f97;               /* Rose accent plus doux */
+  --color-accent: #ff8f97;
+  /* Rose accent plus doux */
   --color-accent-content: #ffffff;
 
   --color-info: rgba(255, 63, 73, 0.23);
@@ -224,7 +275,8 @@
   --color-neutral-content: #ffffff;
 
   /* Border radius */
-  --radius-box: 1.527rem;                /* 24.456px comme dans le design */
+  --radius-box: 1.527rem;
+  /* 24.456px comme dans le design */
   --radius-field: 0.5rem;
   --radius-selector: 0.5rem;
 }
@@ -234,9 +286,22 @@
    Inspiré de la maquette Figma
    ======================================== */
 
-html{
+html {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  /* Inter Regular par défaut */
+}
+
+/* Police pour tous les titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", "Inter", sans-serif;
+  font-weight: 700;
 }
 
 .gloria-hallelujah {
@@ -256,57 +321,134 @@ html{
 }
 
 /* ─────────────────────────────────────
-   TYPOGRAPHIE - Titres
+   TYPOGRAPHIE (dans @layer base pour que les utilitaires Tailwind text-* restent prioritaires)
    ───────────────────────────────────── */
 
-/* H1 - Titre principal de page (ex: "My UX Philosophy") */
-.heading-1 {
-  @apply font-bold text-5xl tracking-[-0.06rem];
-}
+@layer base {
 
-/* H2 - Sections principales (ex: "About me") */
-.heading-2 {
-  @apply font-bold text-4xl tracking-[-0.045rem];
-}
+  /* H1 — 48px */
+  .heading-1 {
+    font-family: "DM Sans", "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
 
-/* H3 - Sous-sections (ex: "Expertise I bring") */
-.heading-3 {
-  @apply font-bold text-3xl tracking-[0];
-}
+  /* H2 — 36px */
+  .heading-2 {
+    font-family: "DM Sans", "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
 
-/* H4 - Titres de cartes */
-.heading-4 {
-  @apply font-semibold text-2xl tracking-[-0.0075rem];
-}
+  /* H3 — 28px */
+  .heading-3 {
+    font-family: "DM Sans", "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
 
-/* H5 - Petits titres (ex: "Behavior design") */
-.heading-5 {
-  @apply font-semibold text-xl tracking-[-0.0225rem];
-}
+  /* H4 — 24px */
+  .heading-4 {
+    font-family: "DM Sans", "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
 
-/* ─────────────────────────────────────
-   TYPOGRAPHIE - Corps de texte
-   ───────────────────────────────────── */
+  /* H5 — 20px */
+  .heading-5 {
+    font-family: "DM Sans", "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
 
-/* Body Large - Texte principal (18px) */
-.body-large {
-  @apply font-medium text-lg leading-[1.45] tracking-[-0.005625rem] text-base-content;
-}
+  /* Corps de texte & Paragraphes
+     Desktop: 16px (1rem), Inter Regular 400
+     Mobile (<640px): 14px (0.875rem), Inter Regular 400 */
+  p,
+  .body,
+  .body-large,
+  .body-muted {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+  }
 
-/* Body - Texte standard (16px) */
-.body {
-  @apply font-medium text-base tracking-[-0.005rem] text-base-content;
-}
+  @media (max-width: 639px) {
 
-/* Body Muted - Texte secondaire */
-.body-muted {
-  @apply font-medium tracking-[-0.005625rem] opacity-55;
-}
+    p,
+    .body,
+    .body-large,
+    .body-muted {
+      font-size: 0.875rem;
+    }
+  }
 
-/* Caption - Petits textes */
-.caption {
-  font-family: "Gloria Hallelujah", cursive;
-  @apply text-accent;
+  .body {
+    @apply text-base-content;
+  }
+
+  .body-large {
+    @apply text-base-content;
+  }
+
+  .body-muted {
+    @apply opacity-55;
+  }
+
+  /* Annotations & Légendes
+     Desktop: 14px (0.875rem)
+     Mobile (<640px): 12px (0.75rem) */
+  .annotation,
+  .caption,
+  .caption-text,
+  small,
+  figcaption {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 639px) {
+
+    .annotation,
+    .caption,
+    .caption-text,
+    small,
+    figcaption {
+      font-size: 0.75rem;
+    }
+  }
+
+  /* Caption manuscrite */
+  .caption {
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    @apply text-accent;
+  }
+
+  /* Métadonnées de projet (Role, Timeline, Team, Tools...) */
+  .key-data {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
+  }
+
+  @media (max-width: 639px) {
+    .key-data {
+      font-size: 0.75rem;
+    }
+  }
 }
 
 /* Quote - Citations (couleur primary) */
@@ -314,10 +456,11 @@ html{
   @apply font-semibold text-2xl leading-[1.45] tracking-[-0.0075rem];
 }
 
-.muted{
+.muted {
   @apply text-black/55;
 }
-.hero .muted{
+
+.hero .muted {
   @apply text-white/55;
 }
 
@@ -341,19 +484,19 @@ html{
    CARTES & CONTAINERS
    ───────────────────────────────────── */
 
-.portfolio-card-base{
+.portfolio-card-base {
   @apply rounded-2xl p-[1.5rem];
 }
 
 /* Card - Carte standard avec bordure */
 .portfolio-card {
-  @apply bg-base-100 border border-base-content/10 rounded-2xl p-[2rem];
+  @apply bg-base-100 border border-base-content/10 rounded-2xl p-6;
   @apply transition-shadow hover:shadow-lg;
 }
 
 /* Card sans bordure - background subtle */
 .portfolio-card-subtle {
-  @apply bg-base-200 rounded-2xl p-[2rem];
+  @apply bg-base-200 rounded-2xl p-6;
 }
 
 /* Card colorée avec background accent */
@@ -370,7 +513,7 @@ html{
 
 /* Glassmorphism - Pour la section "Expertise" */
 .glass-card {
-  @apply backdrop-blur-[0.31rem] backdrop-filter bg-[rgba(240,226,255,0.05)] border-[0.1128rem] border-[rgba(255,255,255,0.4)] border-solid rounded-[1.4886rem] p-[2.4809rem];
+  @apply backdrop-blur-[0.31rem] backdrop-filter bg-[rgb(240_226_255/0.05)] border-[0.1128rem] border-[rgb(255_255_255/0.4)] border-solid rounded-[1.4886rem] p-4;
 }
 
 /* ─────────────────────────────────────
@@ -393,20 +536,31 @@ html{
 
 /* Header de section */
 .portfolio-section-header {
-  @apply w-full flex flex-col gap-[1rem] ;
+  @apply w-full flex flex-col gap-[1rem];
 }
 
-.prose section{
+.prose section {
   @apply pb-14 md:px-12;
 }
 
-.hero, .hero .heading-1, .hero .heading-2, .hero .heading-3, .hero .heading-4, .hero .heading-5, .hero .body, .hero .body-large, .hero .body-muted, .hero .quote {
+.hero,
+.hero .heading-1,
+.hero .heading-2,
+.hero .heading-3,
+.hero .heading-4,
+.hero .heading-5,
+.hero .body,
+.hero .body-large,
+.hero .body-muted,
+.hero .quote {
   @apply text-white
 }
-.hero .p{
+
+.hero .p {
   @apply p-8 md:p-12 lg:p-15;
 }
-.hero.rounded{
+
+.hero.rounded {
   @apply rounded-3xl overflow-hidden;
 }
 
@@ -417,7 +571,7 @@ html{
 /* Bouton avec icône sociale */
 .social-button {
   @apply bg-base-100 flex items-center gap-[14px] px-[14px] py-[7px] rounded-lg;
-  @apply shadow-[0px_1px_3px_0px_rgba(0,0,0,0.25)];
+  @apply shadow-[0px_1px_3px_0px_rgb(0_0_0/10%)];
   @apply transition-transform hover:scale-105;
 }
 
@@ -440,23 +594,25 @@ html{
   @apply overflow-hidden shrink-0;
 }
 
-article[data-theme="portfolio"]{
+article[data-theme="portfolio"] {
   background-image: url("/assets/default-bg.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-.alert{
+.alert {
   @apply border-2 rounded-lg;
 }
-.alert-sm{
+
+.alert-sm {
   @apply py-0.5 px-2 rounded-full;
 }
 
-.btn{
+.btn {
   @apply bg-base-200/20 flex items-center text-white px-6 py-3 font-medium rounded-full;
 }
-a.btn::after{
+
+a.btn::after {
   content: "";
   background-image: url("/assets/arrow_forward_ios.png");
   background-size: contain;
@@ -468,7 +624,7 @@ a.btn::after{
   margin-left: 0.5rem;
 }
 
-a.btn.out::after{
+a.btn.out::after {
   content: "";
   background-image: url("/assets/open_in_new.png");
   background-size: contain;
@@ -480,10 +636,121 @@ a.btn.out::after{
   margin-left: 0.5rem;
 }
 
-ul{
+ul {
   @apply list-disc list-inside;
 }
 
-.animbox{
+/* ─────────────────────────────────────
+   CARTES PROJETS (HOMEPAGE MOSAÏQUE ÉGALISÉE)
+   ───────────────────────────────────── */
+.project-mosaic-grid {
+  grid-auto-rows: 1fr !important;
+}
+
+.project-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 520px;
+  justify-content: space-between !important;
+}
+
+.project-card app-hero-lightcrowd,
+.project-card app-hero-pluka,
+.project-card app-hero-anthropophonie,
+.project-card .project-banner {
+  display: block !important;
+  width: 100% !important;
+  height: 340px !important;
+  min-height: 340px !important;
+  max-height: 340px !important;
+  border-radius: 1.5rem !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+.project-card app-hero-lightcrowd > div,
+.project-card app-hero-pluka > div,
+.project-card app-hero-anthropophonie > div,
+.project-card .hero,
+.project-card .hero-lightcrowd,
+.project-card .hero-pluka,
+.project-card .hero-anthropophonie {
+  height: 340px !important;
+  min-height: 340px !important;
+  max-height: 340px !important;
+  width: 100% !important;
+  border-radius: 1.5rem !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.project-card .project-card-info {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  margin-top: 1.25rem !important;
+  gap: 1.25rem !important;
+}
+
+.project-card .project-card-desc {
+  min-height: 4.5rem !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.project-card .project-card-meta {
+  min-height: 3.25rem !important;
+}
+
+.project-card .project-card-bottom {
+  margin-top: auto !important;
+}
+
+.animbox {
   clip-path: polygon(-100% -100%, 200% -100%, 200% calc(100% + 0px), -100% calc(100% + 0px));
+}
+
+/* ─────────────────────────────────────
+   STICKER PROJET ACADÉMIQUE
+   ───────────────────────────────────── */
+.academic-badge {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  z-index: 20;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  color: #ffffff;
+  background-color: #1e1c28;
+  border: 2.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: rotate(12deg);
+  animation: badge-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  padding: 0.5rem;
+}
+
+@keyframes badge-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(12deg);
+  }
 }

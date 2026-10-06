@@ -2,14 +2,12 @@ import { Component, inject } from '@angular/core';
 import { HeroAnthropophonie } from '../../components/hero/variants/hero-anthropophonie.component';
 import { ExpertiseCard } from '../../components/expertise-card/expertise-card';
 import {ExpertiseKey, ExpertiseService} from '../../services/expertise-service';
-import {HeroLightcrowdComponent} from '../../components/hero/variants/hero-lightcrowd.component';
 
 @Component({
   selector: 'app-anthropophonie-demo',
   imports: [
     HeroAnthropophonie,
-    ExpertiseCard,
-    HeroLightcrowdComponent
+    ExpertiseCard
   ],
   templateUrl: './anthropophonie-demo.html',
   styleUrl: './anthropophonie-demo.css',

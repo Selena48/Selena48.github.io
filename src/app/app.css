@@ -1,0 +1,123 @@
+/* ─────────────────────────────────────
+   DESKTOP HEADER – ombre au scroll
+   ───────────────────────────────────── */
+
+header.scrolled {
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ─────────────────────────────────────
+   MOBILE BURGER MENU
+   ───────────────────────────────────── */
+
+/* Fixed top bar on mobile only */
+@media (max-width: 639px) {
+  .mobile-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1rem;
+    background: var(--color-base-100, #fff);
+    border-bottom: 1px solid oklch(var(--bc) / 0.1);
+    box-shadow: 0 2px 12px oklch(var(--bc) / 0.06);
+  }
+}
+
+.mobile-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Burger button inside the top bar */
+.mobile-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-burger span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-primary, #3FBCA1);
+  transform-origin: center;
+  transition: transform 0.25s ease, opacity 0.2s ease, width 0.2s ease;
+  width: 100%;
+}
+
+/* Animate to X when open */
+.mobile-burger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-burger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-burger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Full-screen overlay */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: oklch(var(--bc) / 0.35);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.mobile-drawer.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Slide-in panel from right */
+.mobile-drawer-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(280px, 80vw);
+  background: var(--color-base-100, #fff);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 5rem 2rem 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -8px 0 32px oklch(var(--bc) / 0.1);
+}
+
+.mobile-drawer.active .mobile-drawer-nav {
+  transform: translateX(0);
+}
+
+.mobile-drawer-nav .nav-link {
+  font-size: 1.25rem;
+}
+
+/* Offset page content below the fixed mobile bar */
+@media (max-width: 639px) {
+  article {
+    padding-top: 4rem;
+  }
+}
