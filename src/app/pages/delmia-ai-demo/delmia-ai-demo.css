@@ -1,0 +1,57 @@
+/* ─────────────────────────────────────
+   DELMIA AI — Hero
+   ───────────────────────────────────── */
+
+.delmia-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1640 50%, #0d1b2a 100%);
+}
+
+/* Decorative blobs */
+.delmia-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.delmia-blob-1 {
+  top: -4rem;
+  right: -4rem;
+  width: 28rem;
+  height: 28rem;
+  background: rgba(108, 99, 255, 0.2);
+}
+
+.delmia-blob-2 {
+  bottom: -3rem;
+  left: -3rem;
+  width: 22rem;
+  height: 22rem;
+  background: rgba(0, 201, 167, 0.12);
+}
+
+.delmia-blob-3 {
+  top: 50%;
+  left: 40%;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(167, 139, 250, 0.1);
+}
+
+/* ─────────────────────────────────────
+   Deliverable tags
+   ───────────────────────────────────── */
+
+.delmia-deliverable {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-base-content);
+  background: var(--color-base-200);
+  border: 1px solid color-mix(in oklab, var(--color-base-content) 10%, transparent);
+}

@@ -43,5 +43,10 @@ export const routes: Routes = [
     path: 'anthropophonie',
     loadComponent: () => import('./pages/anthropophonie-demo/anthropophonie-demo').then(m => m.AnthrophonieDemo),
     data: { theme: 'anthropophonie' }
+  },
+  {
+    path: 'delmia-ai',
+    loadComponent: () => import('./pages/delmia-ai-demo/delmia-ai-demo').then(m => m.DelmiaAiDemo),
+    data: { theme: 'portfolio' }
   }
 ];

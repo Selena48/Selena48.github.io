@@ -25,4 +25,8 @@ export const serverRoutes: ServerRoute[] = [
     path: 'anthropophonie',
     renderMode: RenderMode.Prerender,
   },
+  {
+    path: 'delmia-ai',
+    renderMode: RenderMode.Prerender,
+  },
 ];

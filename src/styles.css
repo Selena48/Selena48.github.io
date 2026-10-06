@@ -669,9 +669,9 @@ ul {
   flex-shrink: 0 !important;
 }
 
-.project-card app-hero-lightcrowd > div,
-.project-card app-hero-pluka > div,
-.project-card app-hero-anthropophonie > div,
+.project-card app-hero-lightcrowd>div,
+.project-card app-hero-pluka>div,
+.project-card app-hero-anthropophonie>div,
 .project-card .hero,
 .project-card .hero-lightcrowd,
 .project-card .hero-pluka,
@@ -749,6 +749,7 @@ ul {
     opacity: 0;
     transform: scale(0.6) rotate(-5deg);
   }
+
   to {
     opacity: 1;
     transform: scale(1) rotate(12deg);
@@ -767,7 +768,6 @@ ul {
 
 @media (min-width: 768px) {
   .recommendations-grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
 }
@@ -783,10 +783,6 @@ ul {
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.reco-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
-  transform: translateY(-2px);
-}
 
 .reco-header {
   display: flex;
