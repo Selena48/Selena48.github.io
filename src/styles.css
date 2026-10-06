@@ -754,3 +754,112 @@ ul {
     transform: scale(1) rotate(12deg);
   }
 }
+
+/* ─────────────────────────────────────
+   SECTION RECOMMENDATIONS / TÉMOIGNAGES
+   ───────────────────────────────────── */
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.reco-card {
+  background: var(--color-base-100);
+  border: 1px solid color-mix(in oklab, var(--color-base-content) 8%, transparent);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.reco-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+  transform: translateY(-2px);
+}
+
+.reco-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.reco-avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.reco-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.reco-name {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-base-content);
+  flex-wrap: wrap;
+}
+
+.reco-linkedin-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.reco-title {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.reco-relation {
+  font-size: 0.68rem;
+  line-height: 1.4;
+  opacity: 0.45;
+  font-style: italic;
+  margin: 0;
+}
+
+.reco-quote {
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 2.5px solid color-mix(in oklab, var(--color-primary) 40%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reco-quote p {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  opacity: 0.72;
+  margin: 0;
+}
